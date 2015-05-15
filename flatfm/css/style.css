@@ -1,0 +1,165 @@
+*{
+    outline: none;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+body{
+    background: #40609d;
+
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1em;
+}
+.wrapper{
+    width: 947px;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+.header{
+    height: 99px;
+}
+.header h1{
+    padding-top: 1.09375em;
+
+    color: #ffffff;
+
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: -0.06em;
+    line-height: 2;
+    text-align: center;
+}
+
+
+/*MAIN-CONTENT*/
+.main-content{
+    width: 100%;
+}
+.blocks{
+    position: relative;
+
+    height: 39.375em;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.blocks li{
+    position: absolute;
+
+    border-left: 1px solid #5473af;
+    border-top: 1px solid #5473af;
+    height: 13.125em;
+    overflow: hidden;
+    padding: 0 0.75em;
+    width: 26.25em;
+}
+.blocks li.bc-current{
+    z-index: 1;
+
+    border: 2px solid #ff4b4c;
+}
+
+/*BROADCAST BOX*/
+
+/* --header-- */
+.bc-header{
+    height: 2.375em;
+}
+.bc-time{
+    float: left;
+}
+.bc-time h4{
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.9;
+}
+.bc-passed .bc-time h4{
+    color: #b8ccf4;
+}
+.bc-current .bc-time h4{
+    color: #ff4b4c;
+}
+.bc-coming .bc-time h4{
+    color: #ffffff;
+}
+.bc-date{
+    float: right;
+}
+.bc-date h5{
+    color: #95afdf;
+
+    font-size: 0.75em;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    line-height: 3.1667;
+}
+.bc-current .bc-date h5{
+    padding-right: 1.1875em;
+
+    color: #ffffff;
+}
+#bcLive{
+    position: absolute;
+    top: 1.25em;
+    right: 1em;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: block;
+    height: 0.75em;
+    width: 0.75em;
+
+    background: #eb1f23;
+}
+#bcLive.blink{
+    background: none;
+}
+
+/* --body-- */
+.bc-img{
+    width: 100%;
+    height: 6.25em;
+    overflow: hidden;
+}
+.bc-img img{
+    width: 100%;
+}
+.bc-track{
+    line-height: 4.375;
+}
+.bc-avatar, .bc-track-info{
+    display: inline-block;
+}
+.bc-avatar{
+    float: left;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 2.875em;
+    margin: 0.75em 0;
+    overflow: hidden;
+    width: 2.875em;
+}
+.bc-avatar img{
+    vertical-align: top;
+}
+.bc-track-info{
+    padding-left: 0.625em;
+    margin: 1.1875em 0px;
+}
+.bc-track-info h4, .bc-track-info h5{
+    color: #ffffff;
+    line-height: 1;
+}
+.bc-track-info h5{
+    font-size: 0.875em;
+    letter-spacing: -0.025em;
+}
+.bc-track-info h4{
+    font-size: 1.125em;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
