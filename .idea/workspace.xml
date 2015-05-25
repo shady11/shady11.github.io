@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9621316f-4979-4319-a1e4-e93ca7571cb5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tricks/index.html" afterPath="$PROJECT_DIR$/tricks/index.html" />
-    </list>
+    <list default="true" id="9621316f-4979-4319-a1e4-e93ca7571cb5" name="Default" comment="" />
     <ignored path="shady11.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9621316f-4979-4319-a1e4-e93ca7571cb5" time="1432555576488" ignored="false" />
