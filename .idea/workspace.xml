@@ -26,7 +26,7 @@
     <file path="$PROJECT_DIR$/../tms.dev/oiun/jplayer/jplayer.blue.monday.min.css" changelist="9621316f-4979-4319-a1e4-e93ca7571cb5" time="1431957482660" ignored="false" />
     <file path="/game.php" changelist="9621316f-4979-4319-a1e4-e93ca7571cb5" time="1431959429719" ignored="false" />
     <file path="/jplayer.blue.monday.min.css" changelist="9621316f-4979-4319-a1e4-e93ca7571cb5" time="1431955566521" ignored="false" />
-    <file path="/rhombus_image.html" changelist="9621316f-4979-4319-a1e4-e93ca7571cb5" time="1432558241499" ignored="false" />
+    <file path="/rhombus_image.html" changelist="9621316f-4979-4319-a1e4-e93ca7571cb5" time="1432558634969" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tricks/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.061519902">
+            <state line="31" column="37" selection-start="955" selection-end="955" vertical-scroll-proportion="0.38480097">
               <folding />
             </state>
           </provider>
@@ -385,7 +385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tricks/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.061519902">
+        <state line="31" column="37" selection-start="955" selection-end="955" vertical-scroll-proportion="0.38480097">
           <folding />
         </state>
       </provider>
