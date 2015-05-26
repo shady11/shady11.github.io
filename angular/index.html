@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+<div ng-controller="SampleCtrl">
+    <table>
+        <thead>
+        <tr>
+            <th>Last</th>
+            <th>First</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in people">
+            <td>{{person.last}}</td>
+            <td>{{person.first}}</td>
+        </tr>
+        <tr>
+            <td><input ng-model="addLast" type="text" placeholder="last"></td>
+            <td><input ng-model="addFirst" type="text" placeholder="first"></td>
+            <td><button ng-click="addPerson()">Add</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
