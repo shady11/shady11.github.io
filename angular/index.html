@@ -3,8 +3,8 @@
 
 <head>
     <title>Title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -18,8 +18,8 @@
         </thead>
         <tbody>
         <tr ng-repeat="person in people">
-            <td>{{person.last}}</td>
-            <td>{{person.first}}</td>
+            <td>{{ person.last }}</td>
+            <td>{{ person.first }}</td>
         </tr>
         <tr>
             <td><input ng-model="addLast" type="text" placeholder="last"></td>
