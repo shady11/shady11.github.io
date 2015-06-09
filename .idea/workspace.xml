@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9621316f-4979-4319-a1e4-e93ca7571cb5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nightsky/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\shady11.github.io\nightsky\index.php" afterPath="" />
     </list>
     <ignored path="shady11.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,16 +62,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="663">
               <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nightsky/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-144.5" vertical-offset="0" max-vertical-offset="6001">
-              <caret line="221" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="347" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -475,14 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="663">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nightsky/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-144.5" vertical-offset="0" max-vertical-offset="6001">
-          <caret line="221" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="347" selection-end-column="7" />
           <folding />
         </state>
       </provider>
