@@ -1,0 +1,9 @@
+html{
+    background: #cfd8dc;
+}
+
+#map-canvas{
+    width: 400px;
+    height: 500px;
+    background: #a7ffeb;
+}
