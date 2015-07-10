@@ -1,46 +1,22 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-    <title>Arena</title>
-
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
-
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
-
+<meta charset=utf-8 />
+<title>A simple map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; height: 500px; }
+</style>
 </head>
-
 <body>
-    <div id="map"></div>
-
-    <header>
-
-    </header>
-
-    <script type="text/javascript">
-
-
-        var map = L.map('map').setView([42.857, 74.609], 13);
-
-        L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-            id: 'shady11.07d1bed4'
-        }).addTo(map);
-
-
-        L.marker([51.5, -0.09]).addTo(map)
-            .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-
-    </script>
+<div id='map'></div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZHkxMSIsImEiOiIwZmUxYjAzNGJkMTU3NDNlZGMxZTNiMTczZGQzZDNlYSJ9.lqNrLPyOBk1U2-ef-Jom6Q';
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([42.869, 74.646], 13);
+</script>
 </body>
-
 </html>
