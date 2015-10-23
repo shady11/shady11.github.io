@@ -1,3 +1,103 @@
+$light-grey: #f1f4f9;
+$white: #ffffff;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius !important;
+    -moz-border-radius: $radius  !important;
+    border-radius: $radius  !important;
+}
+@mixin border($width, $type, $color) {
+    border: $width $type $color;
+}
+
+*{
+    @include border-radius(0);
+}
+
 body{
-	background: #000000;
+    background: $white;
+    
+    font-family:  "Roboto", Arial, sans-serif;
+    font-size: 14px;
+    
+    a, a:hover,a:focus,a:active{
+        text-decoration: none;
+    }
+
+    @media (min-width: 1200px) {
+        .container{
+            // padding-left: 10px;
+            // padding-right: 10px;
+            // width: 960px;
+        }
+    }
+
+    header{
+        height: 80px;
+        
+        .logo{
+            a{
+                color: #ffffff;
+                
+                font-size: 18px;
+            }
+        }
+        .navbar{
+            border: 0;
+            
+            .navbar-header, .navbar-nav{
+                display: inline-block;
+                float: none;
+                vertical-align: middle;
+            }
+            .navbar-header{
+                width: 15%;                
+                .navbar-brand{
+                    margin: 0;
+                }
+            }            
+            .navbar-nav {
+                position: relative;
+                                
+                li{
+                    a{
+                        text-align: center;
+                    }
+                }
+                &.main-menu{
+                    width: 70%;
+                    
+                    text-align: center;
+                    li{
+                        display: inline-block;
+                        float: none;
+                        a{
+                            font-size: 16px;
+                        }
+                    }
+                }
+                &.login{
+                    width: 14%;
+                    li{
+                        position: static;
+                        float: right;
+                        
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .dropdown{
+                    .dropdown-menu{
+                        left: auto;
+                        right: 0;
+                        
+                        border: 0;
+                        max-width: 250px;
+                    }
+                }
+            } 
+        }
+    }
 }
