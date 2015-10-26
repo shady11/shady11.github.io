@@ -1,6 +1,9 @@
 $light-grey: #f1f4f9;
 $white: #ffffff;
 
+// Font Families
+$roboto: "Roboto", Arial, sans-serif;
+
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius !important;
     -moz-border-radius: $radius  !important;
@@ -16,10 +19,10 @@ $white: #ffffff;
 
 body{
     background: $white;
-    
-    font-family:  "Roboto", Arial, sans-serif;
+
+    font-family:  $roboto;
     font-size: 14px;
-    
+
     a, a:hover,a:focus,a:active{
         text-decoration: none;
     }
@@ -34,38 +37,38 @@ body{
 
     header{
         height: 80px;
-        
+
         .navbar-brand, .navbar li a{
-            padding-bottom: 30px;
-            padding-top: 30px;
+            margin: 15px 0;
+            padding: 10px;
         }
-        
+
         .logo{
             a{
                 height: auto;
-                
+
                 color: #ffffff;
-                
+
                 font-size: 18px;
             }
         }
         .navbar{
             border: 0;
-            
+
             .navbar-header, .navbar-nav{
                 display: inline-block;
                 float: none;
                 vertical-align: middle;
             }
             .navbar-header{
-                width: 15%;                
+                width: 15%;
                 .navbar-brand{
                     margin: 0;
                 }
-            }            
+            }
             .navbar-nav {
                 position: relative;
-                                
+
                 li{
                     a{
                         text-align: center;
@@ -73,7 +76,7 @@ body{
                 }
                 &.main-menu{
                     width: 70%;
-                    
+
                     text-align: center;
                     li{
                         display: inline-block;
@@ -86,9 +89,9 @@ body{
                 &.login{
                     width: 14%;
                     li{
-                        position: static;
+                        position: relative;
                         float: right;
-                        
+
                         a{
                             font-size: 12px;
                         }
@@ -99,18 +102,19 @@ body{
                     .dropdown-menu{
                         left: auto;
                         right: 0;
-                        
+
                         border: 0;
                         max-width: 250px;
+                        margin-top: -15px;
                     }
                 }
-            } 
+            }
         }
     }
 
     section{
         .main-title{
-            margin-top: 40px;
+            margin-top: 30px;
 
             font-size: 32px;
             text-align: center;
