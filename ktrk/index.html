@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="filter/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="css/custombox.css"/>-->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+
+    <style type="text/css">
+
+        /* Preloader */
+
+        #preloader {
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color:#00498B; /* change if the mask should have another color then white */
+            z-index:99; /* makes sure it stays on top */
+        }
+
+        #status {
+            width:200px;
+            height:200px;
+            position:absolute;
+            left:50%; /* centers the loading animation horizontally one the screen */
+            top:50%; /* centers the loading animation vertically one the screen */
+            /*background-image:url('images/clean_logo.png'); *//* path to your loading animation */
+            /*background-repeat:no-repeat;*/
+            /*background-position:center;*/
+            /*-webkit-background-size: 100% auto;*/
+            background-size: 100% auto;
+            margin:-100px 0 0 -100px; /* is width and height divided by two */
+
+
+        }
+
+        /* rotation animation */
+        @-webkit-keyframes rotate {
+            from { -webkit-transform:rotate(0deg); }
+            to { -webkit-transform:rotate(360deg); }
+        }
+
+        @-moz-keyframes rotate {
+            from { -moz-transform:rotate(0deg); }
+            to { -moz-transform:rotate(360deg); }
+        }
+
+        @-ms-keyframes rotate {
+            from { -ms-transform:rotate(0deg); }
+            to { -ms-transform:rotate(360deg); }
+        }
+
+        @-o-keyframes rotate {
+            from { -o-transform:rotate(0deg); }
+            to { -o-transform:rotate(360deg); }
+        }
+
+        .flip {
+            -webkit-transform-origin: 50% 50%;
+            -webkit-animation-name: anim;
+            -webkit-animation-duration: 1.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -moz-transform-origin: 50% 50%;
+            -moz-animation-name: anim;
+            -moz-animation-duration: 1.5s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+            -ms-transform-origin: 50% 50%;
+            -ms-animation-name: anim;
+            -ms-animation-duration: 1.5s;
+            -ms-animation-iteration-count: infinite;
+            -ms-animation-timing-function: linear;
+            -o-transform-origin: 50% 50%;
+            -o-animation-name: anim;
+            -o-animation-duration: 1.5s;
+            -o-animation-iteration-count: infinite;
+            -o-animation-timing-function: linear;
+        }
+
+        @-webkit-keyframes anim {
+            from {-webkit-transform: rotateY(0deg);}
+            to {-webkit-transform: rotateY(360deg);}
+        }
+
+        @keyframes anim {
+            from {transform: rotateY(0deg);}
+            to {transform: rotateY(360deg);}
+        }
+
+        svg.line-drawing {
+            position: absolute;
+            max-width: 100%;
+            height: 100%;
+            z-index: 10;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        .line-drawing,
+        .illustration {
+            -webkit-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+        }
+
+        .line-drawing path {
+            fill: none;
+            stroke: white;
+            stroke-width: 1;
+        }
+
+        .sh {
+            opacity: 1;
+        }
+
+        .hi {
+            opacity: 0;
+        }
+        .sh,
+        .hi {
+            -webkit-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+        }
+
+        .ktrk-logo {
+            position: relative;
+
+            height: 100%;
+            width: 100%;
+            background: url('images/clean_logo.png') no-repeat center;
+            -webkit-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="">
+
+        <svg id="logo" class="line-drawing" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 138 92.2">
+            <path class="st0" d="M81.1,41.5v50.1c34.1-0.9,55-4.3,55.5-9c1.3-12,1.2-30.5-0.7-38.4c-1.9-7.7-7.8-19.4-45.4-38.1
+                    c-18.6-9.2-32-5.7-43,0C19.4,20.7,5.4,31.3,2.3,44c-3,12.3-1.4,37.2-0.9,38.5c0.5,1.3,1.3,7.2,52.4,9V55.1L81.1,41.5z"/>
+        </svg>
+        <div data-svg="logo" class="ktrk-logo hi"></div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="liveModal" tabindex="-1" role="dialog" aria-labelledby="liveModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="playerStop" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="liveModalLabel">Түз эфир - КТРК</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 modal-block">
+                        <div id="player"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid main-header">
+    <div class="container">
+        <div class="row">
+            <header class="top-menu">
+                <div class="top-header clearfix">
+                    <div class="col-md-12 logo-block">
+                        <div class="row">
+                            <a class="logo" href="#">
+                                <img class="logo-ktrk" src="images/logo_new1.png" alt=""/>
+                                <!--<img class="logo-madaniyat" src="images/channels/madaniyat.png" alt=""/>-->
+                            </a>
+
+                            <nav class="top-nav clearfix">
+                                <ul class="clearfix">
+                                    <li><a href="#">Башкы бет</a></li>
+                                    <li>/</li>
+                                    <li>
+                                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false" role="button" aria-expanded="false">КТРК</a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Тарыхы</a></li>
+                                            <li><a href="#">Жетекчилер</a></li>
+                                            <li><a href="#">Стратегия</a></li>
+                                            <li><a href="#">Нормативдик база</a></li>
+                                            <li><a href="#">РРТЦ</a></li>
+                                            <li><a href="#">Отчет</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>/</li>
+                                    <li><a href="#">Видеопортал</a></li>
+                                    <li>/</li>
+                                    <li><a href="#">Телепрограмма</a></li>
+                                    <li>/</li>
+                                    <li><a href="#">Байкоочу кеңеш</a></li>
+                                    <li>/</li>
+                                    <li><a href="#">Редакциялык кеңешчи</a></li>
+                                </ul>
+                            </nav>
+
+                            <ul class="soc">
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+
+                            <form class="form-search" action="" method="post">
+                                <div class="form-group pull-right">
+                                    <input type="text" class="form-control" placeholder="Издөө"/>
+                                </div>
+
+                                <button class="btn" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+
+                            <button id="playerPlay" class="btn btn-danger btn-live" data-toggle="modal" data-target="#liveModal">
+                                <i class="fa fa-dot-circle-o"></i>
+                                түз эфир
+                            </button>
+
+                            <div class="main-nav">
+                                <ul class="channels_ul active">
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/channels/balastan.png" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/channels/muztv.png" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/channels/madaniyat.png" alt=""/>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="radios_ul">
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/channels/1-radio.png" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/channels/kg-radio.png" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/channels/baldar.png" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/channels/dostuk.png" alt=""/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/channels/min-kiyal.png" alt=""/>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix">
+    <a href="#" class="col-md-12 text-center ads top-ads">
+        <img src="images/ads_1.jpg" alt=""/>
+    </a>
+</div>
+
+<div class="container main-wrapper">
+
+    <div class="row">
+        <section class="content clearfix">
+
+            <div class="clearfix">
+                <div class="top-left-block col-md-8">
+                    <div class="panel panel-default panel-top-news">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><span>Топ жаңылыктар</span></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-4 block">
+                                <figure class="effect-zoe">
+                                    <a href="article.html" class="main-img"><img src="images/image.jpeg" alt="img26"><i class="fa fa-play-circle-o"></i></a>
+                                    <div class="news-channel">
+                                        <a href="channel.html"><img src="images/channels/balastan.png" alt=""/></a>
+                                    </div>
+                                    <figcaption>
+                                        <h2><a href="article.html">Милиция кызматкерлери үйлүү болду</a></h2>
+                                        <p class="description"><a href="category.html">Интернет жана технологиялар</a></p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4 block">
+                                <figure class="effect-zoe">
+                                    <a href="article.html" class="main-img"><img src="images/image.jpeg" alt="img26"></a>
+                                    <div class="news-channel">
+                                        <a href="channel.html"><img src="images/logo_notext.png" alt=""/></a>
+                                    </div>
+                                    <figcaption>
+                                        <h2><a href="article.html">Милиция кызматкерлери үйлүү болду</a></h2>
+                                        <p class="description"><a href="category.html">Интернет жана технологиялар</a></p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4 block">
+                                <figure class="effect-zoe">
+                                    <a href="article.html" class="main-img"><img src="images/image.jpeg" alt="img26"></a>
+                                    <div class="news-channel">
+                                        <a href="channel.html"><img src="images/logo_notext.png" alt=""/></a>
+                                    </div>
+                                    <figcaption>
+                                        <h2><a href="article.html">Милиция кызматкерлери үйлүү болду</a></h2>
+                                        <p class="description"><a href="category.html">Интернет жана технологиялар</a></p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4 block">
+                                <figure class="effect-zoe">
+                                    <a href="article.html" class="main-img"><img src="images/image.jpeg" alt="img26"></a>
+                                    <div class="news-channel">
+                                        <a href="channel.html"><img src="images/logo_notext.png" alt=""/></a>
+                                    </div>
+                                    <figcaption>
+                                        <h2><a href="article.html">Милиция кызматкерлери үйлүү болду</a></h2>
+                                        <p class="description"><a href="category.html">Интернет жана технологиялар</a></p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4 block">
+                                <figure class="effect-zoe">
+                                    <a href="article.html" class="main-img"><img src="images/image.jpeg" alt="img26"></a>
+                                    <div class="news-channel">
+                                        <a href="channel.html"><img src="images/logo_notext.png" alt=""/></a>
+                                    </div>
+                                    <figcaption>
+                                        <h2><a href="article.html">Милиция кызматкерлери үйлүү болду</a></h2>
+                                        <p class="description"><a href="category.html">Интернет жана технологиялар</a></p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-4 block">
+                                <figure class="effect-zoe">
+                                    <a href="article.html" class="main-img"><img src="images/image.jpeg" alt="img26"></a>
+                                    <div class="news-channel">
+                                        <a href="channel.html"><img src="images/logo_notext.png" alt=""/></a>
+                                    </div>
+                                    <figcaption>
+                                        <h2><a href="article.html">Милиция кызматкерлери үйлүү болду</a></h2>
+                                        <p class="description"><a href="category.html">Интернет жана технологиялар</a></p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <footer>
+                                <a href="#">
+                                    <span>Бардык жаңылыктар <i class="fa fa-arrow-circle-right"></i></span>
+                                </a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-center ads">
+                        <img src="images/ads_1.jpg" alt=""/>
+                    </a>
+
+                    <div class="panel panel-default panel-carousel">
+                        <div class="panel-body">
+                            <div class="col-md-3 heading">
+                                <div class="row">
+                                    <h4><i class="fa fa-users"></i><span>Элдик репортер</span></h4>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="carousel">
+                                    <div class="col-md-4"><img src="images/image.jpeg" alt=""/></div>
+                                    <div class="col-md-4"><img src="images/image.jpeg" alt=""/></div>
+                                    <div class="col-md-4"><img src="images/image.jpeg" alt=""/></div>
+                                    <div class="col-md-4"><img src="images/image.jpeg" alt=""/></div>
+                                    <div class="col-md-4"><img src="images/image.jpeg" alt=""/></div>
+                                    <div class="col-md-4"><img src="images/image.jpeg" alt=""/></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="top-right-block col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><span>Күндүн видеосу</span></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12 block main-video">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/k2w8UII9cgI" allowfullscreen=""></iframe>
+                                </div>
+
+                                <h4>Video title</h4>
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            <h4 class="old-videos text-center">Өткөн күндөр</h4>
+
+                            <div class="col-md-6 block main-video">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/k2w8UII9cgI" allowfullscreen=""></iframe>
+                                </div>
+
+                                <h4>Video title</h4>
+                            </div>
+
+                            <div class="col-md-6 block main-video">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/k2w8UII9cgI" allowfullscreen=""></iframe>
+                                </div>
+
+                                <h4>Video title</h4>
+                            </div>
+
+                            <footer>
+                                <a href="#">
+                                    <span>Архив <i class="fa fa-arrow-circle-right"></i></span>
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-center ads ads-300x250">
+                        <img src="images/ads_300x250.gif" alt=""/>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="bottom-left-block col-md-4">
+                <div class="panel panel-default latest-news">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span>Акыркы жаңылыктар</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item news-item">
+                                <div class="news-body clearfix">
+                                    <a href="#">
+                                        <p class="news-title">В Бишкеке проходит внеочередной съезд партии "Республика Ата-Журт"</p>
+                                        <span class="ctg"><img src="images/logo_notext.png" alt=""/></span>
+                                    </a>
+                                </div>
+                                <div class="news-adds clearfix">
+                                    <a href="#" class="">Политика</a>
+                                    <span class="news-file"><i class="fa fa-play-circle-o"></i></span>
+
+                                    <span class="news-time pull-right">10:10</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="list-group-item news-item">
+                                <div class="news-body clearfix">
+                                    <a href="#">
+                                        <p class="news-title">В Бишкеке проходит внеочередной съезд партии "Республика Ата-Журт"</p>
+                                        <span class="ctg"><img src="images/logo_notext.png" alt=""/></span>
+                                    </a>
+                                </div>
+                                <div class="news-adds clearfix">
+                                    <a href="#">Политика</a>
+                                    <span class="news-file"><i class="fa fa-image"></i></span>
+
+                                    <span class="news-time pull-right">10:10</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="list-group-item news-item">
+                                <div class="news-body clearfix">
+                                    <a href="#">
+                                        <p class="news-title">В Бишкеке проходит внеочередной съезд партии "Республика Ата-Журт"</p>
+                                        <span class="ctg"><img src="images/logo_notext.png" alt=""/></span>
+                                    </a>
+                                </div>
+                                <div class="news-adds clearfix">
+                                    <a href="#" class="">Политика</a>
+                                    <span class="news-file"><i class="fa fa-play-circle-o"></i></span>
+
+                                    <span class="news-time pull-right">10:10</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="list-group-item news-item">
+                                <div class="news-body clearfix">
+                                    <a href="#">
+                                        <p class="news-title">В Бишкеке проходит внеочередной съезд партии "Республика Ата-Журт"</p>
+                                        <span class="ctg"><img src="images/logo_notext.png" alt=""/></span>
+                                    </a>
+                                </div>
+                                <div class="news-adds clearfix">
+                                    <a href="#" class="">Политика</a>
+                                    <span class="news-file"><i class="fa fa-play-circle-o"></i></span>
+
+                                    <span class="news-time pull-right">10:10</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="list-group-item news-item">
+                                <div class="news-body clearfix">
+                                    <a href="#">
+                                        <p class="news-title">В Бишкеке проходит внеочередной съезд партии "Республика Ата-Журт"</p>
+                                        <span class="ctg"><img src="images/logo_notext.png" alt=""/></span>
+                                    </a>
+                                </div>
+                                <div class="news-adds clearfix">
+                                    <a href="#" class="">Политика</a>
+                                    <span class="news-file"><i class="fa fa-play-circle-o"></i></span>
+
+                                    <span class="news-time pull-right">10:10</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="list-group-item news-item">
+                                <div class="news-body clearfix">
+                                    <a href="#">
+                                        <p class="news-title">В Бишкеке проходит внеочередной съезд партии "Республика Ата-Журт"</p>
+                                        <span class="ctg"><img src="images/logo_notext.png" alt=""/></span>
+                                    </a>
+                                </div>
+                                <div class="news-adds clearfix">
+                                    <a href="#" class="">Политика</a>
+                                    <span class="news-file"><i class="fa fa-play-circle-o"></i></span>
+
+                                    <span class="news-time pull-right">10:10</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                        </ul>
+
+                        <footer>
+                            <a href="#">
+                                <span>Бардык жаңылыктар <i class="fa fa-arrow-circle-right"></i></span>
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span>Башкы директордун баракчасы</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="slideshow">
+                            <div>
+                                <a href="#">
+                                    <img src="images/chief.jpg" alt="директор"/>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="images/chief_3.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="images/chief_2.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom-right-block col-md-8">
+                <div class="panel panel-default videoportal">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span>Видеопортал</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div>
+                            <ul id="filters">
+                                <li class="col-md-2"><span class="filter" data-filter="all-videos">Бардык</span></li>
+                                <li class="col-md-2"><span class="filter" data-filter="tele">Телеберүүлөр</span></li>
+                                <li class="col-md-2"><span class="filter" data-filter="serial">Сериалдар</span></li>
+                                <li class="col-md-2"><span class="filter" data-filter="tasma">Көркөм тасма</span></li>
+                                <li class="col-md-2"><span class="filter" data-filter="maanai">Маанайшат</span></li>
+                                <li class="col-md-2"><span class="filter" data-filter="sport">Спорт</span></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="clearfix"></div>
+
+                        <div id="portfoliolist">
+
+
+
+                            <!--&lt;!&ndash; Телеберүүлөр &ndash;&gt;-->
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="portfolio tele" data-cat="tele">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Телеберүүлөр</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+
+                            <!--&lt;!&ndash; Спорт &ndash;&gt;-->
+
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio sport" data-cat="sport">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Спорт</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+
+                            <!--&lt;!&ndash; Сериалдар &ndash;&gt;-->
+
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio serial" data-cat="serial">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Сериалдар</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+
+                            <!--&lt;!&ndash; Көркөм тасма &ndash;&gt;-->
+
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="portfolio tasma" data-cat="tasma">-->
+                                <!--<div class="portfolio-wrapper">-->
+                                    <!--&lt;!&ndash; 4:3 aspect ratio &ndash;&gt;-->
+                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                        <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v7GbxUnwRY8"></iframe>-->
+                                    <!--</div>-->
+                                    <!--<div class="label">-->
+                                        <!--<div class="label-text">-->
+                                            <!--<a class="text-title">Эфир 14.08.2015</a>-->
+                                            <!--<span class="text-category">Көркөм тасма</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="label-bg"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                        </div>
+
+                        <footer>
+                            <a href="#">
+                                <span>Архив <i class="fa fa-arrow-circle-right"></i></span>
+                            </a>
+                        </footer>
+
+                    </div>
+                </div>
+
+                <a href="#" class="text-center ads">
+                    <img src="images/ads_1.jpg" alt=""/>
+                </a>
+
+                <div class="panel panel-default panel-carousel gallery">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span>Фотогалерея</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="carousel-slick">
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/001.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/002.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/003.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/004.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/005.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/006.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/007.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/008.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/009.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/010.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/011.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                                <div class="col-md-4"><a href="#"><img src="images/gallery/012.jpg" alt=""/><span>Название</span><div class="overlay"></div></a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="col-md-12 apps-logo">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">
+                <a href="#" class="android">
+                    <img src="images/android.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="ios">
+                    <img src="images/ios.png" alt=""/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <ul>
+                                <li><a href="#">Башкы бет</a></li>
+                                <li><a href="#">КТРК</a></li>
+                                <li><a href="#">Видеопортал</a></li>
+                                <li><a href="#">Телепрограмма</a></li>
+                                <li><a href="#">Байкоочу кеңеш</a></li>
+                                <li><a href="#">Редакциялык кеңешчи</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 copy"><i class="fa fa-copyright"></i> 2015 Кыргыз Республикасынын Коомдук телерадиоберүү корпорациясы</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap-hover-dropdown.js"></script>
+
+<!--Menu concept-->
+<!--<script src="js/polyfills.js"></script>-->
+<!--<script src="js/demo1.js"></script>-->
+
+<script type="text/javascript" src="filter/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="filter/js/jquery.mixitup.min.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<!--Carousel-->
+<script>
+    $('.carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+    $('.carousel-slick').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+</script>
+
+<!--Video filter-->
+<script type="text/javascript">
+    $(function () {
+
+        var filterList = {
+
+            init: function () {
+
+                // MixItUp plugin
+                // http://mixitup.io
+                $('#portfoliolist').mixitup({
+                    showOnLoad: 'all-videos',
+                    targetSelector: '.portfolio',
+                    filterSelector: '.filter',
+                    effects: ['fade'],
+                    easing: 'snap',
+                    // call the hover effect
+                    onMixEnd: filterList.hoverEffect()
+                });
+
+            },
+
+            hoverEffect: function () {
+
+                // Simple parallax effect
+                $('#portfoliolist .portfolio').hover(
+                        function () {
+                            $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                            $(this).find('img').stop().animate({top: -40}, 250, 'easeOutQuad');
+                        },
+                        function () {
+                            $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                            $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+                        }
+                );
+
+            }
+
+        };
+
+        // Run the show!
+        filterList.init();
+    });
+</script>
+
+<!--Photo slider-->
+<script>
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() {
+        $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+    },  3000);
+</script>
+
+<!--http://31.192.250.52:8000/obondoru128-->
+
+​<script src="jwplayer/jwplayer.js"></script>
+<script>jwplayer.key="tmEO2SU8NzqLBoHr2Vq6nV13XCyfo8xbdiCb/Q==";</script>
+
+<script type="text/javascript">
+
+    var playerInstance = jwplayer("player");
+
+//    $('#playerPlay').click(function(){
+//        playerInstance.play();
+//    });
+    $('#playerStop').click(function(){
+        playerInstance.stop();
+    });
+
+    playerInstance.setup({
+        playlist: [{
+            image: "images/live_bg.png",
+            sources: [{
+                file: "rtmp://212.112.96.233:1936/live/ktrk.stream"
+            }]
+        }],
+        width: "640",
+        height: "360",
+        aspectratio: "16:9",
+        primary: "flash",
+        skin: {
+            name: "five"
+        },
+        stretching: "exactfit"
+    });
+</script>
+
+<script>
+    var toggleSlide = function(){
+        $(".main-nav ul.active").removeClass('active')
+                .next().add(".main-nav ul:first").last().addClass("active");
+    }
+    setInterval(toggleSlide, 2000);
+</script>
+
+<script src="js/classie.js"></script>
+<script src="js/svg.js"></script>
+
+<!-- Preloader -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function() { // makes sure the whole site is loaded
+
+        $('#status').delay(1000).fadeOut(); // will first fade out the loading animation
+        $('#preloader').delay(1200).fadeOut('slow'); // will fade out the white DIV that covers the website.
+
+    })
+    //]]>
+</script>
+
+</body>
+</html>
