@@ -35,8 +35,15 @@ body{
     header{
         height: 80px;
         
+        .navbar-brand, .navbar li a{
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+        
         .logo{
             a{
+                height: auto;
+                
                 color: #ffffff;
                 
                 font-size: 18px;
@@ -98,6 +105,15 @@ body{
                     }
                 }
             } 
+        }
+    }
+
+    section{
+        .main-title{
+            margin-top: 40px;
+
+            font-size: 32px;
+            text-align: center;
         }
     }
 }
