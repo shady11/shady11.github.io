@@ -31,7 +31,7 @@
     var svgs = Array.prototype.slice.call( document.querySelectorAll( 'svg' ) ),
         hidden = Array.prototype.slice.call( document.querySelectorAll( '.hi' ) ),
         current_frame = 0,
-        total_frames = 60,
+        total_frames = 240,
         path = new Array(),
         length = new Array(),
         handle = 0;
