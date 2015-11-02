@@ -6,10 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<!-- slick -->
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body>
 
@@ -37,11 +33,36 @@
 					<a class="navbar-brand" href="#">Лого</a>
 				</div>
 
-				<ul class="nav navbar-nav main-menu">
-					<li class=""><a href="#" data-hoverable="О сервисе">О сервисе</a></li>
-					<li class=""><a href="#" data-hoverable="Как это работает">Как это работает</a></li>
-					<li class=""><a href="#" data-hoverable="Преподавателям">Преподавателям</a></li>
-					<li class=""><a href="#" data-hoverable="Заказчикам">Заказчикам</a></li>
+				<ul class="nav navbar-nav main-menu secondary">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hoverable="О сервисе" data-delay="100" data-close-others="false" role="button" aria-expanded="false">О сервисе</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Как это работает</a></li>
+							<li><a href="#">Для учеников</a></li>
+							<li><a href="#">Для преподавателей</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">База знаний</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hoverable="Репетиторы" data-delay="100" data-close-others="false" role="button" aria-expanded="false">Репетиторы</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Общеобразовательные предметы</a></li>
+							<li><a href="#">Иностранные языки</a></li>
+							<li><a href="#">Музыка</a></li>
+							<li><a href="#">IT, WEB</a></li>
+							<li><a href="#">Вузовские предметы</a></li>
+							<li><a href="#">Разное</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-hoverable="Инструкторы">Инструкторы</a>
+					</li>
+					<li>
+						<a href="#" data-hoverable="Тренеры">Тренеры</a>
+					</li>
 				</ul>
 
 				<ul class="nav navbar-nav login">
@@ -200,31 +221,10 @@
 						</figcaption>
 					</figure>
 				</div>
-			</main>			
+			</main>
 		</div>
 	</div>
 </section>
-
-<div class="partners">
-	<div class="container">
-		<div class="row">
-			<h2>Наши партнеры</h2>
-			<!-- <div class="slider1">
-				<div><img src="images/partners/bookingem.png" alt=""></div>
-				<div><img src="images/partners/namba.png" alt=""></div>
-				<div><img src="images/partners/diesel.png" alt=""></div>
-				<div><img src="images/partners/sebat.png" alt=""></div>
-			</div> -->
-			<ul class="slider">
-				<li><img src="images/partners/bookingem.png" alt=""></li>
-				<li><img src="images/partners/namba.png" alt=""></li>
-				<li><img src="images/partners/diesel.png" alt=""></li>
-				<li><img src="images/partners/sebat.png" alt=""></li>
-				<li><img src="images/partners/grs.png" alt=""></li>
-			</ul>
-		</div>
-	</div>	
-</div>
 
 <footer>
 	<div class="container">
@@ -305,19 +305,6 @@
 
 <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-<!-- <script type="text/javascript" src="slick/slick.min.js"></script>
-<script>
-	$('.partners .slider').slick({
-		speed: 300,
-		slidesToShow: 5,
-		slidesToScroll: 1,
-		variableWidth: true,
-		autoplay: true,
-		autoplaySpeed: 2000
-	});
-</script> -->
 
 <script>
 	$(document).ready(function() {
