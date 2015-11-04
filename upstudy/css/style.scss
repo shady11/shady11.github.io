@@ -285,7 +285,164 @@ body{
 			text-transform: uppercase;
 		}
 
+		.breadcrumb{
+			margin:  5px 0 10px;
+			
+			background: $white;
+		}
+
 		main{
+			.panel, .panel-heading,.panel-footer{
+				border: none;
+			}
+			.panel{		
+				-webkit-box-shadow: none;
+	    			box-shadow: none; 
+			    
+				.panel-heading{
+					padding: 15px;
+					background: $light-blue;
+					color: $white;
+					font-size: 20px;
+					
+					.media{
+						.media-left{
+							padding-right: 15px;
+							a{
+								border-radius:  50% !important;
+								display: block;
+								overflow: hidden;
+								
+								img{
+									width: 100px;
+									height: 100px;
+								}
+							}
+						}
+
+						.media-body{
+							.media-heading{
+								font-size: 24px;
+							}
+							.label{
+								background: $white;
+								color: $blue;
+								font-size: 12px;
+								font-weight: normal;
+								text-transform: lowercase;
+							}
+						}
+
+						.media-right{
+							.btn, .label{
+								display: block;
+								width: 100px;
+							}
+							.btn{
+								border: 2px solid $white;
+								margin-bottom: 10px;
+								
+								background: $blue;
+								color: $white;
+							}
+							.label{
+								vertical-align: middle;
+								background: none;
+								font-size: 20px;
+								font-weight: normal;
+								text-align: right;
+								
+								.badge{
+									padding: 0 0 0 5px;
+									background: none;
+								}
+							}
+						}
+					}
+				}
+
+				.panel-body{
+					padding:  0;
+					
+					h4{
+						margin-bottom: 20px;
+						color: $grey;
+						
+						font-size: 14px;
+						text-transform: uppercase;
+					}
+
+					>div{
+						padding-top: 15px;
+					}
+
+					.list-group{
+						.list-group-item{
+							border: none;
+							border-bottom: 1px solid lighten($light-blue, 25);
+							margin: 0;
+							font-size: 13px;
+							
+							&:last-child{
+								border: none;
+							}
+							
+							i, span, p{
+								display: inline-block;
+								vertical-align: top;
+							}
+							i{
+								margin-top: 2px;
+								width: 5%;
+								color: lighten($light-blue, 25);
+								text-align: center;
+							}
+							span{
+								width: 25%;								
+								color: $grey;
+							}
+							p{
+								margin: 0;
+								width: 65%;
+							}
+						}
+					}
+
+					.secondary{
+						background: #f1f4f9;
+						.list-group{
+							padding: 0 15px;
+							.list-group-item{
+								border: none;
+								background: none;
+								font-weight: bold;
+								span{
+									width: 50%;
+									float: left;
+									color: #15588A;
+								}
+								p{
+									width: 50%;
+									float: right;
+								}
+							}
+						}
+
+						.table{
+							tbody{
+								padding: 0 15px;
+								
+								tr{
+									th,td{
+										border: none;
+										padding:  8px 15px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 			.box{
 				padding: 0;
 
