@@ -86,6 +86,10 @@
 	margin: 0 auto;
 	padding: 20px;
 	pointer-events: auto;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 
 .deco--expander {
