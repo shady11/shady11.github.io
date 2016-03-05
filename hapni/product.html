@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/demo.css"> <!-- Resource style -->
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
 
     <title>3D Items Quick View</title>
@@ -21,31 +22,31 @@
         </a>
     </header>
 
-    <ul id="cd-gallery-items" class="cd-container">
+    <ul class="cd-gallery">
         <li>
-            <ul class="cd-item-wrapper">
-                <li class="cd-item-front"><a href="#0"><img src="img/thumb-1.jpg" alt="Preview image"></a></li>
-                <li class="cd-item-middle"><a href="#0"><img src="img/thumb-2.jpg" alt="Preview image"></a></li>
-                <li class="cd-item-back"><a href="#0"><img src="img/thumb-3.jpg" alt="Preview image"></a></li>
-                <li class="cd-item-out"><a href="#0"><img src="img/thumb-4.jpg" alt="Preview image"></a></li>
-                <!-- <li class="cd-item-out">...</li> -->
-            </ul> <!-- cd-item-wrapper -->
+            <a href="http://codyhouse.co/">
+                <ul class="cd-item-wrapper">
+                    <li class="selected">
+                        <img src="img/ugmonk-tshirt-1.jpg" alt="Preview image">
+                    </li>
+
+                    <li class="move-right" data-sale="true" data-price="$22">
+                        <img src="img/ugmonk-tshirt-2.jpg" alt="Preview image">
+                    </li>
+
+                    <li>
+                        <img src="img/ugmonk-tshirt-3.jpg" alt="Preview image">
+                    </li>
+                </ul> <!-- cd-item-wrapper -->
+            </a>
 
             <div class="cd-item-info">
-                <b><a href="#0">Product Name</a></b>
-                <em>$9.99</em>
+                <b><a href="#0">Mountains</a></b>
+
+                <em class="cd-price">$26</em>
             </div> <!-- cd-item-info -->
-
-            <nav>
-                <ul class="cd-item-navigation">
-                    <li><a class="cd-img-replace" href="#0">Prev</a></li>
-                    <li><a class="cd-img-replace" href="#0">Next</a></li>
-                </ul>
-            </nav>
-
-            <a class="cd-3d-trigger cd-img-replace" href="#0">Open</a>
         </li>
-    </ul> <!-- cd-gallery-items -->
+    </ul>
 </div>
 
 <script src="js/jquery-2.1.1.js"></script>
