@@ -1,0 +1,67 @@
+html{
+    min-height: 100%;
+    min-width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+
+}
+.us-section .content-wrapper{
+    padding: 0 15px;
+}
+.us-section{
+    position: relative;
+    background-image: url("../img/main3.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.us-section h1{
+    margin: 0;
+    font-size: 3.2rem;
+}
+.action-wrapper p{
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+.us-links{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.us-links ul{
+    margin: 0;
+    padding: 0 15px;
+}
+.us-links li a{
+    font-size: 1.6rem;
+}
+.us-links .fa-circle,
+.us-links li a,
+.us-links li a:hover,
+.us-links li a:focus{
+    color: #ffffff;
+}
+.us-links li .us-usb{
+    font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 768px){
+    .us-section h1{
+        font-size: 5.2rem;
+    }
+    .action-wrapper p{
+        font-size: 2.4rem;
+    }
+    .us-links li a{
+        font-size: 2rem;
+    }
+    .us-links li .us-usb{
+        font-size: 1.4rem;
+    }
+}

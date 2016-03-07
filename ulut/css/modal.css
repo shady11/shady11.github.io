@@ -1,0 +1,238 @@
+/* General styles for the modal */
+
+/* 
+Styles for the html/body for special modal where we want 3d effects
+Note that we need a container wrapping all content on the page for the 
+perspective effects (not including the modals and the overlay).
+*/
+.md-perspective,
+.md-perspective body {
+	height: 100%;
+	overflow: hidden;
+}
+
+.md-perspective body  {
+	background: #222;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	perspective: 600px;
+}
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 360px;
+	min-width: 320px;
+	height: auto;
+    max-height: 90%;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(255,255,255,0.9);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Content styles */
+.md-content {
+	color: #fff;
+	background: #ffffff;
+	position: relative;
+	border-radius: 4px;
+	margin: 0 auto;
+    overflow: hidden;
+
+    -webkit-box-shadow: 0px 0px 65px 0px rgba(60,108,222,0.25);
+    -moz-box-shadow: 0px 0px 65px 0px rgba(60,108,222,0.25);
+    box-shadow: 0px 0px 65px 0px rgba(60,108,222,0.25);
+}
+
+.md-content h3 {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+    text-transform: uppercase;
+    color: #3b6cde;
+	background: #edf3ff;
+	border-radius: 3px 3px 0 0;
+}
+
+.md-content > div {
+	padding: 20px 0 0;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+
+.md-content > div p {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.md-content > div ul {
+	margin: 0;
+	padding: 0 0 30px 20px;
+}
+
+.md-content > div ul li {
+	padding: 5px 0;
+}
+
+.md-content button {
+	display: block;
+	margin: 0 auto;
+	font-size: 0.8em;
+}
+.md-content form{
+}
+.input-group{
+    margin-bottom: 10px;
+    padding: 0 30px;
+}
+.input-group:nth-child(3){
+    margin-bottom: 30px;
+}
+.input-group label{
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #7c99d6;
+    font-size: 14px;
+    font-weight: bold;
+}
+.input-group input,.input-group textarea{
+    display: block;
+    border: 1px solid #dddddd;
+    padding: 10px;
+    width: 100%;
+    color: #7c99d6;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    resize: vertical;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.input-group input{
+    height: 40px;
+}
+.form-actions::after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.form-actions a,
+.form-actions button{
+    border: none;
+    float: left;
+    padding: 15px 0;
+    width: 50%;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-align: center;
+    opacity: 1;
+    cursor: pointer;
+
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+.form-actions a{
+    background: rgba(176,195,236,1);
+    background: -moz-linear-gradient(left, rgba(176,195,236,1) 0%, rgba(124,153,214,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(176,195,236,1)), color-stop(100%, rgba(124,153,214,1)));
+    background: -webkit-linear-gradient(left, rgba(176,195,236,1) 0%, rgba(124,153,214,1) 100%);
+    background: -o-linear-gradient(left, rgba(176,195,236,1) 0%, rgba(124,153,214,1) 100%);
+    background: -ms-linear-gradient(left, rgba(176,195,236,1) 0%, rgba(124,153,214,1) 100%);
+    background: linear-gradient(to right, rgba(176,195,236,1) 0%, rgba(124,153,214,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c3ec', endColorstr='#7c99d6', GradientType=1 );
+}
+.form-actions a:hover,
+.form-actions a:focus,
+.form-actions button:hover,
+.form-actions button:focus{
+    opacity: 0.75;
+}
+.form-actions button{
+    background: rgba(109,153,255,1);
+    background: -moz-linear-gradient(left, rgba(109,153,255,1) 0%, rgba(60,109,222,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(109,153,255,1)), color-stop(100%, rgba(60,109,222,1)));
+    background: -webkit-linear-gradient(left, rgba(109,153,255,1) 0%, rgba(60,109,222,1) 100%);
+    background: -o-linear-gradient(left, rgba(109,153,255,1) 0%, rgba(60,109,222,1) 100%);
+    background: -ms-linear-gradient(left, rgba(109,153,255,1) 0%, rgba(60,109,222,1) 100%);
+    background: linear-gradient(to right, rgba(109,153,255,1) 0%, rgba(60,109,222,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d99ff', endColorstr='#3c6dde', GradientType=1 );
+}
+
+
+/* Individual modal styles with animations/transitions */
+
+/* Effect 8: 3D flip horizontal */
+.md-effect-8.md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.md-effect-8 .md-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(-70deg);
+	-moz-transform: rotateY(-70deg);
+	-ms-transform: rotateY(-70deg);
+	transform: rotateY(-70deg);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+}
+
+.md-show.md-effect-8 .md-content {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	opacity: 1;
+}
