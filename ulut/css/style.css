@@ -530,8 +530,10 @@ Logo Wrapper
     transition: opacity 0.4s ease;
 }
 .us-logo img{
-    width: 200px;
-    height: auto;
+    /*width: 200px;*/
+    /*height: auto;*/
+    height: 100px;
+    width: auto;
     margin-top: 30px;
 }
 .active-slide-4 .us-logo{
