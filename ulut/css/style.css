@@ -521,7 +521,7 @@ Logo Wrapper
 
     z-index: 100;
     display: block;
-    height: 10rem;
+    height: 8rem;
 
     -webkit-transition: opacity 0.4s ease;
     -moz-transition: opacity 0.4s ease;
@@ -530,11 +530,9 @@ Logo Wrapper
     transition: opacity 0.4s ease;
 }
 .us-logo img{
-    /*width: 200px;*/
-    /*height: auto;*/
-    height: 100px;
+    height: 60px;
     width: auto;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .active-slide-4 .us-logo{
     opacity: 0;
@@ -543,7 +541,12 @@ Logo Wrapper
     .us-logo{
         left: 90px;
         right: auto;
-        width: 200px;
+        height: 10rem;
+        width: auto;
+    }
+    .us-logo img{
+        margin-top: 30px;
+        height: 70px;
     }
 }
 
