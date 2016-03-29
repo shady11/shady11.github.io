@@ -60,7 +60,7 @@ Main Components
 }
 .services-container .us-service::before {
     /* never visible - this is used in jQuery to detect if the background image has been loaded  */
-    content: 'img/img-1-small.jpg';
+    content: 'img/services/img-1-small.jpg';
     display: none;
 }
 .services-container .us-service:nth-of-type(2) {
@@ -70,7 +70,7 @@ Main Components
     background-image: url("../img/services/img-2-small.jpg");
 }
 .services-container .us-service:nth-of-type(2)::before {
-    content: 'img/img-2-small.jpg';
+    content: 'img/services/img-2-small.jpg';
 }
 .services-container .us-service:nth-of-type(3) {
     top: 50vh;
@@ -79,7 +79,7 @@ Main Components
     background-image: url("../img/services/img-3-small.jpg");
 }
 .services-container .us-service:nth-of-type(3)::before {
-    content: 'img/img-3-small.jpg';
+    content: 'img/services/img-3-small.jpg';
 }
 .services-container .us-service:nth-of-type(4) {
     top: 75vh;
@@ -88,7 +88,7 @@ Main Components
     background-image: url("../img/services/img-4-small.jpg");
 }
 .services-container .us-service:nth-of-type(4)::before {
-    content: 'img/img-4-small.jpg';
+    content: 'img/services/img-4-small.jpg';
 }
 .services-container .us-service.is-loaded {
     /* move items in the viewport when background images have been loaded */

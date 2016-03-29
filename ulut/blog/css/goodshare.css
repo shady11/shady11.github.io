@@ -1,0 +1,82 @@
+.share-buttons{
+    position: relative;
+    vertical-align: middle;
+    height: 32px;
+    text-align: center;
+}
+.goodshare{
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+    outline: none;
+    padding: 0;
+    /*margin-right: 5px;*/
+    border: none;
+    background: #f1f4f9;
+    border-radius: 2px !important;
+}
+.goodshare:last-child{
+    margin-right: 0;
+}
+.goodshare i, .goodshare span{
+    display: table-cell;
+    vertical-align: middle;
+}
+.goodshare i{
+    width: 32px;
+    height: 32px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 2px 0 0 2px !important;
+    transition: all 0.2s linear;
+}
+.goodshare:hover i{
+    background: #f1f4f9;
+}
+.goodshare.empty i{
+    border-radius: 2px !important;
+}
+.goodshare.btn-fb i{
+    background: #3b5998;
+}
+.goodshare.btn-fb:hover i{
+    background: #f1f4f9;
+    color: #3b5998;
+}
+.goodshare.btn-tw i{
+    background: #55acee;
+}
+.goodshare.btn-tw:hover i{
+    color: #55acee;
+    background: #f1f4f9;
+}
+.goodshare.btn-vk i{
+    background: #45668e;
+}
+.goodshare.btn-vk:hover i{
+    color: #45668e;
+    background: #f1f4f9;
+}
+.goodshare.btn-gp i{
+    background: #d95032;
+}
+.goodshare.btn-gp:hover i{
+    color: #d95032;
+    background: #f1f4f9;
+}
+.goodshare.btn-ok i{
+    background: #eb722e;
+}
+.goodshare.btn-ok:hover i{
+    color: #eb722e;
+    background: #f1f4f9;
+}
+.goodshare span{
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 32px;
+}
+.goodshare.empty span{
+    display: none;
+}

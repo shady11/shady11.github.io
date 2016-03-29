@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 	var scrolling = false;
 	var contentSections = $('.us-section'),
-		verticalNavigation = $('.us-vertical-nav'),
+		verticalNavigation = $('.us-nav'),
 		navigationItems = verticalNavigation.find('a'),
 		navTrigger = $('.us-nav-trigger'),
 		scrollArrow = $('.us-scroll-down'),
