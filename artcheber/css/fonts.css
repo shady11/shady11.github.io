@@ -1,0 +1,50 @@
+/*
+
+    Fonts stylesheet
+
+*/
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('fonts/proxima_nova_regular.eot');
+    src: url('fonts/proxima_nova_regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proxima_nova_regular.woff2') format('woff2'),
+         url('fonts/proxima_nova_regular.woff') format('woff'),
+         url('fonts/proxima_nova_regular.ttf') format('truetype'),
+         url('fonts/proxima_nova_regular.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Extrabold';
+    src: url('fonts/proxima_nova_extrabold.eot');
+    src: url('fonts/proxima_nova_extrabold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proxima_nova_extrabold.woff2') format('woff2'),
+         url('fonts/proxima_nova_extrabold.woff') format('woff'),
+         url('fonts/proxima_nova_extrabold.ttf') format('truetype'),
+         url('fonts/proxima_nova_extrabold.svg#proxima_nova_thextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Guerrilla';
+    src: url('fonts/guerrilla-normal.eot');
+    src: url('fonts/guerrilla-normal.eot?#iefix') format('embedded-opentype'),
+         url('fonts/guerrilla-normal.woff2') format('woff2'),
+         url('fonts/guerrilla-normal.woff') format('woff'),
+         url('fonts/guerrilla-normal.ttf') format('truetype'),
+         url('fonts/guerrilla-normal.svg#guerrillanormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('fonts/proxima_nova_bold.eot');
+    src: url('fonts/proxima_nova_bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proxima_nova_bold.woff2') format('woff2'),
+         url('fonts/proxima_nova_bold.woff') format('woff'),
+         url('fonts/proxima_nova_bold.ttf') format('truetype'),
+         url('fonts/proxima_nova_bold.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

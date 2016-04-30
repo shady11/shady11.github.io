@@ -1,0 +1,8 @@
+@media screen and (min-width: 1400px){
+	header{
+		height: 800px;
+	}	
+	.hd-slider{
+		height: 800px;
+	}
+}

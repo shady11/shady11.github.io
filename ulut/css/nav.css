@@ -21,18 +21,18 @@ NAVIGATION
     transition: transform 0.2s;
     transition: transform 0.2s, -webkit-transform 0.2s;
     border-radius: 0.25em;
-    background-color: rgba(234, 242, 227, 0.9);
+    background: #edf3ff;
 }
 .us-nav li > span {
     display: block;
     padding: 1em;
-    color: #3a2c41;
+    color: #3c6cde;
     font-family: 'system_fontregular','Open Sans',Arial, sans-serifs;
     font-weight: bold;
     border-bottom: 1px solid rgba(58, 44, 65, 0.1);
 }
 .us-nav li.active > span {
-    color: #c0a672;
+    color: #ff536d;
 }
 .us-vertical-nav.open {
     -webkit-transform: scale(1);
@@ -284,7 +284,7 @@ Navigation trigger - visible on small devices only
     height: 44px;
     width: 44px;
     border-radius: 0.25em;
-    background: rgba(234, 242, 227, 0.9);
+    background: #edf3ff;
     /* reset button style */
     cursor: pointer;
     -webkit-appearance: none;
@@ -301,7 +301,7 @@ Navigation trigger - visible on small devices only
     position: absolute;
     height: 4px;
     width: 4px;
-    background-color: #3a2c41;
+    background-color: #3c6cde;
     border-radius: 50%;
     left: 50%;
     top: 50%;
@@ -321,7 +321,7 @@ Navigation trigger - visible on small devices only
     z-index: 99;
     height: 100%;
     width: 100%;
-    background-color: #3a2c41;
+    background-color: #3c6cde;
     border-radius: inherit;
 }
 
@@ -344,11 +344,14 @@ Navigation trigger - visible on small devices only
 
 .us-nav.open {
     -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
     transform: scale(1);
     -webkit-overflow-scrolling: touch;
 }
 .us-nav.open li span span{
-    font-weight: normal;
+    font-weight: bold;
     /* Force Hardware Acceleration */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -402,4 +405,7 @@ Navigation trigger - visible on small devices only
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
     bottom: 0;
+}
+.pagination-link a{
+    display: block;
 }

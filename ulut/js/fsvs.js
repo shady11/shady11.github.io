@@ -204,7 +204,7 @@
 			var startY = null;
 			$(window).on( "touchstart.fsvs", function(ev) {
     			var e = ev.originalEvent;
-    			var cancelOn = ['a','input','textarea','select'];
+    			var cancelOn = ['button','span','a','input','textarea','select','div','h2'];
     			var targetName = e.target.nodeName.toLowerCase();
     			var cancel = false;
     			cancelOn.forEach(function(_cancelOn){

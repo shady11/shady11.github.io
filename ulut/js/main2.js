@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+$(document).ready(function($){
     var scrolling = false;
     var contentSections = $('.us-section'),
         verticalNavigation = $('.us-nav'),
@@ -8,68 +8,16 @@ jQuery(document).ready(function($){
         servicesButton = $('.us-btn.services'),
         contactsButton = $('.us-btn.contacts');
 
-    $(window).on('scroll', checkScroll);
-
-    //smooth scroll to the selected section
-    verticalNavigation.on('click', 'a', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-        verticalNavigation.removeClass('open');
-    });
-
-    //smooth scroll to the second section
-    scrollArrow.on('click', function(event){
-        smoothScroll($(this.hash));
-    });
-
-    //smooth scroll to the services section
-    servicesButton.on('click', function(event){
-        smoothScroll($(this.hash));
-    });
-
-    //smooth scroll to the contacts section
-    contactsButton.on('click', function(event){
-        smoothScroll($(this.hash));
-    });
-
     // open navigation if user clicks the .us-nav-trigger - small devices only
     navTrigger.on('click', function(event){
         event.preventDefault();
         verticalNavigation.toggleClass('open');
     });
-
-    function checkScroll() {
-        if( !scrolling ) {
-            scrolling = true;
-            (!window.requestAnimationFrame) ? setTimeout(updateSections, 300) : window.requestAnimationFrame(updateSections);
-        }
-    }
-
-    function updateSections() {
-        var halfWindowHeight = $(window).height()/2,
-            scrollTop = $(window).scrollTop();
-        contentSections.each(function(){
-            var section = $(this),
-                sectionId = section.attr('id'),
-                navigationItem = navigationItems.filter('[href^="#'+ sectionId +'"]');
-            ( (section.offset().top - halfWindowHeight < scrollTop ) && ( section.offset().top + section.height() - halfWindowHeight > scrollTop) )
-                ? navigationItem.addClass('active')
-                : navigationItem.removeClass('active');
-        });
-        scrolling = false;
-    }
-
-    function smoothScroll(target) {
-        $('body,html').animate(
-            {'scrollTop':target.offset().top},
-            800
-        );
-    }
 });
 
 // PROJECTS SLIDER
 
-jQuery(document).ready(function($){
+$(document).ready(function($){
     var sliderContainers = $('.us-slider-wrapper');
 
     if( sliderContainers.length > 0 ) initBlockSlider(sliderContainers);
@@ -133,7 +81,7 @@ jQuery(document).ready(function($){
 
 // TEXT CLIP EFFECT
 
-jQuery(document).ready(function($){
+$(document).ready(function($){
     //set animation timing
     var animationDelay = 2500,
     //clip effect
@@ -280,16 +228,17 @@ jQuery(document).ready(function($){
 
 // SERVICES
 
-jQuery(document).ready(function($){
+$(document).ready(function($){
+    var liService = $('.us-service');
     //check if background-images have been loaded and show list items
-    $('.us-service').bgLoaded({
+    liService.bgLoaded({
         afterLoaded : function(){
             showCaption($('.services-container li').eq(0));
         }
     });
 
     //open project
-    $('.us-service').on('click', function(){
+    liService.on('click', function(){
         var selectedProject = $(this),
             toggle = !selectedProject.hasClass('is-full-width');
         if(toggle) toggleProject($(this), $('.services-container'), toggle);

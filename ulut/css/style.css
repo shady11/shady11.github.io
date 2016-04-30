@@ -4,7 +4,7 @@ Fonts
 
 -------------------------------- */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);*/
 @font-face {
     font-family: 'system_fontregular';
     src: url('fonts/sfnsdisplay-regular.eot');
@@ -121,11 +121,16 @@ header{
 }
 
 @media only screen and (min-width: 768px) {
+    header{
+        height: 12rem;
+    }
     .us-logo {
+        padding: 0 9rem;
+        text-align: left;
     }
     .us-logo img {
         margin-top: 2rem;
-        height: 70px;
+        height: 80px;
     }
 }
 
@@ -524,33 +529,37 @@ Partners
 
 -------------------------------- */
 #section4{
-    
+
     background: #ffffff;
 }
 .partners-wrapper{
     position: relative;
+    padding-top: 60px;
     width: 100%;
     height: 100vh;
     background-size: cover;
 }
-.partners-wrapper .left-inner,
-.partners-wrapper .right-inner{
-    position: absolute;
-    top: 0;
-    width: 50%;
+.partners-min{
+    position: relative;
     height: 100%;
 }
+.partners-wrapper .left-inner,
+.partners-wrapper .right-inner{
+    display: block;
+    width: 100%;
+}
 .partners-wrapper .left-inner{
-    left: 0;
-    
     background: url("../img/partners.jpg") no-repeat;
     background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 30%;
     box-shadow: 0px 0px 20px 5px rgba(60,109,222,0.25);
 }
 .partners-wrapper .right-inner{
-    right: 0;
+    height: 70%;
     display: table;
-    padding: 0 9rem;
+    padding: 0 1.5rem;
 }
 .partners-wrapper .right-inner .inner{
     display: table-cell;
@@ -563,29 +572,69 @@ Partners
 .partners-wrapper li{
     display: inline-block;
     vertical-align: middle;
-    width: 30%;
-    margin: 1rem;
+    width: 45%;
+    margin: 0.5rem;
 }
 .partners-wrapper li span{
     display: block;
     background: #f0f7ff;
-    padding: 2rem;
-    margin: 0 auto 1rem;
-    width: 12rem;
-    height:12rem;
+    padding: 1rem;
+    margin: 0 auto 0.5rem;
+    width: 6rem;
+    height:6rem;
     border-radius: 6rem;
 }
 .partners-wrapper li img{
-    height: 8rem;
+    height: 4rem;
 }
 .partners-wrapper li h4{
-    height: 40px;
-    padding: 0 1rem;
+    height: 45px;
+    padding: 0;
     color: #3c6cde;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
-    line-height: 1.6rem;
+    line-height: 1.5rem;
     text-transform: uppercase;
+}
+
+@media(min-width: 1024px){
+    .partners-wrapper{
+        padding: 0;
+    }
+    .partners-wrapper .left-inner,
+    .partners-wrapper .right-inner{
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+    }
+    .partners-wrapper .left-inner{
+        left: 0;
+    }
+    .partners-wrapper .right-inner{
+        right: 0;
+        padding: 0 9rem;
+    }
+    .partners-wrapper li{
+        width: 30%;
+        margin: 1rem;
+    }
+    .partners-wrapper li span{
+        padding: 2rem;
+        margin: 0 auto 1rem;
+        width: 12rem;
+        height:12rem;
+        border-radius: 6rem;
+    }
+    .partners-wrapper li img{
+        height: 8rem;
+    }
+    .partners-wrapper li h4{
+        height: 6rem;
+        padding: 0 1rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
 }
 /* --------------------------------
 
@@ -593,31 +642,32 @@ xclip
 
 -------------------------------- */
 
-.us-headline {
+.us-section .us-headline {
     position: absolute;
     z-index: 100;
-    width: auto;
-    height: 40px;
-    top: 30px;
-    right: 120px;
-    font-size: 3rem;
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 2rem 0;
+    font-size: 2rem;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 2rem;
     text-transform: uppercase;
+    text-align: center;
 }
 #section2 .us-headline{
     display: none;
 }
 
-@media only screen and (min-width: 768px) {
-    .us-headline {
-        font-size: 4.4rem;
+@media only screen and (min-width: 1024px) {
+    .us-section .us-headline {
+        font-size: 2rem;
+        width: auto;
+        top: 3rem;
+        right: 12rem;
     }
-}
-
-@media only screen and (min-width: 1170px) {
-    .us-headline {
-        font-size: 6rem;
+    #section2 .us-headline{
+        display: block;
     }
 }
 
@@ -657,7 +707,6 @@ xclip
 
 .us-headline.clip span {
     display: inline-block;
-    padding: .2em 0;
     color: #7c99d6;
 }
 
@@ -745,7 +794,7 @@ xclip
     position: absolute;
     z-index: 1001;
     bottom: 0;
-    padding: 0 90px;
+    padding: 0 1rem;
     width: 100%;
     background: rgba(255, 255, 255, 1);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(237, 243, 255, 1)));
@@ -755,31 +804,30 @@ xclip
 
 .footer-left,
 .footer-right {
-    height: 100px;
-}
-
-.footer-left {
-    float: left;
+    display: block;
+    float: none;
+    height: 10rem;
+    margin-bottom: 1rem;
 }
 
 .footer-right {
-    float: right;
+    height: auto;
+    padding-bottom: 3rem;
 }
 
 .footer p {
     position: relative;
-    margin: 0;
-    padding: 50px 0 30px;
+    margin: 0 0 1rem;
+    padding: 3rem 0 1rem;
     color: #254ead;
     font-size: 14px;
     line-height: 20px;
-    box-shadow: inset 5px 0px 10px 0px rgba(61, 109, 223, 0.15);
 }
 
 .footer p::before {
     content: attr(data-before);
     position: absolute;
-    top: 30px;
+    top: 0.5rem;
     left: 0;
     width: 100%;
     color: #7c99d6;
@@ -787,15 +835,17 @@ xclip
     text-transform: uppercase;
     text-align: center;
 }
-
-.footer-left {
-    padding: 30px 0;
-}
-
 .footer-left .logo,
 .us-links {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
+}
+
+.footer-left {
+    padding: 2rem 0;
+}
+
+.footer-left .logo{
+    margin-bottom: 1rem;
 }
 
 .us-links ul {
@@ -820,25 +870,6 @@ xclip
 .us-links li a:hover {
     color: #FF8392;
 }
-
-
-/*.us-links li .us-fb{*/
-
-
-/*color: #3b5999;*/
-
-
-/*}*/
-
-
-/*.us-links li .us-tw{*/
-
-
-/*color: #55acee;*/
-
-
-/*}*/
-
 .us-links li .us-usb {
     font-size: 14px;
     font-weight: bold;
@@ -870,4 +901,37 @@ xclip
 
 .footer-right p:last-child::after {
     display: none;
+}
+
+@media (min-width: 1024px){
+    .footer{
+        padding: 0 9rem;
+    }
+    .footer-left {
+        float: left;
+        padding: 3rem 0;
+        margin-bottom: 0;
+    }
+    .footer-left .logo,
+    .us-links {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .footer-left .logo{
+        margin: 0;
+    }
+    .footer-right{
+        float: right;
+        height: 10rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .footer p{
+        margin: 0;
+        padding: 5rem 1rem 3rem;
+        box-shadow: inset 5px 0px 10px 0px rgba(61, 109, 223, 0.15);
+    }
+    .footer p::before{
+        top: 3rem;
+    }
 }
