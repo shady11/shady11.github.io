@@ -109,11 +109,11 @@ jQuery(document).ready(function($){
 	function loadNewContent(url, bool) {
 		url = ('' == url) ? 'index.html' : url;
 		var newSection = 'art-'+url.replace('.html', '');
-		var section = $('<div class="'+newSection+'"></div>');
+		var section = $('<main class="'+newSection+'"></main>');
 			
 		section.load(url+' > *', function(event){
 		  	// load new content and replace <main> content with the new one
-		  	$('main').html(section);
+		  	$('body').html(section);
 		  	//if browser doesn't support CSS transitions - dont wait for the end of transitions
 		  	var delay = ( transitionsSupported() ) ? 1200 : 0;
 		  	setTimeout(function(){
