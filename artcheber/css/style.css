@@ -86,6 +86,11 @@ body.page-is-changing::after, body.page-is-changing::before {
 	-moz-transition: -moz-transform 0.4s 0s;
 	transition: transform 0.4s 0s;
 }
+main {
+	height: 100vh;
+	padding: 10px;
+	text-align: center;
+}
 .cd-cover-layer {
 	/* layer that covers the content when the animation is triggered */
 	position: fixed;
