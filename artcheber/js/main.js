@@ -108,17 +108,17 @@ jQuery(document).ready(function($){
 
 	function loadNewContent(url, bool) {
 		url = ('' == url) ? 'index.html' : url;
-		var newSection = 'cd-'+url.replace('.html', '');
-		var section = $('<div class="cd-main-content '+newSection+'"></div>');
+		var newSection = 'art-'+url.replace('.html', '');
+		var section = $('<div class="'+newSection+'"></div>');
 			
-		section.load(url+' .cd-main-content > *', function(event){
+		section.load(url+' > *', function(event){
 		  	// load new content and replace <main> content with the new one
 		  	$('main').html(section);
 		  	//if browser doesn't support CSS transitions - dont wait for the end of transitions
 		  	var delay = ( transitionsSupported() ) ? 1200 : 0;
 		  	setTimeout(function(){
 		    	//wait for the end of the transition on the loading bar before revealing the new content
-		    	( section.hasClass('cd-about') ) ? $('body').addClass('cd-about') : $('body').removeClass('cd-about');
+		    	( section.hasClass('art-product') ) ? $('body').addClass('art-product') : $('body').removeClass('art-product');
 		    	$('body').removeClass('page-is-changing');
 		    	$('.cd-loading-bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 		      	isAnimating = false;
