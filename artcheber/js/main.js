@@ -1,7 +1,9 @@
 jQuery(document).ready(function($){
 	var visionTrigger = $('.pd-3d-trigger'),
 		galleryItems = $('.no-touch #pd-gallery-items').children('li'),
-		galleryNavigation = $('.pd-item-navigation a');
+		galleryNavigation = $('.pd-item-navigation a'),
+		decreaments = $('.cd-count-decr'),
+		increaments = $('.cd-count-incr');
 
 	//on mobile - start/end 3d vision clicking on the 3d-vision-trigger
 	visionTrigger.on('click', function(){
@@ -39,6 +41,23 @@ jQuery(document).ready(function($){
 		updateNavigation(navigationAnchor.parents('.pd-item-navigation').eq(0), activeContainer);
 	});
 
+	// Decrease product count
+	decreaments.each(function(){
+		var target = $(this).siblings('input[type=text]');
+		$(this).click(function(){
+			if (parseInt(target.val()) > 1) {
+				target.val(parseInt(target.val())-1);
+			}			
+		});
+	});
+
+	// Increase product count
+	increaments.each(function(){
+		var target = $(this).siblings('input[type=text]');
+		$(this).click(function(){
+			target.val(parseInt(target.val())+1);
+		});
+	});
 
 });
 
@@ -88,4 +107,8 @@ function updateNavigation(navigation, container) {
 
 function hideNavigation(navigation) {
 	navigation.find('a').removeClass('visible');
+}
+
+function cartCountDecrease(target){
+	target.val(target.val()+1);
 }

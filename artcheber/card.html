@@ -8,26 +8,19 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/bpHS.css">
-	<link rel="stylesheet" href="css/slick.css">
-	<!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 
 	<script src="js/modernizr.js"></script>
 </head>
-<body class="pd-body">
+<body class="cd-body">
 
-<header class="pd-header">
-
-	<div class="pd-hero">
-      	<img src="img/pd-hero.jpg" alt="">
-    </div>
+<header class="cd-header">	
     
     <h1>Название товара</h1>
 
     <a class="logo" href="#">
-    	<img src="img/logo-white.png" alt="">
+    	<img src="img/logo-dark.png" alt="">
     </a>
 
 	<nav class="menu">
@@ -119,103 +112,120 @@
 <div class="content">
 	<div class="container">
 		<div class="row">
-			<h2 class="text-center">Информация</h2>		
+			<h2 class="text-center">Корзина</h2>		
 
-			<div class="pd-panel clearfix">
-				
-				<div class="pd-panel-left col-md-6">
-
-					<div class="slider-for">
-						<div>
-							<img src="img/products/large/shirt_1.jpg" alt="">
-						</div>
-					    <div>
-					    	<img src="img/products/large/shirt_2.jpg" alt="">
-					    </div>
-					    <div>
-					    	<img src="img/products/large/shirt_3.jpg" alt="">
-					    </div>
-						<div>
-							<img src="img/products/large/shirt_1.jpg" alt="">
-						</div>
-					    <div>
-					    	<img src="img/products/large/shirt_2.jpg" alt="">
-					    </div>
-					    <div>
-					    	<img src="img/products/large/shirt_3.jpg" alt="">
-					    </div>
+			<div class="cd-panel">
+				<form action="">
+					<table class="table">
+						<thead>
+							<tr>
+								<td>Товар</td>
+								<td>Размер</td>
+								<td>Цена за шт.</td>
+								<td>Кол-во</td>
+								<td>Сумма</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cd-product">
+									<img src="img/products/small/shirt_1.jpg" alt="">
+									<span>Название продукта</span>
+								</td>
+								<td>									
+									<div class="pd-size">
+										<div class="radio clearfix">
+										    <div class="radio-item">
+										    	<input id="sizeS_pid6" type="radio" name="size" value="s">
+										    	<label for="sizeS_pid6" data-size="S"></label>
+										    </div>
+										    <div class="radio-item">
+											    <input id="sizeM_pid6" type="radio" name="size" value="m">
+											    <label for="sizeM_pid6" data-size="M"></label>
+										    </div>
+										    <div class="radio-item">
+										    	<input id="sizeL_pid6" type="radio" name="size" value="l">
+										    	<label for="sizeL_pid6" data-size="L"></label>
+										    </div>
+										    <div class="radio-item">
+											    <input id="sizeXL_pid6" type="radio" name="size" value="xl">
+											    <label for="sizeXL_pid6" data-size="XL"></label>
+										    </div>
+										</div>
+									</div>
+								</td>
+								<td class="cd-price">
+									1200 сом
+								</td>
+								<td class="cd-count">
+									<a class="cd-count-decr">-</a>
+									<input type="text" class="numbertype" value="1" disabled/>
+									<a class="cd-count-incr">+</a>									
+								</td>
+								<td class="cd-sum">
+									1200 сом
+								</td>
+							</tr>
+							<tr>
+								<td class="cd-product">
+									<img src="img/products/small/shirt_1.jpg" alt="">
+									<span>Название продукта</span>
+								</td>
+								<td>									
+									<div class="pd-size">
+										<div class="radio clearfix">
+										    <div class="radio-item">
+										    	<input id="sizeS_pid6" type="radio" name="size" value="s">
+										    	<label for="sizeS_pid6" data-size="S"></label>
+										    </div>
+										    <div class="radio-item">
+											    <input id="sizeM_pid6" type="radio" name="size" value="m">
+											    <label for="sizeM_pid6" data-size="M"></label>
+										    </div>
+										    <div class="radio-item">
+										    	<input id="sizeL_pid6" type="radio" name="size" value="l">
+										    	<label for="sizeL_pid6" data-size="L"></label>
+										    </div>
+										    <div class="radio-item">
+											    <input id="sizeXL_pid6" type="radio" name="size" value="xl">
+											    <label for="sizeXL_pid6" data-size="XL"></label>
+										    </div>
+										</div>
+									</div>
+								</td>
+								<td class="cd-price">
+									1200 сом
+								</td>
+								<td class="cd-count">
+									<a class="cd-count-decr">-</a>
+									<input type="text" class="numbertype" value="1" disabled/>
+									<a class="cd-count-incr">+</a>									
+								</td>
+								<td class="cd-sum">
+									1200 сом
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="cd-total">Итого</td>
+								<td>1200 сом</td>
+							</tr>
+						</tfoot>
+					</table>
+					<div class="cd-actions">
+						<a href="#" class="cancel-bag continue transition">
+							Продолжить покупки
+						</a>
+						<span>или</span>
+						<a href="" class="take-order transition">
+							Оформить заказ
+						</a>
 					</div>
-
-					<div class="slider-nav">
-						<div class="transition">
-							<img src="img/products/small/shirt_1.jpg" alt="">
-						</div>
-					    <div class="transition">
-					    	<img src="img/products/small/shirt_2.jpg" alt="">
-					    </div>
-					    <div class="transition">
-					    	<img src="img/products/small/shirt_3.jpg" alt="">
-					    </div>
-						<div class="transition">
-							<img src="img/products/small/shirt_1.jpg" alt="">
-						</div>
-					    <div class="transition">
-					    	<img src="img/products/small/shirt_2.jpg" alt="">
-					    </div>
-					    <div class="transition">
-					    	<img src="img/products/small/shirt_3.jpg" alt="">
-					    </div>
-					</div>
-						
-				</div>
-
-				<div class="pd-panel-right col-md-6">
-					<div class="pd-title">
-						<h4>Название продукта</h4>
-						<p>автор принта <span>Нурлан Токтали уулу</span></p>
-					</div>
-					<div class="pd-desc">
-						<ul>
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Quos ab consequuntur ducimus itaque.</li>
-							<li>Architecto laborum ipsam voluptatibus temporibus.</li>
-						</ul>
-						<p>Также доступно в <a href="#">черном</a> и <a href="#">фиолетовом</a> цветах</p>
-					</div>
-					<form action="">
-						<div class="pd-size">
-							<div class="radio clearfix">
-								<div class="radio-item">
-									<p title="Выберите размер">Размер</p>
-								</div>
-							    <div class="radio-item">
-							    	<input id="sizeS_pid6" type="radio" name="size" value="s">
-							    	<label for="sizeS_pid6" data-size="S"></label>
-							    </div>
-							    <div class="radio-item">
-								    <input id="sizeM_pid6" type="radio" name="size" value="m">
-								    <label for="sizeM_pid6" data-size="M"></label>
-							    </div>
-							    <div class="radio-item">
-							    	<input id="sizeL_pid6" type="radio" name="size" value="l">
-							    	<label for="sizeL_pid6" data-size="L"></label>
-							    </div>
-							    <div class="radio-item">
-								    <input id="sizeXL_pid6" type="radio" name="size" value="xl">
-								    <label for="sizeXL_pid6" data-size="XL"></label>
-							    </div>
-							</div>
-						</div>
-						<div class="pd-add-to-cart">
-							<button type="submit" class="transition" title="Добавить в корзину">
-								<i class="icon-bag"></i>
-							</button>
-							<span class="pd-price">1200 сом</span>
-						</div>
-					</form>
-					
-				</div>
-
+				</form>
 			</div>
 
 			<h2 class="pd-popular text-center">Популярные товары</h2>	
@@ -356,33 +366,6 @@
 		}
 	);
 
-</script>
-
-<!-- SLICK -->
-<script src="js/slick.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-
-      	$('.slider-for').slick({
-        	slidesToShow: 1,
-			slidesToScroll: 1,
-			fade: true,
-			asNavFor: '.slider-nav',
-			arrows: true,
-			prevArrow: '<i class="pd-nav pd-left"></i>',
-			nextArrow: '<i class="pd-nav pd-right"></i>'
-      	});
-
-      	$('.slider-nav').slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			asNavFor: '.slider-for',
-			dots: false,
-			centerMode: true,
-			arrows: false,
-			focusOnSelect: true
-		});
-    });
 </script>
 	
 </body>
