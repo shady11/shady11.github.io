@@ -11,123 +11,85 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/bpHS.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/media.css">
+	<!-- <link rel="stylesheet" href="css/media.css"> -->
 
 	<script src="js/modernizr.js"></script>
 </head>
 <body>
 
-<main class="art-index">
 	<header>
-		<div class="bp-hs hd-slider" id="demo-default">
-	      	<div class="bp-hs_inner">
-	        	<div class="bp-hs_inner__item">
-	          		<img src="img/hero.jpg" alt="Boompx Hero Slider 01"/>
-	        	</div>
-	        	<div class="bp-hs_inner__item">
-	          		<img src="img/hero_2.jpg" alt="Boompx Hero Slider 02"/>
-	    		</div>
-	        	<div class="bp-hs_inner__item">
-	          		<img src="img/hero.jpg" alt="Boompx Hero Slider 03"/>
-	        	</div>        	
-	        	<div class="bp-hs_inner__item">
-	          		<img src="img/hero_2.jpg" alt="Boompx Hero Slider 02"/>
-	    		</div>
-	      	</div>
-	    </div>
-	    <h1>Футболки с авторскими принтами</h1>
+		<div id="logo"><img src="img/logo-white.png" alt="Homepage"></div>
 
-	    <a class="logo" href="#">
-	    	<img src="img/logo-white.png" alt="">
-	    </a>
+		<div id="cd-hamburger-menu">
+			<a class="cd-img-replace" href="#0">Menu</a>
+		</div>
+		<div id="cd-cart-trigger">
+			<a href="#" class="cd-img-replace"></a>
+		</div>
+	</header> <!-- fixed header -->
 
-		<nav class="menu">
-			<ul>
-				<li>
-					<a class="menu-item" href="#0">Главная</a>
-				</li>
-				<li>
-					<a class="menu-item" href="#0">Каталог</a>
-				</li>
-				<li>
-					<a class="menu-item" href="#0">Заказать</a>
-				</li>
-				<li class="bag">
-					<a href="#" class="open-bag has-item">
-						<i class="icon-bag"></i>
-						<span>2</span>
-					</a>
-					<section>
-						<div class="inner">
-							<div class="bag-body">
-								<div class="media">
-								  	<div class="media-left media-middle">
-								    	<a href="#">
-								      		<img class="media-object" src="img/products/small/shirt.png" alt="">
-								    	</a>
-								  	</div>
-								  	<div class="media-body media-middle">
-								    	<h4 class="media-heading">Название товара</h4>
-								  	</div>
-								  	<div class="media-right media-middle">
-								  		<div>
-								  			<span>100 c.</span>		
-									  		<a href="#" class="remove transition">
-									  			<i class="icon-close"></i>
-									  		</a>	
-								  		</div>			  		
-								  	</div>
-								</div>
-								<div class="media">
-								  	<div class="media-left media-middle">
-								    	<a href="#">
-								      		<img class="media-object" src="img/products/small/shirt.png" alt="">
-								    	</a>
-								  	</div>
-								  	<div class="media-body media-middle">
-								    	<h4 class="media-heading">Название товара</h4>
-								  	</div>
-								  	<div class="media-right media-middle">
-								  		<div>
-								  			<span>100 c.</span>		
-									  		<a href="#" class="remove transition">
-									  			<i class="icon-close"></i>
-									  		</a>	
-								  		</div>			  		
-								  	</div>
-								</div>	
-								<div class="media bag-total">
-								  	<div class="media-body media-middle">
-								    	<h4 class="media-heading">Итого</h4>
-								  	</div>
-								  	<div class="media-right media-middle">
-								  		<div>
-								  			<span>100 c.</span>
-								  		</div>			  		
-								  	</div>
-								</div>	
-							</div>			
-						</div>
-						<a href="#" class="close-bag cancel-bag transition">
-							<i class="icon-close"></i>
-						</a>
-						<div class="actions">
-							<a href="#" class="cancel-bag continue">
-								Продолжить покупки
-							</a>
-							<span>или</span>
-							<a href="" class="take-order">
-								Оформить заказ
-							</a>
-						</div>
-					</section>
-				</li>
-			</ul>
-		</nav>
+	<nav id="main-nav" class="">
+		<ul>
+			<li><a class="current" href="#0">Главная</a></li>
+			<li><a href="#0">Каталог</a></li>
+			<li><a href="#0">Заказать</a></li>
+		</ul>
+	</nav> <!-- art-nav -->
 
-	</header>
+	<div id="cd-shadow-layer"></div>
 
-	<div class="content">
+	<div id="cd-cart" class="">
+		<h2>Корзина</h2>
+		<ul class="cd-cart-items">
+			<li>
+				<img src="img/products/small/shirt.png" alt="">
+				<span class="cd-qty">1x</span> Название товара
+				<div class="cd-price">800 сом</div>
+				<a href="#0" class="cd-item-remove cd-img-replace">
+				</a>
+			</li>
+			<li>
+				<img src="img/products/small/shirt.png" alt="">
+				<span class="cd-qty">1x</span> Название товара
+				<div class="cd-price">800 сом</div>
+				<a href="#0" class="cd-item-remove cd-img-replace">
+					<i class="icon-close"></i>	
+				</a>
+			</li>
+		</ul> <!-- art-cart-items -->
+
+		<div class="cd-cart-total">
+			<p>Итого <span>1600 сом</span></p>
+		</div> <!-- art-cart-total -->
+
+		<div class="checkout-btn">
+			<a href="#">Оформить заказ</a>
+		</div>
+		
+		<p class="cd-go-to-cart"><a href="#0">Перейти в корзину</a></p>
+	</div> <!-- art-cart -->
+
+	<main class="content">
+
+		<div class="hero">
+			<div class="bp-hs hd-slider" id="art-slider">
+		      	<div class="bp-hs_inner">
+		        	<div class="bp-hs_inner__item">
+		          		<img src="img/hero.jpg" alt="Boompx Hero Slider 01"/>
+		        	</div>
+		        	<div class="bp-hs_inner__item">
+		          		<img src="img/hero_2.jpg" alt="Boompx Hero Slider 02"/>
+		    		</div>
+		        	<div class="bp-hs_inner__item">
+		          		<img src="img/hero.jpg" alt="Boompx Hero Slider 03"/>
+		        	</div>        	
+		        	<div class="bp-hs_inner__item">
+		          		<img src="img/hero_2.jpg" alt="Boompx Hero Slider 02"/>
+		    		</div>
+		      	</div>
+		    </div>
+		</div>
+
 		<div class="container">
 			<div class="row">
 				<h2 class="text-center">Каталог</h2>
@@ -157,10 +119,6 @@
 										    <div class="radio-item">
 										    	<input id="sizeL_pid1" type="radio" name="size" value="l">
 										    	<label for="sizeL_pid1" data-size="L"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeXL_pid1" type="radio" name="size" value="xl">
-											    <label for="sizeXL_pid1" data-size="XL"></label>
 										    </div>
 										</div>
 									</div>
@@ -467,7 +425,7 @@
 
 			</div>
 		</div>	
-	</div>
+	</main>
 
 	<footer class="footer">
 		<div class="container">
@@ -497,10 +455,6 @@
 			</div>
 		</div>
 	</footer>
-</main>
-
-<div class="cd-cover-layer"></div> <!-- this is the cover layer --> 
-<div class="cd-loading-bar"></div> <!-- this is the loading bar -->
 
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.js"></script>
@@ -511,15 +465,6 @@
 <script src="js/main.js"></script>
 
 <script>
-	
-	$('.bag .open-bag').click(function(){
-		$('.bag').addClass('active');
-		$('body').addClass('overlay');
-	});
-	$('.bag .cancel-bag').click(function(){
-		$('.bag').removeClass('active');
-		$('body').removeClass('overlay');
-	});
 
 </script>
 	
