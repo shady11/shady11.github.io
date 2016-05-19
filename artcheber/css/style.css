@@ -1216,7 +1216,7 @@ Footer
 
 -------------------------------- */
 .footer{
-	background: #2a363b;
+	border-top: 3px solid #2a363b;
 }
 .cd-body .footer{
   margin: 0;
@@ -1229,6 +1229,10 @@ Footer
 .footer .copyright{
 	padding: 10px 0;
 }
+.footer li a,
+.footer .copyright{
+	color: #2a363b;
+}
 .footer ul{
 	margin: 0;
 	text-align: center;
@@ -1240,8 +1244,7 @@ Footer
 .footer li a{
 	display: block;
 	padding: 0 15px;
-	color: #ffffff;
-  	/*font-family: 'Plumb Bold', Arial, sans-serif;*/
+  	font-family: 'Plumb Bold', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 	text-transform: uppercase;
@@ -1264,7 +1267,6 @@ Footer
 }
 .footer .copyright{
 	margin: 0;
-	color: #ffffff;
 	font-size: 12px;
 	line-height: 20px;
 	text-align: center;
