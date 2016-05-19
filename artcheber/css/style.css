@@ -454,7 +454,6 @@ Slider
 -------------------------------- */
 .hero{
 	position: relative;
-	height: 300px;
 	overflow: hidden;
 }
 .hd-slider .bp-hs_control .bp-bullets .bp-bullets_bullet{
@@ -495,11 +494,11 @@ Content
 	padding-top: 80px;
 }
 .content h2{
-	margin: 30px 0;
+	margin: 20px 0;
 	color: #2a363b;
 	font-family: 'Plumb Bold', Arial, sans-serif;
 	font-size: 24px;
-	line-height: 60px;
+	line-height: 40px;
 	text-transform: uppercase;
 }
 .content .show-more{
