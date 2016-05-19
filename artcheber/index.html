@@ -17,14 +17,14 @@
 </head>
 <body>
 
-	<header>
-		<div id="logo"><img src="img/logo-white.png" alt="Homepage"></div>
+	<header class="header">
+		<div id="logo"><img src="img/logo-dark.png" alt="Homepage"></div>
 
 		<div id="cd-hamburger-menu">
-			<a class="cd-img-replace" href="#0">Menu</a>
+			<a class="img-replace" href="#0">Menu</a>
 		</div>
 		<div id="cd-cart-trigger">
-			<a href="#" class="cd-img-replace"></a>
+			<a href="#" class="img-replace"></a>
 		</div>
 	</header> <!-- fixed header -->
 
@@ -33,6 +33,7 @@
 			<li><a class="current" href="#0">Главная</a></li>
 			<li><a href="#0">Каталог</a></li>
 			<li><a href="#0">Заказать</a></li>
+			<li><a href="#0">Блог</a></li>
 		</ul>
 	</nav> <!-- art-nav -->
 
@@ -45,14 +46,14 @@
 				<img src="img/products/small/shirt.png" alt="">
 				<span class="cd-qty">1x</span> Название товара
 				<div class="cd-price">800 сом</div>
-				<a href="#0" class="cd-item-remove cd-img-replace">
+				<a href="#0" class="cd-item-remove img-replace">
 				</a>
 			</li>
 			<li>
 				<img src="img/products/small/shirt.png" alt="">
 				<span class="cd-qty">1x</span> Название товара
 				<div class="cd-price">800 сом</div>
-				<a href="#0" class="cd-item-remove cd-img-replace">
+				<a href="#0" class="cd-item-remove img-replace">
 					<i class="icon-close"></i>	
 				</a>
 			</li>
@@ -88,341 +89,664 @@
 		    		</div>
 		      	</div>
 		    </div>
+		    <h1>ФУТБОЛКИ С АВТОРСКИМИ ПРИНТАМИ</h1>
 		</div>
 
 		<div class="container">
-			<div class="row">
-				<h2 class="text-center">Каталог</h2>
+			<h2 class="text-center">Популярные</h2>
 
-				<ul id="pd-gallery-items" class="pd-container">
-					<li>
-						<ul class="pd-item-wrapper">
-							<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
-						</ul> <!-- pd-item-wrapper -->
+			<ul id="pd-gallery-items" class="pd-container">
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
 
-						<div class="pd-item-info">
-							<div class="primary clearfix">
-								<form action="" method="post">
-									<div class="pd-size">
-										<div class="radio clearfix">
-										    <div class="radio-item">
-										    	<input id="sizeS_pid1" type="radio" name="size" value="s">
-										    	<label for="sizeS_pid1" data-size="S"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeM_pid1" type="radio" name="size" value="m">
-											    <label for="sizeM_pid1" data-size="M"></label>
-										    </div>
-										    <div class="radio-item">
-										    	<input id="sizeL_pid1" type="radio" name="size" value="l">
-										    	<label for="sizeL_pid1" data-size="L"></label>
-										    </div>
-										</div>
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid1" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid1" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid1" type="radio" name="size" value="m">
+										    <label for="sizeM_pid1" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid1" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid1" data-size="L"></label>
+									    </div>
 									</div>
-									<div class="pd-add-to-cart">
-										<button type="submit" class="transition">
-											<i class="icon-bag"></i>
-										</button>
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
+
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
+
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
+
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
+
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid2" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid2" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid2" type="radio" name="size" value="m">
+										    <label for="sizeM_pid2" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid2" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid2" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid2" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid2" data-size="XL"></label>
+									    </div>
 									</div>
-								</form>
-							</div>
-							<div class="secondary clearfix">
-								<b><a href="#0">Название продукта</a></b>
-								<em>1200 сом</em>
-							</div>
-						</div> <!-- pd-item-info -->
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
 
-						<nav>
-							<ul class="pd-item-navigation">
-								<li><a class="pd-img-replace" href="#0">Prev</a></li>
-								<li><a class="pd-img-replace" href="#0">Next</a></li>
-							</ul>
-						</nav>
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
 
-						<a class="pd-3d-trigger pd-img-replace" href="#0">Open</a>
-					</li>
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
 
-					<li>
-						<ul class="pd-item-wrapper">
-							<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
-						</ul> <!-- pd-item-wrapper -->
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
 
-						<div class="pd-item-info">
-							<div class="primary clearfix">
-								<form action="" method="post">
-									<div class="pd-size">
-										<div class="radio clearfix">
-										    <div class="radio-item">
-										    	<input id="sizeS_pid2" type="radio" name="size" value="s">
-										    	<label for="sizeS_pid2" data-size="S"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeM_pid2" type="radio" name="size" value="m">
-											    <label for="sizeM_pid2" data-size="M"></label>
-										    </div>
-										    <div class="radio-item">
-										    	<input id="sizeL_pid2" type="radio" name="size" value="l">
-										    	<label for="sizeL_pid2" data-size="L"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeXL_pid2" type="radio" name="size" value="xl">
-											    <label for="sizeXL_pid2" data-size="XL"></label>
-										    </div>
-										</div>
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid3" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid3" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid3" type="radio" name="size" value="m">
+										    <label for="sizeM_pid3" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid3" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid3" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid3" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid3" data-size="XL"></label>
+									    </div>
 									</div>
-									<div class="pd-add-to-cart">
-										<button type="submit" class="transition">
-											<i class="icon-bag"></i>
-										</button>
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
+
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
+
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
+
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
+
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid4" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid4" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid4" type="radio" name="size" value="m">
+										    <label for="sizeM_pid4" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid4" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid4" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid4" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid4" data-size="XL"></label>
+									    </div>
 									</div>
-								</form>
-							</div>
-							<div class="secondary clearfix">
-								<b><a href="#0">Название продукта</a></b>
-								<em>1200 сом</em>
-							</div>
-						</div> <!-- pd-item-info -->
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
 
-						<nav>
-							<ul class="pd-item-navigation">
-								<li><a class="pd-img-replace" href="#0">Prev</a></li>
-								<li><a class="pd-img-replace" href="#0">Next</a></li>
-							</ul>
-						</nav>
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
 
-						<a class="pd-3d-trigger pd-img-replace" href="#0">Open</a>
-					</li>
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
 
-					<li>
-						<ul class="pd-item-wrapper">
-							<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
-						</ul> <!-- pd-item-wrapper -->
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
 
-						<div class="pd-item-info">
-							<div class="primary clearfix">
-								<form action="" method="post">
-									<div class="pd-size">
-										<div class="radio clearfix">
-										    <div class="radio-item">
-										    	<input id="sizeS_pid3" type="radio" name="size" value="s">
-										    	<label for="sizeS_pid3" data-size="S"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeM_pid3" type="radio" name="size" value="m">
-											    <label for="sizeM_pid3" data-size="M"></label>
-										    </div>
-										    <div class="radio-item">
-										    	<input id="sizeL_pid3" type="radio" name="size" value="l">
-										    	<label for="sizeL_pid3" data-size="L"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeXL_pid3" type="radio" name="size" value="xl">
-											    <label for="sizeXL_pid3" data-size="XL"></label>
-										    </div>
-										</div>
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid5" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid5" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid5" type="radio" name="size" value="m">
+										    <label for="sizeM_pid5" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid5" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid5" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid5" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid5" data-size="XL"></label>
+									    </div>
 									</div>
-									<div class="pd-add-to-cart">
-										<button type="submit" class="transition">
-											<i class="icon-bag"></i>
-										</button>
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
+
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
+
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
+
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
+
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid6" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid6" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid6" type="radio" name="size" value="m">
+										    <label for="sizeM_pid6" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid6" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid6" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid6" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid6" data-size="XL"></label>
+									    </div>
 									</div>
-								</form>
-							</div>
-							<div class="secondary clearfix">
-								<b><a href="#0">Название продукта</a></b>
-								<em>1200 сом</em>
-							</div>
-						</div> <!-- pd-item-info -->
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
 
-						<nav>
-							<ul class="pd-item-navigation">
-								<li><a class="pd-img-replace" href="#0">Prev</a></li>
-								<li><a class="pd-img-replace" href="#0">Next</a></li>
-							</ul>
-						</nav>
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
 
-						<a class="pd-3d-trigger pd-img-replace" href="#0">Open</a>
-					</li>
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>					
 
-					<li>
-						<ul class="pd-item-wrapper">
-							<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
-						</ul> <!-- pd-item-wrapper -->
+			</ul> <!-- pd-gallery-items -->
 
-						<div class="pd-item-info">
-							<div class="primary clearfix">
-								<form action="" method="post">
-									<div class="pd-size">
-										<div class="radio clearfix">
-										    <div class="radio-item">
-										    	<input id="sizeS_pid4" type="radio" name="size" value="s">
-										    	<label for="sizeS_pid4" data-size="S"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeM_pid4" type="radio" name="size" value="m">
-											    <label for="sizeM_pid4" data-size="M"></label>
-										    </div>
-										    <div class="radio-item">
-										    	<input id="sizeL_pid4" type="radio" name="size" value="l">
-										    	<label for="sizeL_pid4" data-size="L"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeXL_pid4" type="radio" name="size" value="xl">
-											    <label for="sizeXL_pid4" data-size="XL"></label>
-										    </div>
-										</div>
+			<h2 class="middle-heading text-center">Новинки</h2>
+
+			<ul id="pd-gallery-items" class="pd-container">
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
+
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid1" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid1" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid1" type="radio" name="size" value="m">
+										    <label for="sizeM_pid1" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid1" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid1" data-size="L"></label>
+									    </div>
 									</div>
-									<div class="pd-add-to-cart">
-										<button type="submit" class="transition">
-											<i class="icon-bag"></i>
-										</button>
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
+
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
+
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
+
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
+
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid2" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid2" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid2" type="radio" name="size" value="m">
+										    <label for="sizeM_pid2" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid2" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid2" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid2" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid2" data-size="XL"></label>
+									    </div>
 									</div>
-								</form>
-							</div>
-							<div class="secondary clearfix">
-								<b><a href="#0">Название продукта</a></b>
-								<em>1200 сом</em>
-							</div>
-						</div> <!-- pd-item-info -->
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
 
-						<nav>
-							<ul class="pd-item-navigation">
-								<li><a class="pd-img-replace" href="#0">Prev</a></li>
-								<li><a class="pd-img-replace" href="#0">Next</a></li>
-							</ul>
-						</nav>
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
 
-						<a class="pd-3d-trigger pd-img-replace" href="#0">Open</a>
-					</li>
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
 
-					<li>
-						<ul class="pd-item-wrapper">
-							<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
-						</ul> <!-- pd-item-wrapper -->
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
 
-						<div class="pd-item-info">
-							<div class="primary clearfix">
-								<form action="" method="post">
-									<div class="pd-size">
-										<div class="radio clearfix">
-										    <div class="radio-item">
-										    	<input id="sizeS_pid5" type="radio" name="size" value="s">
-										    	<label for="sizeS_pid5" data-size="S"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeM_pid5" type="radio" name="size" value="m">
-											    <label for="sizeM_pid5" data-size="M"></label>
-										    </div>
-										    <div class="radio-item">
-										    	<input id="sizeL_pid5" type="radio" name="size" value="l">
-										    	<label for="sizeL_pid5" data-size="L"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeXL_pid5" type="radio" name="size" value="xl">
-											    <label for="sizeXL_pid5" data-size="XL"></label>
-										    </div>
-										</div>
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid3" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid3" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid3" type="radio" name="size" value="m">
+										    <label for="sizeM_pid3" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid3" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid3" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid3" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid3" data-size="XL"></label>
+									    </div>
 									</div>
-									<div class="pd-add-to-cart">
-										<button type="submit" class="transition">
-											<i class="icon-bag"></i>
-										</button>
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
+
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
+
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
+
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
+
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid4" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid4" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid4" type="radio" name="size" value="m">
+										    <label for="sizeM_pid4" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid4" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid4" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid4" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid4" data-size="XL"></label>
+									    </div>
 									</div>
-								</form>
-							</div>
-							<div class="secondary clearfix">
-								<b><a href="#0">Название продукта</a></b>
-								<em>1200 сом</em>
-							</div>
-						</div> <!-- pd-item-info -->
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
 
-						<nav>
-							<ul class="pd-item-navigation">
-								<li><a class="pd-img-replace" href="#0">Prev</a></li>
-								<li><a class="pd-img-replace" href="#0">Next</a></li>
-							</ul>
-						</nav>
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
 
-						<a class="pd-3d-trigger pd-img-replace" href="#0">Open</a>
-					</li>
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
 
-					<li>
-						<ul class="pd-item-wrapper">
-							<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
-							<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
-						</ul> <!-- pd-item-wrapper -->
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
 
-						<div class="pd-item-info">
-							<div class="primary clearfix">
-								<form action="" method="post">
-									<div class="pd-size">
-										<div class="radio clearfix">
-										    <div class="radio-item">
-										    	<input id="sizeS_pid6" type="radio" name="size" value="s">
-										    	<label for="sizeS_pid6" data-size="S"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeM_pid6" type="radio" name="size" value="m">
-											    <label for="sizeM_pid6" data-size="M"></label>
-										    </div>
-										    <div class="radio-item">
-										    	<input id="sizeL_pid6" type="radio" name="size" value="l">
-										    	<label for="sizeL_pid6" data-size="L"></label>
-										    </div>
-										    <div class="radio-item">
-											    <input id="sizeXL_pid6" type="radio" name="size" value="xl">
-											    <label for="sizeXL_pid6" data-size="XL"></label>
-										    </div>
-										</div>
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid5" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid5" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid5" type="radio" name="size" value="m">
+										    <label for="sizeM_pid5" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid5" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid5" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid5" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid5" data-size="XL"></label>
+									    </div>
 									</div>
-									<div class="pd-add-to-cart">
-										<button type="submit" class="transition">
-											<i class="icon-bag"></i>
-										</button>
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
+
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
+
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>
+
+				<li>
+					<ul class="pd-item-wrapper">
+						<li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+						<li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+					</ul> <!-- pd-item-wrapper -->
+
+					<div class="pd-item-info">
+						<div class="primary clearfix">
+							<form action="" method="post">
+								<div class="pd-size">
+									<div class="radio clearfix">
+									    <div class="radio-item">
+									    	<input id="sizeS_pid6" type="radio" name="size" value="s">
+									    	<label for="sizeS_pid6" data-size="S"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeM_pid6" type="radio" name="size" value="m">
+										    <label for="sizeM_pid6" data-size="M"></label>
+									    </div>
+									    <div class="radio-item">
+									    	<input id="sizeL_pid6" type="radio" name="size" value="l">
+									    	<label for="sizeL_pid6" data-size="L"></label>
+									    </div>
+									    <div class="radio-item">
+										    <input id="sizeXL_pid6" type="radio" name="size" value="xl">
+										    <label for="sizeXL_pid6" data-size="XL"></label>
+									    </div>
 									</div>
-								</form>
-							</div>
-							<div class="secondary clearfix">
-								<b><a href="#0">Название продукта</a></b>
-								<em>1200 сом</em>
-							</div>
-						</div> <!-- pd-item-info -->
+								</div>
+								<div class="pd-add-to-cart">
+									<button type="submit" class="transition">
+										<i class="icon-bag"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="secondary clearfix">
+							<b><a href="#0">Название продукта</a></b>
+							<em>1200 сом</em>
+						</div>
+					</div> <!-- pd-item-info -->
 
-						<nav>
-							<ul class="pd-item-navigation">
-								<li><a class="pd-img-replace" href="#0">Prev</a></li>
-								<li><a class="pd-img-replace" href="#0">Next</a></li>
-							</ul>
-						</nav>
+					<nav>
+						<ul class="pd-item-navigation">
+							<li><a class="img-replace" href="#0">Prev</a></li>
+							<li><a class="img-replace" href="#0">Next</a></li>
+						</ul>
+					</nav>
 
-						<a class="pd-3d-trigger pd-img-replace" href="#0">Open</a>
-					</li>					
+					<a class="pd-3d-trigger img-replace" href="#0">Open</a>
+				</li>					
 
-				</ul> <!-- pd-gallery-items -->
+			</ul> <!-- pd-gallery-items -->
 
-				<div class="show-more">
-					<a href="#0">
-						Загрузить еще
-					</a>
-				</div>
-
+			<div class="show-more">
+				<a href="#0">
+					Посмотреть все
+				</a>
 			</div>
 		</div>	
 	</main>
