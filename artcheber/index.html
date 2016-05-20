@@ -539,13 +539,20 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.touchSwipe.min.js"></script>
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
 
 <script src="js/bpHS.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/main.js"></script>
 
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
 <script>
+	$(document).ready(function(){
+		if( $(window).width() >= 1024 ) {
+	      	$('.grid').masonry({
+				itemSelector: '.grid-item',
+			});
+		}
+	});
 </script>
 	
 </body>
