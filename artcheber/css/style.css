@@ -379,10 +379,11 @@ header{
   	background: #a2dda8;
 }
 #cd-cart .cd-go-to-cart {
-  	text-align: center;
   	margin: 1em 0;
+  	text-align: center;
 }
 #cd-cart .cd-go-to-cart a {
+  	color: #2a363b;
   	text-decoration: underline;
 }
 @media only screen and (min-width: 1200px) {
@@ -659,7 +660,7 @@ Catalog
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px;
+  padding: 20px;
   background: #ffffff;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translate3d(0, 0, 0);
@@ -878,7 +879,9 @@ Catalog
 	width: 48px;
 	height: 48px;
 	border-radius: 24px;
-	background: #7dcf85;
+	background: url('img/icons/add-to-cart.svg') no-repeat center center;
+	-webkit-background-size: 36px auto;
+	background-size: 36px auto;
 	color: #ffffff;
 	font-size: 24px;
 	line-height: 48px;
