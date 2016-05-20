@@ -22,12 +22,12 @@ jQuery(document).ready(function($){
 	galleryItems.hover(
 		//when mouse enters the element, show slider navigation
 		function(){
-			$this = $(this).children('.pd-item-wrapper');
+			$this = $(this).children('.grid-item-inner').children('.pd-item-wrapper');
 			updateNavigation($this.siblings('nav').find('.pd-item-navigation').eq(0), $this);
 		},
 		//when mouse leaves the element, hide slider navigation
 		function(){
-			$this = $(this).children('.pd-item-wrapper');
+			$this = $(this).children('.grid-item-inner').children('.pd-item-wrapper');
 			hideNavigation($this.siblings('nav').find('.pd-item-navigation').eq(0));
 		}
 	);

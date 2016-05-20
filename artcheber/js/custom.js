@@ -10,14 +10,12 @@
 		duration: 3600
     });  
 
-	$(document).ready(function(){
-		var height = $('.hd-slider img').height();
-		$( "#art-slider" ).css('height', height);
-	});
+	var height = $('.hd-slider img').height();
+	$( "#art-slider" ).css('height', height);
 
     $(window).resize(function() {
-    	var height = $('.hd-slider img').height();
-		$( "#art-slider" ).css('height', height);
+    	var heightResize = $('.hd-slider img').height();
+		$( "#art-slider" ).css('height', heightResize);
 	});
     
 })(jQuery); 
