@@ -627,8 +627,14 @@ Pluses
 .pluses{
 	margin-top: 50px;
 }
+.pluses{
+	text-align: center;
+}
 .plus{
+	display: inline-block;
+	vertical-align: middle;
 	margin-bottom: 10px;
+	width: 100%;
 }
 .plus .media-left{
 	padding-right: 15px;
@@ -645,6 +651,7 @@ Pluses
 	margin: 0;	
 	font-family: 'Plumb Bold', Arial, sans-serif;
 	text-transform: uppercase;
+	text-align: left;
 }
 .plus:first-child .media-object{
 	background-image: url('img/icons/shipment.svg');
@@ -655,7 +662,16 @@ Pluses
 .plus:nth-child(3) .media-object{
 	background-image: url('img/icons/cash.svg');
 }
+@media screen and (min-width:768px){
+	.plus{
+		width: 220px;
+	}
+}
 @media screen and (min-width:1024px){
+	.plus{
+		width: 300px;
+		margin: 0 10px;
+	}
 	.plus .media-object{
 		width: 64px;
 		height: 64px;
@@ -786,13 +802,42 @@ Catalog
   	#pd-gallery-items > li {
     	width: 31%;
     	float: left;
-    	margin-bottom: 95px;
+    	margin-bottom: 0;
     	margin-right: 3.5%;
   	}
   	#pd-gallery-items > li:nth-child(2n) {
     	margin-right: 3.5%;
   	}
   	#pd-gallery-items > li:nth-child(3n) {
+    	margin-right: 0;
+  	}
+  	.pop-items{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+  	.pop-items #pd-gallery-items > li {
+    	width: 25%;
+    	display: block;
+    	float: left;
+    	margin: 0;
+    	padding: 0 15px;
+  	}
+  	.grid-item-inner{  	
+  		position: relative;	
+    	margin-bottom: 95px;
+  	}
+  	.pop-items #pd-gallery-items > li:first-child,
+  	.pop-items #pd-gallery-items > li:nth-child(4) {
+    	margin-left: 0;
+  	}
+  	.pop-items #pd-gallery-items > li:nth-child(2) {
+    	margin-right: 0%;
+  	}
+  	.pop-items #pd-gallery-items > li:nth-child(3),
+  	.pop-items #pd-gallery-items > li:nth-child(4){
+  		width: 50%;
+  	}
+  	.pop-items #pd-gallery-items > li:nth-child(3) {
     	margin-right: 0;
   	}
 }

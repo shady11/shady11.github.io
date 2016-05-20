@@ -93,43 +93,45 @@
 
 		<div class="container">
 
-			<div class="pluses row">
-				<div class="col-md-4 col-xs-12 plus">
-					<div class="media">
-						<div class="media-left media-middle">
-							<div class="media-object"></div>
+			<div class="pluses">
+				<ul>
+					<li class="plus">
+						<div class="media">
+							<div class="media-left media-middle">
+								<div class="media-object"></div>
+							</div>
+							<div class="media-body media-middle">
+								<p>
+									Бесплатная доставка по городу.
+								</p>
+							</div>
 						</div>
-						<div class="media-body media-middle">
-							<p>
-								Бесплатная доставка по городу Бишкек.
-							</p>
+					</li>
+					<li class="plus">
+						<div class="media">
+							<div class="media-left media-middle">
+								<div class="media-object"></div>
+							</div>
+							<div class="media-body media-middle">
+								<p>
+									Примерка перед покупкой.
+								</p>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-xs-12 plus">
-					<div class="media">
-						<div class="media-left media-middle">
-							<div class="media-object"></div>
+					</li>
+					<li class="plus">
+						<div class="media">
+							<div class="media-left media-middle">
+								<div class="media-object"></div>
+							</div>
+							<div class="media-body media-middle">
+								<p>
+									Наличный расчет на месте.
+								</p>
+							</div>
 						</div>
-						<div class="media-body media-middle">
-							<p>
-								Примерка перед покупкой.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-xs-12 plus">
-					<div class="media">
-						<div class="media-left media-middle">
-							<div class="media-object"></div>
-						</div>
-						<div class="media-body media-middle">
-							<p>
-								Наличный расчет на месте.
-							</p>
-						</div>
-					</div>
-				</div>
+					</li>
+				</ul>
 			</div>
 			
 			<div class="pop-items">
@@ -537,18 +539,13 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.touchSwipe.min.js"></script>
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
 
 <script src="js/bpHS.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/main.js"></script>
 
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
 <script>
-	if( $(window).width() >= 1024 ) {
-      	$('.grid').masonry({
-			itemSelector: '.grid-item',
-		});
-	}
 </script>
 	
 </body>

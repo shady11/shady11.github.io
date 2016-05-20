@@ -17,5 +17,11 @@
     	var heightResize = $('.hd-slider img').height();
 		$( "#art-slider" ).css('height', heightResize);
 	});
+
+	if( $(window).width() >= 1024 ) {
+      	$('.grid').masonry({
+			itemSelector: '.grid-item',
+		});
+	}
     
 })(jQuery); 
