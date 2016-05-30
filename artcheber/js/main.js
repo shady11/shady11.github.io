@@ -9,12 +9,12 @@ jQuery(document).ready(function($){
 	//on mobile - start/end 3d vision clicking on the 3d-vision-trigger
 	visionTrigger.on('click', function(){
 		$this = $(this);
-		if( $this.parent('li').hasClass('active') ) {
-			$this.parent('li').removeClass('active');
-			hideNavigation($this.parent('li').find('.pd-item-navigation'));
+		if( $this.parent().parent('li').hasClass('active') ) {
+			$this.parent().parent('li').removeClass('active');
+			hideNavigation($this.parent().parent('li').find('.pd-item-navigation'));
 		} else {
-			$this.parent('li').addClass('active');
-			updateNavigation($this.parent('li').find('.pd-item-navigation'), $this.parent('li').find('.pd-item-wrapper'));
+			$this.parent().parent('li').addClass('active');
+			updateNavigation($this.parent().parent('li').find('.pd-item-navigation'), $this.parent().parent('li').find('.pd-item-wrapper'));
 		}
 	});
 

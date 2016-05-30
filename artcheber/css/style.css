@@ -116,7 +116,6 @@ header{
     background-position: center center;
     background-repeat: no-repeat;
 }
-
 #cd-hamburger-menu {
   	left: 0;
 }
@@ -495,9 +494,21 @@ Slider
 }
 .hd-slider .bp-hs_control .bp-btn{
 	background: none;
-	width: auto;
-	padding: 0;
 	z-index: 3;
+	opacity: 1;
+
+	height: 24px;
+	width: 24px;
+	margin-top: -12px;
+	padding: 0;
+	background-repeat: no-repeat;
+
+	-webkit-transition: opacity 0.2s ease;
+	-o-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease;
+}
+.hd-slider .bp-hs_control .bp-btn:hover{
+	opacity: 0.5;
 }
 .hd-slider i{
 	color: #ffffff;
@@ -508,9 +519,11 @@ Slider
 }
 .hd-slider .bp-hs_control .bp-btn.bp-hs_control__prev{
 	left: 10px;
+	background-image: url('img/icons/slider-left.svg');
 }
 .hd-slider .bp-hs_control .bp-btn.bp-hs_control__next{
 	right: 10px;
+	background-image: url('img/icons/slider-right.svg');
 }
 .hd-slider img{
 	height: auto;
@@ -529,11 +542,16 @@ Slider
 		bottom: 10px;
 		height: 20px;
 	}
+	.hd-slider .bp-hs_control .bp-btn{
+		height: 32px;
+		width: 32px;
+		margin-top: -16px;
+	}
 	.hd-slider .bp-hs_control .bp-btn.bp-hs_control__prev{
-		left: 14px;
+		left: 20px;
 	}
 	.hd-slider .bp-hs_control .bp-btn.bp-hs_control__next{
-		right: 14px;
+		right: 20px;
 	}
 	.hd-slider .bp-hs_control .bp-bullets .bp-bullets_bullet{
 		width: 12px;
@@ -566,6 +584,12 @@ Slider
 	.hd-slider .bp-hs_control .bp-bullets .bp-bullets_bullet{
 		width: 16px;
 		height: 16px;
+	}
+	.hd-slider .bp-hs_control .bp-btn.bp-hs_control__prev{
+		left: 40px;
+	}
+	.hd-slider .bp-hs_control .bp-btn.bp-hs_control__next{
+		right: 40px;
 	}
 }
 @media screen and (min-width: 1400px){
@@ -1137,27 +1161,9 @@ Catalog
 Product Page
 
 -------------------------------- */
-.pd-header{
-	height: 500px;
-}
-.pd-hero{
-	position: relative;
-	height: 500px;
-	overflow: hidden;
-}
-.pd-header h1{
-	bottom: 70px;
-	font-size: 32px;
-}
 .pd-hero img{
-	position: absolute;
-	left: 50%;
-	height: 100%;
-	width: auto;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
+	width: 100%;
+	height: auto;
 }
 .pd-panel-left{
 	padding: 30px;	
@@ -1232,6 +1238,7 @@ Product Page
 }
 .pd-title{	
 	margin: 30px 0;
+	text-align: center;
 }
 .pd-title h4{
 	margin: 0;
@@ -1242,8 +1249,9 @@ Product Page
 	text-transform: uppercase;
 }
 .pd-title p{
+	margin: 5px 0;
 	color: #a1a1a1;
-	font-size: 14px;
+	font-size: 12px;
 }
 .pd-title p span{
 	font-family: 'Plumb Bold', Arial, sans-serif;
