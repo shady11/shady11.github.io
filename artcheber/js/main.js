@@ -3,8 +3,8 @@ jQuery(document).ready(function($){
 	var visionTrigger = $('.pd-3d-trigger'),
 		galleryItems = $('.no-touch #pd-gallery-items').children('li'),
 		galleryNavigation = $('.pd-item-navigation a'),
-		decreaments = $('.cd-count-decr'),
-		increaments = $('.cd-count-incr');
+		decreaments = $('.pd-count-decr'),
+		increaments = $('.pd-count-incr');
 
 	//on mobile - start/end 3d vision clicking on the 3d-vision-trigger
 	visionTrigger.on('click', function(){
@@ -63,10 +63,10 @@ jQuery(document).ready(function($){
 	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
 	var $L = 1200,
 		$menu_navigation = $('#main-nav'),
-		$cart_trigger = $('#cd-cart-trigger'),
-		$hamburger_icon = $('#cd-hamburger-menu'),
-		$lateral_cart = $('#cd-cart'),
-		$shadow_layer = $('#cd-shadow-layer');
+		$cart_trigger = $('#pd-cart-trigger'),
+		$hamburger_icon = $('#pd-hamburger-menu'),
+		$lateral_cart = $('#pd-cart'),
+		$shadow_layer = $('#pd-shadow-layer');
 
 	//open lateral menu on mobile
 	$hamburger_icon.on('click', function(event){

@@ -19,10 +19,10 @@
 	<header class="header">
 		<div id="logo"><img src="img/logo-dark.png" alt="Homepage"></div>
 
-		<div id="cd-hamburger-menu">
+		<div id="pd-hamburger-menu">
 			<a class="img-replace" href="#0">Menu</a>
 		</div>
-		<div id="cd-cart-trigger">
+		<div id="pd-cart-trigger">
 			<a href="#" class="img-replace"></a>
 		</div>
 	</header> <!-- fixed header -->
@@ -36,28 +36,28 @@
 		</ul>
 	</nav> <!-- art-nav -->
 
-	<div id="cd-shadow-layer"></div>
+	<div id="pd-shadow-layer"></div>
 
-	<div id="cd-cart" class="">
+	<div id="pd-cart" class="">
 		<h2>Корзина</h2>
-		<ul class="cd-cart-items">
+		<ul class="pd-cart-items">
 			<li>
 				<img src="img/products/small/shirt.png" alt="">
-				<span class="cd-qty">1x</span> Название товара
-				<div class="cd-price">800 сом</div>
-				<a href="#0" class="cd-item-remove img-replace">
+				<span class="pd-qty">1x</span> Название товара
+				<div class="pd-price">800 сом</div>
+				<a href="#0" class="pd-item-remove img-replace">
 				</a>
 			</li>
 			<li>
 				<img src="img/products/small/shirt.png" alt="">
-				<span class="cd-qty">1x</span> Название товара
-				<div class="cd-price">800 сом</div>
-				<a href="#0" class="cd-item-remove img-replace">
+				<span class="pd-qty">1x</span> Название товара
+				<div class="pd-price">800 сом</div>
+				<a href="#0" class="pd-item-remove img-replace">
 				</a>
 			</li>
 		</ul> <!-- art-cart-items -->
 
-		<div class="cd-cart-total">
+		<div class="pd-cart-total">
 			<p>Итого <span>1600 сом</span></p>
 		</div> <!-- art-cart-total -->
 
@@ -65,7 +65,7 @@
 			<a href="#">Оформить заказ</a>
 		</div>
 		
-		<p class="cd-go-to-cart"><a href="#0">Перейти в корзину</a></p>
+		<p class="pd-go-to-cart"><a href="#0">Перейти в корзину</a></p>
 	</div> <!-- art-cart -->
 
 	<main class="content">
@@ -540,7 +540,25 @@
 <script src="js/jquery.touchSwipe.min.js"></script>
 
 <script src="js/bpHS.js"></script>
-<script src="js/custom.js"></script>
+<script>
+	$(document).ready(function() { 
+	  
+	    // fire default bpHS!
+	    $('#art-slider').bpHS({
+			// autoPlay: true,
+			duration: 3600
+	    });  
+
+		var height = $('.hd-slider img').height();
+		$( "#art-slider" ).css('height', height);
+
+	    $(window).resize(function() {
+	    	var heightResize = $('.hd-slider img').height();
+			$( "#art-slider" ).css('height', heightResize);
+		});
+	    
+	}); 
+</script>
 <script src="js/main.js"></script>
 
 <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
