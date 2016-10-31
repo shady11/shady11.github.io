@@ -101,13 +101,13 @@ header{
   	}
 }
 
-#pd-hamburger-menu, 
+#main-nav,
 #pd-cart-trigger {
 	position: absolute;
 	top: 0;
 	height: 100%;
 }
-#pd-hamburger-menu a, 
+#pd-hamburger-menu a,
 #pd-cart-trigger a {
 	width: 60px;
 	height: 100%;
