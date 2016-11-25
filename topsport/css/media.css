@@ -1,0 +1,22 @@
+@media screen and (min-width: 768px){
+}
+@media screen and (min-width: 1170px){
+  	#pd-gallery-items > li {
+    	width: 48%;
+    	float: left;
+    	margin-bottom: 160px;
+    	margin-right: 4%;
+  	}
+  	#pd-gallery-items > li:nth-child(2n) {
+    	margin-right: 3.5%;
+  	}
+  	#pd-gallery-items > li:nth-child(3n) {
+    	margin-right: 0;
+  	}
+
+}
+@media screen and (min-width: 1400px){
+	.hd-slider{
+		height: 800px;
+	}
+}

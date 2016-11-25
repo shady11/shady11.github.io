@@ -1,0 +1,86 @@
+/*
+
+    Fonts stylesheet
+
+*/
+@font-face {
+    font-family: 'Plumb Regular';
+    src: url('fonts/plumb/plumb-regular.eot');
+    src: url('fonts/plumb/plumb-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/plumb/plumb-regular.woff2') format('woff2'),
+         url('fonts/plumb/plumb-regular.woff') format('woff'),
+         url('fonts/plumb/plumb-regular.ttf') format('truetype'),
+         url('fonts/plumb/plumb-regular.svg#plumbregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Plumb Medium';
+    src: url('fonts/plumb/plumb-medium.eot');
+    src: url('fonts/plumb/plumb-medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/plumb/plumb-medium.woff2') format('woff2'),
+         url('fonts/plumb/plumb-medium.woff') format('woff'),
+         url('fonts/plumb/plumb-medium.ttf') format('truetype'),
+         url('fonts/plumb/plumb-medium.svg#plumbmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Plumb Bold';
+    src: url('fonts/plumb/plumb-bold.eot');
+    src: url('fonts/plumb/plumb-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/plumb/plumb-bold.woff2') format('woff2'),
+         url('fonts/plumb/plumb-bold.woff') format('woff'),
+         url('fonts/plumb/plumb-bold.ttf') format('truetype'),
+         url('fonts/plumb/plumb-bold.svg#plumbbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "AvenirNextW1G-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/avenir/AvenirNextW1G-Regular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/avenir/AvenirNextW1G-Regular.woff") format("woff"),
+    url("fonts/avenir/AvenirNextW1G-Regular.ttf") format("truetype"),
+    url("fonts/avenir/AvenirNextW1G-Regular.svg#AvenirNextW1G-Regular") format("svg")
+}
+@font-face {
+    font-family: "AvenirNextW1G-Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/avenir/AvenirNextW1G-Medium.eot?#iefix") format("embedded-opentype"),
+    url("fonts/avenir/AvenirNextW1G-Medium.woff") format("woff"),
+    url("fonts/avenir/AvenirNextW1G-Medium.ttf") format("truetype"),
+    url("fonts/avenir/AvenirNextW1G-Medium.svg#AvenirNextW1G-Medium") format("svg")
+}
+@font-face {
+    font-family: "AvenirNextW1G-Demi";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/avenir/AvenirNextW1G-Demi.eot?#iefix") format("embedded-opentype"),
+    url("fonts/avenir/AvenirNextW1G-Demi.woff") format("woff"),
+    url("fonts/avenir/AvenirNextW1G-Demi.ttf") format("truetype"),
+    url("fonts/avenir/AvenirNextW1G-Demi.svg#AvenirNextW1G-Demi") format("svg")
+}
+@font-face {
+    font-family: "AvenirNextW1G-Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/avenir/AvenirNextW1G-Bold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/avenir/AvenirNextW1G-Bold.woff") format("woff"),
+    url("fonts/avenir/AvenirNextW1G-Bold.ttf") format("truetype"),
+    url("fonts/avenir/AvenirNextW1G-Bold.svg#AvenirNextW1G-Bold") format("svg")
+}
+@font-face {
+    font-family: "AvenirNextW1G-Heavy";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/avenir/AvenirNextW1G-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("fonts/avenir/AvenirNextW1G-Heavy.woff") format("woff"),
+    url("fonts/avenir/AvenirNextW1G-Heavy.ttf") format("truetype"),
+    url("fonts/avenir/AvenirNextW1G-Heavy.svg#AvenirNextW1G-Heavy") format("svg")
+}
