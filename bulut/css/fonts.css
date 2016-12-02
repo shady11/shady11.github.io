@@ -3,41 +3,6 @@
     Fonts stylesheet
 
 */
-@font-face {
-    font-family: 'Plumb Regular';
-    src: url('fonts/plumb/plumb-regular.eot');
-    src: url('fonts/plumb/plumb-regular.eot?#iefix') format('embedded-opentype'),
-         url('fonts/plumb/plumb-regular.woff2') format('woff2'),
-         url('fonts/plumb/plumb-regular.woff') format('woff'),
-         url('fonts/plumb/plumb-regular.ttf') format('truetype'),
-         url('fonts/plumb/plumb-regular.svg#plumbregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Plumb Medium';
-    src: url('fonts/plumb/plumb-medium.eot');
-    src: url('fonts/plumb/plumb-medium.eot?#iefix') format('embedded-opentype'),
-         url('fonts/plumb/plumb-medium.woff2') format('woff2'),
-         url('fonts/plumb/plumb-medium.woff') format('woff'),
-         url('fonts/plumb/plumb-medium.ttf') format('truetype'),
-         url('fonts/plumb/plumb-medium.svg#plumbmedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'Plumb Bold';
-    src: url('fonts/plumb/plumb-bold.eot');
-    src: url('fonts/plumb/plumb-bold.eot?#iefix') format('embedded-opentype'),
-         url('fonts/plumb/plumb-bold.woff2') format('woff2'),
-         url('fonts/plumb/plumb-bold.woff') format('woff'),
-         url('fonts/plumb/plumb-bold.ttf') format('truetype'),
-         url('fonts/plumb/plumb-bold.svg#plumbbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 @font-face {
     font-family: "AvenirNextW1G-Regular";
