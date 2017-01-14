@@ -1,0 +1,15 @@
+.text-left {
+    @include text-align(left);
+}
+.text-right {
+    @include text-align(right);
+}
+.text-center {
+    @include text-align(center);
+}
+.clearfix{
+    @include clearfix();
+}
+.mb-60{
+    margin-bottom: 60px;
+}

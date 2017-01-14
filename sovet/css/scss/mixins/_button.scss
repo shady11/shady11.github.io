@@ -1,0 +1,9 @@
+@mixin button(){
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 30px;
+    border: none;
+    @include font-middle(10px, left, uppercase);
+    line-height: 40px;
+    @include transition(all 0.4s ease);
+}

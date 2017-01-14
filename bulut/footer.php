@@ -32,7 +32,7 @@
 
         function init() {
             var idx = 0;
-            [].slice.call(document.querySelectorAll('div.tilter')).forEach(function(el, pos) {
+            [].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) {
                 idx = pos%2 === 0 ? idx+1 : idx;
                 new TiltFx(el, tiltSettings[0]);
             });

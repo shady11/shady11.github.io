@@ -239,6 +239,7 @@ a:hover, a:focus {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 0;
     width: auto;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -314,6 +315,16 @@ a:hover, a:focus {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
+.dt-content{
+    width: 100%;
+    max-width: 630px;
+    min-width: 240px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    font-family:"AvenirNextW1G-Medium", Arial, Helvetica, sans-serif;
+}
 
 .md-show {
     visibility: visible;
@@ -342,7 +353,7 @@ a:hover, a:focus {
 /* Content styles */
 .md-content {
     color: #463f51;
-    background: #e74c3c;
+    background: none;
     position: relative;
     border-radius: 3px;
     margin: 0 auto;

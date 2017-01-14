@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="C:/xampp/htdocs/ktrk.dev" vcs="Git" />
+    <mapping directory="C:/xampp/htdocs/manas.dev" vcs="Git" />
+    <mapping directory="D:/xampp/htdocs/ktrk.dev" vcs="Git" />
+    <mapping directory="D:/xampp/htdocs/manas.dev" vcs="Git" />
   </component>
 </project>

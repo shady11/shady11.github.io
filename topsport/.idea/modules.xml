@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://D:/projects/airmanas/.idea/airmanas.iml" filepath="D:/projects/airmanas/.idea/airmanas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bulut/.idea/bulut.iml" filepath="$PROJECT_DIR$/../bulut/.idea/bulut.iml" />
+      <module fileurl="file://C:/xampp/htdocs/ktrk.dev/.idea/ktrk.dev.iml" filepath="C:/xampp/htdocs/ktrk.dev/.idea/ktrk.dev.iml" />
+      <module fileurl="file://C:/xampp/htdocs/manas.dev/.idea/manas.dev.iml" filepath="C:/xampp/htdocs/manas.dev/.idea/manas.dev.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/topsport.iml" filepath="$PROJECT_DIR$/.idea/topsport.iml" />
+      <module fileurl="file://D:/projects/yntymak/.idea/yntymak.iml" filepath="D:/projects/yntymak/.idea/yntymak.iml" />
     </modules>
   </component>
 </project>
