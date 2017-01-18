@@ -303,7 +303,8 @@ header {
   header #hamburger-menu {
     position: absolute;
     top: 0;
-    height: 100%; }
+    height: 100%;
+    padding: 30px 18px; }
     header #hamburger-menu a {
       width: 60px;
       height: 100%;
@@ -312,6 +313,32 @@ header {
       background-position: center center;
       -webkit-background-size: 32px;
       background-size: 32px; }
+    header #hamburger-menu .line {
+      width: 24px;
+      height: 3px;
+      background-color: #242526;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      display: block;
+      margin: 3px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    header #hamburger-menu.is-active .line:nth-child(1) {
+      opacity: 0;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%); }
+    header #hamburger-menu.is-active .line:nth-child(3) {
+      opacity: 0;
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      transform: translateX(100%); }
   header.smaller {
     height: 80px;
     padding: 15px 0;

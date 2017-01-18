@@ -9,6 +9,7 @@ jQuery(document).ready(function($){
     //open lateral menu on mobile
     $hamburger_icon.on('click', function(event){
         event.preventDefault();
+        $(this).toggleClass("is-active");
         toggle_panel_visibility($menu_navigation, $shadow_layer, $('body'));
     });
 
