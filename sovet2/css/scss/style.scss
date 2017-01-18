@@ -1,0 +1,195 @@
+@import "base";
+
+/* --------------------------------
+Logo
+-------------------------------- */
+.logo{
+    img{
+        height: 50px;
+        width: auto;
+    }
+}
+/* --------------------------------
+Header
+-------------------------------- */
+/* --------------------------------
+Cover
+-------------------------------- */
+.with-cover{
+    header{
+        color: $white;
+    }
+}
+.cover{
+    display: none;
+    position: relative;
+    height: 700px;
+    color: $white;
+    @include background('../img/cover.jpg',cover);
+    @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
+    .content{
+        width: 60%;
+        @include abs-centered;
+    }
+    h1{
+        margin: 150px 0 50px;
+        @include font-bold(40px, 1px, center, uppercase);
+        span{
+            display: block;
+        }
+    }
+    h4{
+        font-family: $avenir-regular;
+        font-size: 24px;
+        span{
+            display: block;
+        }
+    }
+}
+
+//CONTENT
+.section{
+    display: none;
+}
+.section-title h1{
+    margin: 60px auto;
+    @include font-bold(30px, 2px, center, uppercase);
+}
+.section-content p{
+    color: $text-secondary;
+}
+.btn-block{
+    @include text-align(center);
+}
+
+//Blocks
+.pb-20{
+    padding-bottom: 20px;
+}
+.block{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    color: $white;
+    @include font-bold(30px, 1.5px, center, uppercase);
+    //for fun
+    background: -webkit-linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
+    background: linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
+
+    &:hover{
+        color: $white;
+    }
+}
+.block-quarter{
+    font-size: 24px;
+    letter-spacing: 0;
+}
+.block img{
+    @include abs-centered();
+}
+.block figcaption{
+    @include abs-centered();
+}
+//News Block
+.news-block{
+    article{
+        background: $white;
+        @include transition(all 0.4s ease);
+        &:hover{
+            @include box-shadow(0px 7px 20px rgba(36,37,38,0.1));
+        }
+    }
+}
+.news-info{
+    padding: 15px;
+    a{
+        display: block;
+        height: 100px;
+        overflow: hidden;
+        @include font-middle(14px, center);
+        @include link-hover();
+        line-height: 20px;
+    }
+    .news-date{
+        margin-top: 15px;
+        color: $text-secondary;
+        @include font-middle(9px, center, uppercase);
+    }
+}
+
+//PARTNERS
+.partners{
+    .grid{
+        float: left;
+        width: 18%;
+        margin-right: 2.5%;
+        img{
+            @include center-block;
+            @include size(auto, 40px);
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+//FOOTER
+footer{
+    display: none;
+    background: $white;
+    @include box-shadow(0 1px 5px transparentize($bx-light, 0.75));
+    .copyright{
+        @include border(1px solid #bcc6d0, top);
+        padding: 20px 0;
+        @include font-middle(12px, left);
+    }
+}
+.footer{
+    .section-content{
+        padding: 80px 0 40px;
+    }
+    .logo{
+        display: block;
+        margin-bottom: 20px;
+        img{
+            height: 60px;
+        }
+    }
+    .info{
+        color: $text-primary;
+        @include font-regular(14px);
+    }
+    .menu{
+        li{
+            margin-bottom: 8px;
+            @include font-middle(14px, right);
+            &:first-child{
+                margin-bottom: 20px;
+                @include font-bold(12px, 0, right, uppercase);
+            }
+            a{
+                @include link-hover();
+            }
+        }
+        .social{
+            li:not(:first-child){
+                display: inline-block;
+                margin: 0 0 0 5px;
+                a{
+                    position: relative;
+                    display: block;
+                    @include square(32px);
+                    @include border(2px solid $text-primary);
+                    @include border-radius(100%);
+                    font-size: 12px;
+                    i{
+                        @include abs-centered();
+                    }
+                    &:hover{
+                        border-color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}

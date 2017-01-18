@@ -1,0 +1,17 @@
+.btn{
+    @include button;
+}
+.btn-pill{
+    @extend .btn;
+    @include border-radius(20px);
+}
+.btn-light{
+    @extend .btn;
+    background: #ffffff;
+    @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
+
+    &:hover{
+        background: $blue;
+        color: $white;
+    }
+}

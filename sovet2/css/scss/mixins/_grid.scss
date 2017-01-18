@@ -1,0 +1,58 @@
+@mixin container-fixed($gutter: $grid-gutter-width) {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left:  floor(($gutter / 2));
+    padding-right: ceil(($gutter / 2));
+    @include clearfix;
+
+    @include breakpoint(small) { width: 480px; }
+    @include breakpoint(medium) { width: 720px; }
+    @include breakpoint(large) { width: 940px; }
+    @include breakpoint(xlarge) { width: 1170px; }
+}
+
+@mixin make-row($gutter: $grid-gutter-width) {
+    margin-left:  ceil(($gutter / -2));
+    margin-right: floor(($gutter / -2));
+    @include clearfix;
+}
+
+@mixin grid-columns($columns, $i: 1, $list: ".grid-#{$i}", $gutter: $grid-gutter-width) {
+    @for $i from (1 + 1) through $columns {
+        $list: "#{$list}, .grid-#{$i}";
+    }
+    #{$list} {
+        position: relative;
+        float: left;
+        // Prevent columns from collapsing when empty
+        min-height: 1px;
+        // Inner gutter via padding
+        padding-left:  floor(($gutter / 2));
+        padding-right: ceil(($gutter / 2));
+    }
+}
+
+@mixin calc-grid-column($index, $type) {
+    @if ($type == width) and ($index > 0) {
+        .grid-#{$index} {
+            width: percentage(($index / $grid-columns));
+        }
+    }
+    @if ($type == offset) {
+        .offset-#{$index} {
+            margin-left: percentage(($index / $grid-columns));
+        }
+    }
+}
+
+@mixin loop-grid-columns($columns, $type) {
+    @for $i from 1 through $columns {
+        @include calc-grid-column($i, $type);
+    }
+}
+
+@mixin make-grid() {
+    @include grid-columns($grid-columns);
+    @include loop-grid-columns($grid-columns, width);
+    @include loop-grid-columns($grid-columns, offset);
+}

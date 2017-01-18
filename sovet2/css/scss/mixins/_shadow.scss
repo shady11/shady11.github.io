@@ -1,0 +1,15 @@
+@mixin box-shadow($shadow, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $shadow;
+        -moz-box-shadow:inset $shadow;
+        box-shadow:inset $shadow;
+    } @else {
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        box-shadow: $shadow;
+    }
+}
+@mixin drop-shadow($shadow){
+    -webkit-filter: drop-shadow($shadow);
+    filter: drop-shadow($shadow);
+}

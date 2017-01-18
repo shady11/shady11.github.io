@@ -1,0 +1,25 @@
+@mixin font-bold($font-size: 30px, $letter-spacing: 1px, $alignment: left, $text-transform: none){
+    font-family: $avenir-bold;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    text-align: $alignment;
+    text-transform: $text-transform;
+}
+@mixin font-middle($font-size: 30px, $alignment: left, $text-transform: none){
+    font-family: $avenir-demi;
+    font-size: $font-size;
+    text-align: $alignment;
+    text-transform: $text-transform;
+}
+@mixin font-regular($font-size: 30px, $alignment: left, $text-transform: none){
+    font-family: $avenir-medium;
+    font-size: $font-size;
+    text-align: $alignment;
+    text-transform: $text-transform;
+}
+@mixin link-hover(){
+    @include transition(all 0.2s ease);
+    &:hover,&:focus{
+        color: $blue;
+    }
+}

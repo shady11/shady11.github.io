@@ -1,0 +1,25 @@
+@mixin abs-centered(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+@mixin abs-positioned($left: null, $top: null, $right: null, $bottom: null){
+    position: absolute;
+    @if $left {left: $left;}
+    @if $top {top: $top;}
+    @if $right {right: $right;}
+    @if $bottom {bottom: $bottom;}
+}
+@mixin fixed($z-index: 0, $left: null, $top: null, $right: null, $bottom: null){
+    position: fixed;
+    z-index: $z-index;
+    @if $left {left: $left;}
+    @if $top {top: $top;}
+    @if $right {right: $right;}
+    @if $bottom {bottom: $bottom;}
+}
