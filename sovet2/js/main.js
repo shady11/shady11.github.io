@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+    var $window_width = $(window).width();
 
     //if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
     var $L = 992,
@@ -25,19 +26,38 @@ jQuery(document).ready(function($){
     //move #main-navigation inside header on laptop
     //insert #main-navigation after header on mobile
     move_navigation($menu_navigation, $L);
-    console.log('test');
+    blocks_arrange($window_width);
+
     $(window).on('resize', function(){
         move_navigation( $menu_navigation, $L);
-
         if( $(window).width() >= $L && $menu_navigation.hasClass('speed-in')) {
             $menu_navigation.removeClass('speed-in');
             $shadow_layer.removeClass('is-visible');
             $('body').removeClass('overflow-hidden');
         }
-
+        $window_width = $(window).width();
+        blocks_arrange($window_width);
     });
 
 });
+
+function blocks_arrange($window_width){
+    if($window_width > 992) {
+        $('.block').each(function(){
+            $(this).height($(this).width());
+        });
+        $('.block-half').each(function(){
+            $(this).height($(this).width()/2-5);
+        });
+        $('.block-quarter').each(function(){
+            $(this).height($(this).width()-5);
+        });
+    } else {
+        $('.block').each(function(){
+            $(this).height($(this).width());
+        });
+    }
+}
 
 function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
     if( $lateral_panel.hasClass('speed-in') ) {

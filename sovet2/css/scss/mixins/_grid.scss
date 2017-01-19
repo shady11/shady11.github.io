@@ -19,7 +19,7 @@
 
 @mixin grid-columns($columns, $i: 1, $list: ".grid-#{$i}", $gutter: $grid-gutter-width) {
     @for $i from (1 + 1) through $columns {
-        $list: "#{$list}, .grid-#{$i}";
+        $list: "#{$list}, .grid-#{$i}, .grid-#{$i}l, .grid-#{$i}l, .grid-#{$i}xl";
     }
     #{$list} {
         position: relative;

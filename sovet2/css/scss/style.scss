@@ -79,7 +79,7 @@ Cover
 .section-title h1{
     margin: 30px auto;
     @include font-bold(20px, 2px, center, uppercase);
-    @include breakpoint(medium){
+    @include breakpoint(large){
         margin: 60px auto;
         font-size: 30px;
     }
@@ -100,18 +100,35 @@ Cover
     overflow: hidden;
     display: block;
     color: $white;
-    @include font-bold(30px, 1.5px, center, uppercase);
+    @include font-bold(14px, 0, center, uppercase);
     //for fun
     background: -webkit-linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
     background: linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
-
     &:hover{
         color: $white;
     }
+    @include breakpoint(medium){
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+    @include breakpoint(large){
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+    @include breakpoint(xlarge){
+        font-size: 30px;
+        letter-spacing: 1.5px;
+    }
+}
+.block-half{
+    margin-bottom: 20px;
 }
 .block-quarter{
-    font-size: 24px;
     letter-spacing: 0;
+    margin-bottom: 0;
+    @include breakpoint(large){
+        font-size: 24px;
+    }
 }
 .block img{
     @include abs-centered();
@@ -121,6 +138,20 @@ Cover
 }
 //News Block
 .news-block{
+    .grid{
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        @include breakpoint(medium){
+            &:nth-child(3){
+                margin-bottom: 0;
+            }
+        }
+        @include breakpoint(large){
+            margin-bottom: 0;
+        }
+    }
     article{
         background: $white;
         @include transition(all 0.4s ease);
@@ -148,10 +179,10 @@ Cover
 
 //PARTNERS
 .partners{
+    text-align: center;
     .grid{
-        float: left;
-        width: 18%;
-        margin-right: 2.5%;
+        display: inline-block;
+        padding: 10px;
         img{
             @include center-block;
             @include size(auto, 40px);
@@ -159,12 +190,22 @@ Cover
         &:last-child{
             margin-right: 0;
         }
+        @include breakpoint(large){
+            float: left;
+            width: 18%;
+            margin-right: 2.5%;
+        }
+        @include breakpoint(medium){
+            padding: 15px;
+        }
+        @include breakpoint(large){
+            padding: 0;
+        }
     }
 }
 
 //FOOTER
 footer{
-    display: none;
     background: $white;
     @include box-shadow(0 1px 5px transparentize($bx-light, 0.75));
     .copyright{
@@ -175,26 +216,32 @@ footer{
 }
 .footer{
     .section-content{
-        padding: 80px 0 40px;
+        padding: 30px 0;
     }
     .logo{
         display: block;
         margin-bottom: 20px;
         img{
             height: 60px;
+            margin: 0 auto;
         }
     }
     .info{
+        margin-bottom: 20px;
         color: $text-primary;
         @include font-regular(14px);
+        text-align: center;
     }
     .menu{
+        .grid{
+            margin-bottom: 15px;
+        }
         li{
             margin-bottom: 8px;
-            @include font-middle(14px, right);
+            @include font-middle(14px, center);
             &:first-child{
                 margin-bottom: 20px;
-                @include font-bold(12px, 0, right, uppercase);
+                @include font-bold(12px, 0, center, uppercase);
             }
             a{
                 @include link-hover();
@@ -217,6 +264,31 @@ footer{
                     &:hover{
                         border-color: $blue;
                     }
+                }
+            }
+        }
+    }
+    @include breakpoint(large){
+        .section-content{
+            padding: 80px 0 40px;
+        }
+        .info{
+            margin-bottom: 0;
+            text-align: left;
+        }
+        .logo{
+            img{
+                margin: 0;
+            }
+        }
+        .menu{
+            .grid{
+                margin-bottom: 0;
+            }
+            li{
+                text-align: right;
+                &:first-child{
+                    text-align: right;
                 }
             }
         }
