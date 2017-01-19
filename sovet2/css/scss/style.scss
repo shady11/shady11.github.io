@@ -211,7 +211,10 @@ footer{
     .copyright{
         @include border(1px solid #bcc6d0, top);
         padding: 20px 0;
-        @include font-middle(12px, left);
+        @include font-middle(12px, center);
+        @include breakpoint(large){
+            text-align: left;
+        }
     }
 }
 .footer{
@@ -248,23 +251,31 @@ footer{
             }
         }
         .social{
-            li:not(:first-child){
-                display: inline-block;
-                margin: 0 0 0 5px;
-                a{
-                    position: relative;
-                    display: block;
-                    @include square(32px);
-                    @include border(2px solid $text-primary);
-                    @include border-radius(100%);
-                    font-size: 12px;
-                    i{
-                        @include abs-centered();
-                    }
-                    &:hover{
-                        border-color: $blue;
+            text-align: center;
+            li{
+                display: block;
+                float: none;
+                width: 100%;
+                &:not(:first-child){
+                    display: inline-block;
+                    width: auto;
+                    margin: 0 0 0 5px;
+                    a{
+                        position: relative;
+                        display: block;
+                        @include square(32px);
+                        @include border(2px solid $text-primary);
+                        @include border-radius(100%);
+                        font-size: 12px;
+                        i{
+                            @include abs-centered();
+                        }
+                        &:hover{
+                            border-color: $blue;
+                        }
                     }
                 }
+
             }
         }
     }
@@ -290,6 +301,9 @@ footer{
                 &:first-child{
                     text-align: right;
                 }
+            }
+            .social{
+                text-align: right;
             }
         }
     }

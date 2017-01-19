@@ -1075,8 +1075,11 @@ footer {
     padding: 20px 0;
     font-family: "AvenirNextW1G-Demi", Arial, sans-serif;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
     text-transform: none; }
+    @media (min-width: 992px) {
+      footer .copyright {
+        text-align: left; } }
 
 .footer .section-content {
   padding: 30px 0; }
@@ -1116,32 +1119,39 @@ footer {
     transition: all 0.2s ease; }
     .footer .menu li a:hover, .footer .menu li a:focus {
       color: #1b8bf9; }
-.footer .menu .social li:not(:first-child) {
-  display: inline-block;
-  margin: 0 0 0 5px; }
-  .footer .menu .social li:not(:first-child) a {
-    position: relative;
+.footer .menu .social {
+  text-align: center; }
+  .footer .menu .social li {
     display: block;
-    width: 32px;
-    height: 32px;
-    border: 2px solid #242526;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */
-    font-size: 12px; }
-    .footer .menu .social li:not(:first-child) a i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-      -moz-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-      -o-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%); }
-    .footer .menu .social li:not(:first-child) a:hover {
-      border-color: #1b8bf9; }
+    float: none;
+    width: 100%; }
+    .footer .menu .social li:not(:first-child) {
+      display: inline-block;
+      width: auto;
+      margin: 0 0 0 5px; }
+      .footer .menu .social li:not(:first-child) a {
+        position: relative;
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #242526;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */
+        font-size: 12px; }
+        .footer .menu .social li:not(:first-child) a i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translateX(-50%) translateY(-50%);
+          -moz-transform: translateX(-50%) translateY(-50%);
+          -ms-transform: translateX(-50%) translateY(-50%);
+          -o-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%); }
+        .footer .menu .social li:not(:first-child) a:hover {
+          border-color: #1b8bf9; }
 @media (min-width: 992px) {
   .footer .section-content {
     padding: 80px 0 40px; }
@@ -1155,6 +1165,8 @@ footer {
   .footer .menu li {
     text-align: right; }
     .footer .menu li:first-child {
-      text-align: right; } }
+      text-align: right; }
+  .footer .menu .social {
+    text-align: right; } }
 
 /*# sourceMappingURL=style.css.map */
