@@ -21,4 +21,11 @@ body{
 }
 .wrapper{
     position: relative;
+    > .inner{
+        position: relative;
+        top: 80px;
+        @include breakpoint(large){
+            top: 0;
+        }
+    }
 }

@@ -21,39 +21,68 @@ Cover
     }
 }
 .cover{
-    display: none;
     position: relative;
-    height: 700px;
+    height: 400px;
     color: $white;
     @include background('../img/cover.jpg',cover);
     @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
     .content{
-        width: 60%;
+        width: 90%;
         @include abs-centered;
     }
     h1{
-        margin: 150px 0 50px;
-        @include font-bold(40px, 1px, center, uppercase);
+        margin: 70px 0 15px;
+        @include font-bold(20px, 1px, center, uppercase);
         span{
             display: block;
         }
     }
     h4{
+        display: none;
         font-family: $avenir-regular;
-        font-size: 24px;
+        font-size: 16px;
         span{
             display: block;
+        }
+    }
+    @include breakpoint(medium){
+        h4{
+            display: block;
+        }
+    }
+    @include breakpoint(large){
+        height: 500px;
+        top: 0;
+        h1{
+            margin: 130px 0 20px;
+            font-size: 32px;
+        }
+    }
+    @include breakpoint(xlarge){
+        height: 700px;
+        .content{
+            width: 60%;
+        }
+        h1{
+            margin: 150px 0 50px;
+            font-size: 40px;
+        }
+        h4{
+            font-size: 24px;
         }
     }
 }
 
 //CONTENT
 .section{
-    display: none;
 }
 .section-title h1{
-    margin: 60px auto;
-    @include font-bold(30px, 2px, center, uppercase);
+    margin: 30px auto;
+    @include font-bold(20px, 2px, center, uppercase);
+    @include breakpoint(medium){
+        margin: 60px auto;
+        font-size: 30px;
+    }
 }
 .section-content p{
     color: $text-secondary;

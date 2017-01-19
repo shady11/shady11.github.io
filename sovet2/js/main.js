@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
     //if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
-    var $L = 1200,
+    var $L = 992,
         $menu_navigation = $('#main-nav'),
         $hamburger_icon = $('#hamburger-menu'),
         $shadow_layer = $('#shadow-layer');
@@ -16,6 +16,7 @@ jQuery(document).ready(function($){
     //close lateral cart or lateral menu
     $shadow_layer.on('click', function(){
         $shadow_layer.removeClass('is-visible');
+        $hamburger_icon.removeClass("is-active");
         $menu_navigation.removeClass('speed-in').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
             $('body').removeClass('overflow-hidden');
         });
@@ -57,7 +58,7 @@ function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
 function move_navigation( $navigation, $MQ) {
     if ( $(window).width() >= $MQ ) {
         $navigation.detach();
-        $navigation.appendTo('header');
+        $navigation.appendTo('header .container');
     } else {
         $navigation.detach();
         $navigation.insertAfter('header');

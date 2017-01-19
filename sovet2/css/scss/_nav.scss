@@ -5,15 +5,13 @@ header{
     @include fixed(10,0,0);
     @include size(100%, 80px);
     @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
-    background: $bg-secondary;
+    background: $bg-primary;
     text-align: center;
     padding: 15px 0;
     .container{
         position: relative;
         width: 100%;
-    }
-    .logo,nav,.social{
-        @include display-table-cell(middle);
+        padding: 0;
     }
     .logo{
         display: inline-block;
@@ -23,59 +21,154 @@ header{
         @include background('../img/logo.png',auto 100%,no-repeat,center,top);
     }
     #hamburger-menu{
-        position: absolute;
-        top: 0;
+        @include abs-positioned(null,0);
         height: 100%;
-        padding: 30px 18px;
+        padding: 16px 18px;
         a{
             width: 60px;
             height: 100%;
             @include background('img/icons/menu.svg',32px,no-repeat,center,center);
         }
         .line{
-            width: 24px;
-            height: 3px;
-            background-color: #242526;
-            @include border-radius(3px);
             display: block;
+            @include size(24px,3px);
+            @include border-radius(3px);
+            background-color: #242526;
             margin: 3px auto;
-            -webkit-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+            @include transition(all 0.3s ease-in-out);
         }
         &.is-active{
             .line{
                 &:nth-child(1){
                     opacity: 0;
-                    -webkit-transform: translateX(-100%);
-                    -ms-transform: translateX(-100%);
-                    -o-transform: translateX(-100%);
-                    transform: translateX(-100%);
+                    @include translateX(-100%);
                 }
                 &:nth-child(3){
                     opacity: 0;
-                    -webkit-transform: translateX(100%);
-                    -ms-transform: translateX(100%);
-                    -o-transform: translateX(100%);
-                    transform: translateX(100%);
+                    @include translateX(100%);
                 }
             }
         }
     }
-    &.smaller{
-        height: 80px;
-        padding: 15px 0;
-        background: $white;
-        @include fixed(9, 0, 0);
-        @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
+    @include breakpoint(large) {
+        background: none;
+        height: 100px;
+        padding: 25px 15px;
+        @include box-shadow(none);
+
+        .logo, #main-nav{
+            @include display-table-cell(middle);
+        }
         .logo{
-            img{
-                display: none;
-                &.scroll-logo{
-                    display: block;
+            @include background('../img/logo-light.png',auto 50px);
+            padding-right: 15px;
+            min-width: 80px;
+        }
+        #hamburger-menu{
+            display: none;
+        }
+    }
+    @include breakpoint(xlarge) {
+        .container{
+            width: 1170px;
+            padding: 0 10px;
+        }
+        .logo{
+            min-width: 120px;
+        }
+    }
+}
+#main-nav{
+    @include fixed(9,-100%,0);
+    @include size(260px, 100%);
+    @include box-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+    @include transition(left 0.3s ease);
+    background: $white;
+    padding-top: 80px; /* header height */
+
+    &.speed-in{
+        left: 0;
+    }
+
+    .nav{
+        padding: 15px 0;
+        li{
+            @include font-middle(14px, left, uppercase);
+            a{
+                position: relative;
+                display: block;
+                padding: 0 20px;
+                @include border(1px solid lighten(#bcc6d0, 0.9), bottom);
+                line-height: 40px;
+                &::before{
+                    content: '';
+                    @include abs-positioned(0,null,null,-5px);
+                    @include size(0, 2px);
+                    background-color: #ffffff;
+                    @include transition(width 0.6s cubic-bezier(0.1, 0.88, 0.25, 1));
+                }
+                &.active::before, &:hover::before{
+                    width: 100%;
                 }
             }
         }
+    }
+    @include breakpoint(large){
+        @include relative(0,auto,auto);
+        @include box-shadow(none);
+        @include size(auto,auto);
+        padding: 0;
+        background: none;
+        width: 10000px;
+        text-align: right;
+        .social{
+            float: right;
+        }
+        .nav{
+            display: inline-block;
+            padding: 0;
+            li{
+                display: inline-block;
+                padding: 0 12px;
+                @include font-middle(12px, left, uppercase);
+                a{
+                    padding: 0;
+                    border: none;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+}
+.social{
+    min-width:120px;
+    padding-left: 10px;
+    li{
+        float: left;
+        a{
+            display: block;
+            width: 35px;
+            @include transition(transform 0.2s cubic-bezier(0.1, 0.88, 0.25, 1));
+            &:hover{
+                @include drop-shadow(0 3px 5px rgba(0,0,0,0.5));
+                @include translateY(-10%);
+            }
+        }
+    }
+    @include breakpoint(large){
+        padding-left: 30px;
+    }
+}
+header.smaller{
+    height: 80px;
+    background: $white;
+    @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
+    .logo{
+        background-image: url('../img/logo.png');
+    }
+    @include breakpoint(large){
+        padding: 15px;
+
         #main-nav ul{
             li{
                 a{
@@ -99,94 +192,21 @@ header{
             }
         }
     }
-    &.smaller, &.smaller > *{
-        @include transition(all 0.3s ease);
-    }
-    @include breakpoint(large) {
-        .logo{
-            min-width: 60px;
-            padding-right: 15px;
-        }
-    }
-    @include breakpoint(xlarge) {
-        .container{
-            width: 1170px;
-        }
-        .logo{
-            min-width: 120px;
-        }
-    }
 }
-#main-nav{
-    @include fixed(9,-100%,0);
-    @include size(260px, 100%);
-    @include box-shadow(0 0 20px rgba(0, 0, 0, 0.2));
-    background: $white;
-    padding-top: 80px; /* header height */
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    @include transition(left 0.3s ease);
-
-    &.speed-in{
-        left: 0;
-    }
-
-    .nav{
-        padding: 15px 0;
-        li{
-            @include font-middle(14px, left, uppercase);
-            a{
-                position: relative;
-                display: block;
-                padding: 0 20px;
-                @include border(1px solid lighten(#bcc6d0, 0.9), bottom);
-                line-height: 40px;
-                &::before{
-                    content: '';
-                    @include abs-positioned(0,auto,auto,-5px);
-                    @include size(0, 2px);
-                    width: 0;
-                    height: 2px;
-                    background-color: #ffffff;
-                    @include transition(width 0.6s cubic-bezier(0.1, 0.88, 0.25, 1));
-                }
-                &.active::before, &:hover::before{
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
-.social{
-    min-width:120px;
-    padding-left: 15px;
-    li{
-        float: left;
-        a{
-            display: block;
-            width: 35px;
-            @include transition(transform 0.2s cubic-bezier(0.1, 0.88, 0.25, 1));
-            &:hover{
-                @include drop-shadow(0 3px 5px rgba(0,0,0,0.5));
-                @include translateY(-10%);
-            }
-        }
-    }
+header.smaller, header.smaller > *{
+    @include transition(all 0.3s ease);
 }
 /* --------------------------------
 Shadow Overlay
 -------------------------------- */
-
 #shadow-layer {
-    position: fixed;
+    @include fixed(2,0,0);
+    display: none;
     min-height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
-    background: transparentize(#242526, 0.5);
+    background: transparentize(#242526, 0.75);
     cursor: pointer;
     z-index: 2;
-    display: none;
 }
 #shadow-layer.is-visible {
     display: block;

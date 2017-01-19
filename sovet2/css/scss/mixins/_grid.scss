@@ -32,27 +32,79 @@
     }
 }
 
-@mixin calc-grid-column($index, $type) {
+@mixin calc-grid-column($index, $type, $point: false) {
     @if ($type == width) and ($index > 0) {
-        .grid-#{$index} {
-            width: percentage(($index / $grid-columns));
+        @if ($point == small){
+            .grid-#{$index} {
+                width: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($point == medium){
+            @include breakpoint(medium){
+                .grid-#{$index}m {
+                    width: percentage(($index / $grid-columns));
+                }
+            }
+        }
+        @if ($point == large){
+            @include breakpoint(large){
+                .grid-#{$index}l {
+                    width: percentage(($index / $grid-columns));
+                }
+            }
+        }
+        @if ($point == xlarge){
+            @include breakpoint(large){
+                .grid-#{$index}xl {
+                    width: percentage(($index / $grid-columns));
+                }
+            }
         }
     }
     @if ($type == offset) {
-        .offset-#{$index} {
-            margin-left: percentage(($index / $grid-columns));
+        @if ($point == small){
+            .offset-#{$index} {
+                margin-left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($point == medium){
+            @include breakpoint(medium){
+                .offset-#{$index}m {
+                    margin-left: percentage(($index / $grid-columns));
+                }
+            }
+        }
+        @if ($point == large){
+            @include breakpoint(large){
+                .offset-#{$index}l {
+                    margin-left: percentage(($index / $grid-columns));
+                }
+            }
+        }
+        @if ($point == xlarge){
+            @include breakpoint(large){
+                .offset-#{$index}xl {
+                    margin-left: percentage(($index / $grid-columns));
+                }
+            }
         }
     }
 }
 
-@mixin loop-grid-columns($columns, $type) {
+@mixin loop-grid-columns($columns, $type, $point: false) {
     @for $i from 1 through $columns {
-        @include calc-grid-column($i, $type);
+        @include calc-grid-column($i, $type, $point);
     }
 }
 
 @mixin make-grid() {
     @include grid-columns($grid-columns);
-    @include loop-grid-columns($grid-columns, width);
-    @include loop-grid-columns($grid-columns, offset);
+    @include loop-grid-columns($grid-columns, width, small);
+    @include loop-grid-columns($grid-columns, width, medium);
+    @include loop-grid-columns($grid-columns, width, large);
+    @include loop-grid-columns($grid-columns, width, xlarge);
+    @include loop-grid-columns($grid-columns, offset, small);
+    @include loop-grid-columns($grid-columns, offset, medium);
+    @include loop-grid-columns($grid-columns, offset, large);
+    @include loop-grid-columns($grid-columns, offset, xlarge);
 }

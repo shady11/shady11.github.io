@@ -29,5 +29,23 @@ Replace text with a background-image
 Margin
 -------------------------------- */
 .mb-60{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    @include breakpoint(medium){
+        margin-bottom: 60px;
+    }
+}
+/* --------------------------------
+Hide elements
+-------------------------------- */
+.hide-s{
+    display: none;
+    @include breakpoint(medium){
+        display: block;
+    }
+}
+.hide-m{
+    display: none;
+    @include breakpoint(large){
+        display: block;
+    }
 }
