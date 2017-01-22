@@ -3,7 +3,9 @@
     margin: 0 auto;
     padding: 0 30px;
     border: none;
-    @include font-middle(10px, left, uppercase);
+    font-family: $avenir-demi;
+    font-size: 10px;
+    text-transform: uppercase;
     line-height: 40px;
     @include transition(all 0.4s ease);
 }

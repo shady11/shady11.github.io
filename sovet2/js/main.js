@@ -1,3 +1,4 @@
+// Document ready
 jQuery(document).ready(function($){
     var $window_width = $(window).width();
 

@@ -7,11 +7,11 @@
 }
 .btn-light{
     @extend .btn;
-    background: #ffffff;
+    background: $pink;
+    color: $white;
     @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
 
     &:hover{
         background: $blue;
-        color: $white;
     }
 }

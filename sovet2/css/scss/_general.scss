@@ -15,8 +15,7 @@ body{
     height: 100%;
     background-color: $bg-secondary;
     color: $text-primary;
-    font-family: $avenir-medium;
-    font-size: 16px;
+    @include font-fira-sans(14);
     line-height: $line-height-base;
 }
 .wrapper{
@@ -25,7 +24,7 @@ body{
         position: relative;
         top: 80px;
         @include breakpoint(large){
-            top: 0;
+            top: 100px;
         }
     }
 }

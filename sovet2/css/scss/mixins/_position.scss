@@ -1,4 +1,12 @@
-@mixin abs-centered(){
+@mixin abs-centered($type: false){
+    @if ($type == width){
+        width: 100%;
+        height: auto;
+    }
+    @if ($type == height){
+        height: 100%;
+        width: auto;
+    }
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,7 +31,7 @@
     @if $right {right: $right;}
     @if $bottom {bottom: $bottom;}
 }
-@mixin fixed($z-index: 0, $left: null, $top: null, $right: null, $bottom: null){
+@mixin fixed($z-index: 0, $left: false, $top: false, $right: false, $bottom: false){
     position: fixed;
     z-index: $z-index;
     @if $left {left: $left;}

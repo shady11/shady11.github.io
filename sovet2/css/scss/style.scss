@@ -18,6 +18,51 @@ Cover
 .with-cover{
     header{
         color: $white;
+        .logo{
+            @include background('../img/logo.png',auto 50px);
+        }
+        &.smaller{
+            background: $white;
+            @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
+            .logo{
+                background-image: url('../img/logo.png');
+            }
+            #main-nav{
+                .nav{
+                    li{
+                        a{
+                            &::before{
+                                background: $dark-grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint(large){
+            background: none;
+            @include box-shadow(none);
+            .logo{
+                @include background('../img/logo-light.png',auto 50px);
+            }
+        }
+    }
+    .inner{
+        top: 80px;
+        @include breakpoint(large){
+            top: 0;
+        }
+    }
+    #main-nav{
+        .nav{
+            li{
+                a{
+                    &::before{
+                        background: $white;
+                    }
+                }
+            }
+        }
     }
 }
 .cover{
@@ -28,19 +73,21 @@ Cover
     @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
     .content{
         width: 90%;
-        @include abs-centered;
+        @include abs-centered();
     }
     h1{
         margin: 70px 0 15px;
-        @include font-bold(20px, 1px, center, uppercase);
+        @include font-avenir-bold(20);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
         span{
             display: block;
         }
     }
     h4{
         display: none;
-        font-family: $avenir-regular;
-        font-size: 16px;
+        @include font-avenir-regular(16);
         span{
             display: block;
         }
@@ -72,20 +119,210 @@ Cover
         }
     }
 }
+.page{
+    .cover{
+        margin-bottom: 30px;
+        @include breakpoint(large){
+            margin-bottom: 60px;
+        }
+        @include breakpoint(xlarge){
+            height: 500px;
+        }
+    }
+    &.about-page{
+        .cover{
+            background-image: url('../img/about-cover.jpg');
+        }
+    }
+    &.sovet-page{
+        .cover{
+            background-image: url('../img/sovet-cover.jpg');
+        }
+    }
+}
 
 //CONTENT
 .section{
 }
 .section-title h1{
+    color: $darkest-grey;
     margin: 30px auto;
-    @include font-bold(20px, 2px, center, uppercase);
+    @include font-avenir-bold(20);
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
     @include breakpoint(large){
         margin: 60px auto;
         font-size: 30px;
     }
 }
-.section-content p{
-    color: $text-secondary;
+.section-content{
+    font-size: 15px;
+    p{
+        margin-bottom: 10px;
+        color: $text-primary;
+        strong{
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.25;
+            span{
+                display: block;
+            }
+        }
+        b{
+            font-weight: 600;
+        }
+        em{
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
+}
+.page-section{
+    color: $text-primary;
+    @include font-fira-sans();
+    line-height: 1.8;
+    section{
+        margin: 30px 0;
+        &:first-child{
+            margin-top: 0;
+        }
+        .grid{
+            position: relative;
+            padding: 10px;
+            .img-centered{
+                position: relative;
+                height: 200px;
+                overflow: hidden;
+                img{
+                    @include abs-centered(height);
+                }
+                &.img-large{
+                    height: 250px;
+                }
+            }
+            .img-full{
+                width: 100%;
+                margin: 0 auto;
+                figcaption{
+                    padding: 10px 0;
+                    color: $text-secondary;
+                    @include font-avenir-medium(14);
+                    text-align: center;
+                }
+            }
+            h4{
+                color: $pink;
+                @include font-avenir-demi(18);
+                line-height: 1.25;
+                text-align: center;
+            }
+        }
+        &.list-section{
+            .grid{
+                &::after{
+                    content: '';
+                    @include abs-positioned(0,false,0,0);
+                    margin: 0 auto;
+                    @include size(20px,1px);
+                    background: $text-secondary;
+                }
+                &:last-child::after{
+                    display: none;
+                }
+            }
+        }
+    }
+    p{
+        margin-bottom: 20px;
+    }
+    ul,ol{
+        padding-left: 30px;
+        margin-bottom: 20px;
+    }
+    ul{
+        list-style-type:disc;
+    }
+    ol{
+        list-style-type: decimal;
+    }
+    aside{
+        position: relative;
+        width: 100%;
+        margin: 0 0 30px;
+        ul{
+            padding: 20px;
+            margin: 0;
+            background: $white;
+            list-style-type: none;
+            @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
+            li{
+                margin-bottom: 0;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                a{
+                    display: block;
+                    padding: 8px 0;
+                    @include link-hover();
+                    @include font-avenir-demi(12);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    main{
+        width: 100%;
+    }
+    @include breakpoint(large){
+        section{
+            margin: 50px 0;
+            .grid{
+                @include display-table-cell(middle);
+                padding: 0 10px;
+                .img-centered{
+                    width: 450px;
+                    overflow: hidden;
+                    img{
+                        @include abs-centered(width);
+                        &.img-height{
+                            @include abs-centered(height);
+                        }
+                    }
+                }
+                h4{
+                    font-size: 20px;
+                    text-align: left;
+                }
+            }
+            &.image-section{
+                margin: 70px 0;
+            }
+            &.list-section{
+                .grid{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+        aside{
+            float: right;
+            width: 250px;
+            margin-left: 20px;
+            &.fixed{
+                @include fixed(10, false, 100px);
+            }
+        }
+        main{
+            width: 650px;
+        }
+    }
+    @include breakpoint(xlarge){
+        main{
+            width: 880px;
+        }
+    }
 }
 .btn-block{
     @include text-align(center);
@@ -100,7 +337,9 @@ Cover
     overflow: hidden;
     display: block;
     color: $white;
-    @include font-bold(14px, 0, center, uppercase);
+    @include font-avenir-bold(14);
+    text-transform: uppercase;
+    text-align: center;
     //for fun
     background: -webkit-linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
     background: linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
@@ -162,18 +401,20 @@ Cover
 }
 .news-info{
     padding: 15px;
+    text-align: center;
     a{
         display: block;
         height: 100px;
         overflow: hidden;
-        @include font-middle(14px, center);
+        @include font-fira-sans(14,500);
         @include link-hover();
         line-height: 20px;
     }
     .news-date{
         margin-top: 15px;
         color: $text-secondary;
-        @include font-middle(9px, center, uppercase);
+        @include font-avenir-demi(10);
+        text-transform: uppercase;
     }
 }
 
@@ -210,8 +451,9 @@ footer{
     @include box-shadow(0 1px 5px transparentize($bx-light, 0.75));
     .copyright{
         @include border(1px solid #bcc6d0, top);
+        text-align: center;
         padding: 20px 0;
-        @include font-middle(12px, center);
+        @include font-fira-sans(14);
         @include breakpoint(large){
             text-align: left;
         }
@@ -232,7 +474,7 @@ footer{
     .info{
         margin-bottom: 20px;
         color: $text-primary;
-        @include font-regular(14px);
+        font-size: 14px;
         text-align: center;
     }
     .menu{
@@ -241,10 +483,13 @@ footer{
         }
         li{
             margin-bottom: 8px;
-            @include font-middle(14px, center);
+            @include font-avenir-demi(14);
+            text-align: center;
             &:first-child{
                 margin-bottom: 20px;
-                @include font-bold(12px, 0, center, uppercase);
+                @include font-avenir-bold(12);
+                text-transform: uppercase;
+                text-align: center;
             }
             a{
                 @include link-hover();
@@ -271,7 +516,8 @@ footer{
                             @include abs-centered();
                         }
                         &:hover{
-                            border-color: $blue;
+                            border-color: $pink;
+                            color: $pink;
                         }
                     }
                 }

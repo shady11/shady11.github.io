@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Совет по развитию бизнеса и инвестициям Иссык-Кульской области</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOnHeader = 120,
+                    shrinkOnAside = 460,
+                    aside = document.getElementById("sidebar"),
+                    body = document.body.clientWidth,
+                    container = body,
+                    header = document.querySelector("header");
+
+                if(body > 544) {
+                    container = 480;
+                }
+                if(body > 768) {
+                    container = 700;
+                }
+                if(body > 992) {
+                    container = 920;
+                }
+                if(body > 1200) {
+                    container = 1150;
+                }
+
+                var w=window,
+                    d=document,
+                    e=d.documentElement,
+                    g=d.getElementsByTagName('body')[0],
+                    x=w.innerWidth||e.clientWidth||g.clientWidth - 17,
+                    y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+                if (distanceY > shrinkOnHeader) {
+                    classie.add(header,"smaller");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                    }
+                }
+
+                if(distanceY > shrinkOnAside) {
+                    classie.add(aside,"fixed");
+
+                    console.log(container);
+                    aside.style.right = (body-container)/2+"px";
+
+                } else {
+                    if (classie.has(aside,"fixed")) {
+                        classie.remove(aside,"fixed");
+                        aside.removeAttribute("style");
+                    }
+                }
+            });
+        }
+        // Window onload
+        window.onload = init();
+    </script>
+    <link rel="stylesheet" href="../../dizi.jp/admin/css/fonts.css">
+</head>
+<body class="page about-page">
+
+<div class="wrapper with-cover">
+    <header class="header">
+        <div class="container">
+            <div id="logo" class="logo">
+            </div>
+            <div id="hamburger-menu" class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <!--<a class="img-replace" href="#0">Menu</a>-->
+            </div>
+        </div>
+    </header> <!-- fixed header -->
+
+    <nav id="main-nav">
+        <ul class="text-center nav">
+            <li>
+                <a class="active" href="#">О нас</a>
+            </li>
+            <li>
+                <a href="#">Как работает совет</a>
+            </li>
+            <li>
+                <a href="#">Инвесторы</a>
+            </li>
+            <li>
+                <a href="#">Предприниматели</a>
+            </li>
+            <li>
+                <a href="#">Участники кластера</a>
+            </li>
+            <li>
+                <a href="#">Доноры</a>
+            </li>
+        </ul>
+        <div class="social">
+            <ul class="text-center clearfix">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="shadow-layer"></div>
+
+    <div class="inner">
+
+        <div class="cover">
+            <div class="content text-center">
+                <h1>
+                     О нас
+                </h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section page-section">
+                <div class="section-content mb clearfix">
+                    <aside id="sidebar">
+                        <ul>
+                            <li>
+                                <a href="about.html">
+                                    Информация о совете
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sovet.html">
+                                    Структура управления
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <main>
+                        <p>
+                            Совет по развитию бизнеса и инвестициям при Полномочном представителе
+                            Правительства Кыргызской Республики в Иссык-Кульской области (далее - Совет)
+                            является консультационно-совещательным органом и представляет собой
+                            диалоговую и информационную площадку между всеми заинтересованными
+                            сторонами по вопросам улучшения бизнес среды и инвестиционного климата в
+                            Иссык-Кульской области.
+                        </p>
+                        <section class="list-section">
+                            <p class="text-center">
+                                <strong>
+                                    <span>Совет был создан распоряжением полпреда</span>
+                                    <span>29 июля 2016 года с целью:</span>
+                                </strong>
+                            </p>
+                            <div class="row">
+                                <div class="grid text-center">содействия становлению и устойчивому развитию местного бизнес сообщества</div>
+                                <div class="grid text-center">привлечения внешних инвестиций и их поддержки</div>
+                                <div class="grid text-center">реализации иных мероприятий, способствующих улучшению бизнес среды и инвестиционного климата в регионе</div>
+                            </div>
+                        </section>
+                        <section class="image-section">
+                            <div class="row">
+                                <div class="grid">
+                                    <div class="img-centered">
+                                        <img class="img-height" src="img/about-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <h4>
+                                        Совет является информационно диалоговой площадкой для всех
+                                        заинтересованных лиц с целью улучшения бизнес среды и инвестиционного климата
+                                    </h4>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="list-section">
+                            <p class="text-center">
+                                <strong>
+                                    <span>Задачами Совета являются:</span>
+                                </strong>
+                            </p>
+                            <div class="row">
+                                <div class="grid text-center">мобилизация фермеров и предпринимателей, инвесторов, гражданского общества и прочих заинтересованных лиц/сторон</div>
+                                <div class="grid text-center">консолидация всех имеющихся ресурсов и возможностей, с целью их целевого и эффективного использования</div>
+                                <div class="grid text-center">координация усилий органов региональной и местной власти с бизнес сообществом и всеми заинтересованными лицами/сторонами</div>
+                            </div>
+                        </section>
+                        <section class="image-section">
+                            <div class="row">
+                                <div class="grid">
+                                    <h4 class="text-right">
+                                        Задача Совета объединить фермеров и предпринимателей, чтобы объединить
+                                        усилия в решение вопроса "мелко товарности" путем кластерного подхода и
+                                        решение вопроса "доступ к дешевым и длинным деньгам" путем открытия гарантийного фонда.
+                                    </h4>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-centered img-large">
+                                        <img src="img/about-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <p>
+                                Кластер – это объединение лиц с целью достижения единой цели.
+                            </p>
+                            <p>
+                                Кластерное развитие – практический путь к изменению структуры экономики,
+                                обеспечивающий повышение конкурентоспособности регионов, предприятий, входящих в кластер.
+                            </p>
+                            <p>
+                                Финансовая поддержка для участников Кластера будет осуществляться через
+                                Гарантийный фонд, который сможет обеспечить вам 30-50% залога, если вы
+                                участник Кластера, при получении кредита под 12% при поддержке Российско-Кыргызского Фонда Развития.
+                            </p>
+                            <p>
+                                Средства, поступающие от Кумтора, в Фонд Развития Иссык-Куля теперь будут
+                                работать на развитие Экономики (в виде Гарантийного Фонда).
+                            </p>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="section partners">
+                    <div class="section-title">
+                        <h1>Партнеры</h1>
+                    </div>
+                    <div class="section-content mb clearfix">
+                        <div class="grid">
+                            <img src="img/partners/ebrd.png" alt="">
+                        </div>
+                        <div class="grid">
+                            <img src="img/partners/adb.png" alt="">
+                        </div>
+                        <div class="grid">
+                            <img src="img/partners/usaid.png" alt="">
+                        </div>
+                        <div class="grid">
+                            <img src="img/partners/jica.png" alt="">
+                        </div>
+                        <div class="grid">
+                            <img src="img/partners/giz.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="section footer">
+                    <div class="row">
+                        <div class="section-content clearfix">
+                            <div class="grid-4l">
+                                <a href="#" class="logo">
+                                    <img src="img/logo.png" alt="Logo">
+                                </a>
+                                <p class="info">
+                                    Площадка для фермеров,
+                                    предпринимателей,
+                                    способствующий улучшению
+                                    бизнеса и привлечению инвестиций.
+                                </p>
+                            </div>
+                            <div class="grid-16m grid-10l offset-2l menu">
+                                <div class="row">
+                                    <div class="grid grid-8 grid-4m grid-3l offset-2l">
+                                        <ul>
+                                            <li>
+                                                Компания
+                                            </li>
+                                            <li>
+                                                <a href="#">О нас</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новости</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Вакансии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-3l">
+                                        <ul>
+                                            <li>
+                                                Компания
+                                            </li>
+                                            <li>
+                                                <a href="#">О нас</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новости</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Вакансии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-3l">
+                                        <ul>
+                                            <li>
+                                                Компания
+                                            </li>
+                                            <li>
+                                                <a href="#">О нас</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новости</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Вакансии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-5l">
+                                        <ul class="social">
+                                            <li>
+                                                Следите за нами
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    © Совет по развитию бизнеса и инвестициям, 2016
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

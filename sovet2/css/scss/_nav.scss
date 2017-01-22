@@ -51,16 +51,15 @@ header{
         }
     }
     @include breakpoint(large) {
-        background: none;
         height: 100px;
         padding: 25px 15px;
-        @include box-shadow(none);
 
         .logo, #main-nav{
             @include display-table-cell(middle);
         }
         .logo{
-            @include background('../img/logo-light.png',auto 50px);
+            @include bg-size(auto 50px);
+            background-position: 0 0;
             padding-right: 15px;
             min-width: 80px;
         }
@@ -93,18 +92,21 @@ header{
     .nav{
         padding: 15px 0;
         li{
-            @include font-middle(14px, left, uppercase);
+            font-family: $avenir-demi;
+            font-size: 14px;
+            text-transform: uppercase;
             a{
                 position: relative;
                 display: block;
                 padding: 0 20px;
                 @include border(1px solid lighten(#bcc6d0, 0.9), bottom);
                 line-height: 40px;
+                text-align: left;
                 &::before{
                     content: '';
                     @include abs-positioned(0,null,null,-5px);
                     @include size(0, 2px);
-                    background-color: #ffffff;
+                    background-color: $dark-grey;
                     @include transition(width 0.6s cubic-bezier(0.1, 0.88, 0.25, 1));
                 }
                 &.active::before, &:hover::before{
@@ -130,7 +132,7 @@ header{
             li{
                 display: inline-block;
                 padding: 0 12px;
-                @include font-middle(12px, left, uppercase);
+                font-size: 12px;
                 a{
                     padding: 0;
                     border: none;
@@ -163,9 +165,6 @@ header.smaller{
     height: 80px;
     background: $white;
     @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
-    .logo{
-        background-image: url('../img/logo.png');
-    }
     @include breakpoint(large){
         padding: 15px;
 
