@@ -54,7 +54,7 @@
             }
         }
         @if ($point == xlarge){
-            @include breakpoint(large){
+            @include breakpoint(xlarge){
                 .grid-#{$index}xl {
                     width: percentage(($index / $grid-columns));
                 }
@@ -82,7 +82,7 @@
             }
         }
         @if ($point == xlarge){
-            @include breakpoint(large){
+            @include breakpoint(xlarge){
                 .offset-#{$index}xl {
                     margin-left: percentage(($index / $grid-columns));
                 }

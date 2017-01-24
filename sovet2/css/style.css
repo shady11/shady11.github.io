@@ -274,52 +274,52 @@ body {
 @media (min-width: 992px) {
   .grid-16l {
     width: 100%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-1xl {
     width: 6.25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-2xl {
     width: 12.5%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-3xl {
     width: 18.75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-4xl {
     width: 25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-5xl {
     width: 31.25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-6xl {
     width: 37.5%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-7xl {
     width: 43.75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-8xl {
     width: 50%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-9xl {
     width: 56.25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-10xl {
     width: 62.5%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-11xl {
     width: 68.75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-12xl {
     width: 75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-13xl {
     width: 81.25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-14xl {
     width: 87.5%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-15xl {
     width: 93.75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .grid-16xl {
     width: 100%; } }
 .offset-1 {
@@ -466,52 +466,52 @@ body {
 @media (min-width: 992px) {
   .offset-16l {
     margin-left: 100%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-1xl {
     margin-left: 6.25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-2xl {
     margin-left: 12.5%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-3xl {
     margin-left: 18.75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-4xl {
     margin-left: 25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-5xl {
     margin-left: 31.25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-6xl {
     margin-left: 37.5%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-7xl {
     margin-left: 43.75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-8xl {
     margin-left: 50%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-9xl {
     margin-left: 56.25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-10xl {
     margin-left: 62.5%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-11xl {
     margin-left: 68.75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-12xl {
     margin-left: 75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-13xl {
     margin-left: 81.25%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-14xl {
     margin-left: 87.5%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-15xl {
     margin-left: 93.75%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .offset-16xl {
     margin-left: 100%; } }
 /* --------------------------------
@@ -957,6 +957,8 @@ Cover
   background-image: url("../img/about-cover.jpg"); }
 .page.sovet-page .cover {
   background-image: url("../img/sovet-cover.jpg"); }
+.page.contacts-page .cover {
+  background: none; }
 
 .section-title h1 {
   color: #323a45;
@@ -1266,6 +1268,57 @@ Cover
     @media (min-width: 992px) {
       .partners .grid {
         padding: 0; } }
+
+#map {
+  height: 1000px;
+  position: relative;
+  width: 100%; }
+  @media (min-width: 768px) {
+    #map {
+      height: 800px; } }
+  @media (min-width: 992px) {
+    #map {
+      height: 600px; } }
+
+.map-container .container {
+  position: absolute;
+  left: 0;
+  top: 390px;
+  right: 0;
+  margin: 0 auto;
+  height: 600px; }
+  @media (min-width: 768px) {
+    .map-container .container {
+      top: 350px;
+      height: 400px; } }
+  @media (min-width: 992px) {
+    .map-container .container {
+      top: 100px;
+      height: 400px; } }
+.map-container .map-content {
+  height: 100%;
+  padding: 30px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 10px rgba(99, 117, 138, 0.25);
+  -moz-box-shadow: 0 1px 10px rgba(99, 117, 138, 0.25);
+  box-shadow: 0 1px 10px rgba(99, 117, 138, 0.25); }
+  .map-container .map-content .section-title h1 {
+    margin: 0 0 40px; }
+  .map-container .map-content .main-list {
+    text-align: center; }
+    .map-container .map-content .main-list > li {
+      margin-bottom: 30px; }
+      .map-container .map-content .main-list > li h4 {
+        margin-bottom: 15px;
+        color: #fc3768;
+        font-family: "AvenirNextW1G-Demi", Arial, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase; }
+      .map-container .map-content .main-list > li ul li {
+        margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    .map-container .map-content .section-title h1 {
+      margin-bottom: 50px; } }
 
 footer {
   background: #ffffff;

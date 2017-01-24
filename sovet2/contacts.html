@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Совет по развитию бизнеса и инвестициям Иссык-Кульской области</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOnHeader = 120,
+                    header = document.querySelector("header");
+
+                if (distanceY > shrinkOnHeader) {
+                    classie.add(header,"smaller");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                    }
+                }
+            });
+        }
+        // Window onload
+        window.onload = init();
+    </script>
+</head>
+<body class="page contacts-page">
+
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div id="logo" class="logo">
+            </div>
+            <div id="hamburger-menu" class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <!--<a class="img-replace" href="#0">Menu</a>-->
+            </div>
+        </div>
+    </header> <!-- fixed header -->
+
+    <nav id="main-nav">
+        <ul class="text-center nav">
+            <li>
+                <a class="active" href="#">О нас</a>
+            </li>
+            <li>
+                <a href="#">Как работает совет</a>
+            </li>
+            <li>
+                <a href="#">Инвесторы</a>
+            </li>
+            <li>
+                <a href="#">Предприниматели</a>
+            </li>
+            <li>
+                <a href="#">Участники кластера</a>
+            </li>
+            <li>
+                <a href="#">Доноры</a>
+            </li>
+        </ul>
+        <div class="social">
+            <ul class="text-center clearfix">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="shadow-layer"></div>
+
+    <div class="inner">
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="container">
+                <div class="map-content grid-10l offset-6l grid-8xl offset-8xl">
+                    <div class="section-title">
+                        <h1>Контакты</h1>
+                    </div>
+                    <div class="section-content">
+                        <ul class="main-list">
+                            <li class="grid-16 grid-8m">
+                                <h4>Адрес офиса</h4>
+                                <ul>
+                                    <li>
+                                        Иссыккульская обл., г. Каракол
+                                    </li>
+                                    <li>
+                                        ул. Абдрахманова 125
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="grid-16 grid-8m">
+                                <h4>Контактные телефоны</h4>
+                                <ul>
+                                    <li>
+                                        +996 551 98-46-01
+                                    </li>
+                                    <li>
+                                        +996 551 98-46-01
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="grid-16 grid-8m">
+                                <h4>Контактные эл.адреса</h4>
+                                <ul>
+                                    <li>
+                                        baibolot.a@gmail.com
+                                    </li>
+                                    <li>
+                                        baibolot.a@gmail.com
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="grid-16 grid-8m">
+                                <h4>Факс</h4>
+                                <ul>
+                                    <li>
+                                        +996 3922 5-81-81
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="section partners">
+                    <div class="section-title">
+                        <h1>Партнеры</h1>
+                    </div>
+                    <div class="section-content mb clearfix">
+                        <div class="grid">
+                            <img src="img/partners/ebrd.png" alt="">
+                        </div>
+                        <div class="grid">
+                            <img src="img/partners/adb.png" alt="">
+                        </div>
+                        <div class="grid">
+                            <img src="img/partners/usaid.png" alt="">
+                        </div>
+                        <div class="grid">
+                            <img src="img/partners/jica.png" alt="">
+                        </div>
+                        <div class="grid">
+                            <img src="img/partners/giz.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="section footer">
+                    <div class="row">
+                        <div class="section-content clearfix">
+                            <div class="grid-4l">
+                                <a href="#" class="logo">
+                                    <img src="img/logo.png" alt="Logo">
+                                </a>
+                                <p class="info">
+                                    Площадка для фермеров,
+                                    предпринимателей,
+                                    способствующий улучшению
+                                    бизнеса и привлечению инвестиций.
+                                </p>
+                            </div>
+                            <div class="grid-16m grid-10l offset-2l menu">
+                                <div class="row">
+                                    <div class="grid grid-8 grid-4m grid-3l offset-2l">
+                                        <ul>
+                                            <li>
+                                                Компания
+                                            </li>
+                                            <li>
+                                                <a href="#">О нас</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новости</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Вакансии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-3l">
+                                        <ul>
+                                            <li>
+                                                Компания
+                                            </li>
+                                            <li>
+                                                <a href="#">О нас</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новости</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Вакансии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-3l">
+                                        <ul>
+                                            <li>
+                                                Компания
+                                            </li>
+                                            <li>
+                                                <a href="#">О нас</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новости</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Вакансии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-5l">
+                                        <ul class="social">
+                                            <li>
+                                                Следите за нами
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    © Совет по развитию бизнеса и инвестициям, 2016
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    var map;
+    function initMap() {
+
+        var myLatLng = {lat: 42.49156939, lng: 78.39721441},
+            body = document.body.clientWidth,
+            center = {lat: 42.4830168, lng: 78.39783669},
+            image = {
+                url: 'img/pin.svg',
+                size: new google.maps.Size(16, 16)
+            };
+
+        if(body > 544) {
+            center = {lat: 42.48478913, lng: 78.39800835};
+        }
+        if(body > 768) {
+            center = {lat: 42.4925741, lng: 78.40983152};
+        }
+        if(body > 992) {
+            center = {lat: 42.4925741, lng: 78.40983152};
+            image = {
+                url: 'img/pin.svg',
+                size: new google.maps.Size(32, 32)
+            }
+        }
+
+        // Create the map with no initial style specified.
+        // It therefore has default styling.
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: center,
+            scrollwheel: false,
+            zoom: 15,
+            mapTypeControl: false,
+            streetViewControl: false,
+            zoomControl: false
+        });
+
+        map.setOptions({styles: styles['silver']});
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            icon: image
+        });
+    }
+
+    var styles = {
+        default: null,
+        silver: [
+            {
+                elementType: 'geometry',
+                stylers: [{color: '#f5f5f5'}]
+            },
+            {
+                elementType: 'labels.icon',
+                stylers: [{visibility: 'off'}]
+            },
+            {
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#616161'}]
+            },
+            {
+                elementType: 'labels.text.stroke',
+                stylers: [{color: '#f5f5f5'}]
+            },
+            {
+                featureType: 'administrative.land_parcel',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#bdbdbd'}]
+            },
+            {
+                featureType: 'poi',
+                elementType: 'geometry',
+                stylers: [{color: '#eeeeee'}]
+            },
+            {
+                featureType: 'poi',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#757575'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'geometry',
+                stylers: [{color: '#e5e5e5'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9e9e9e'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{color: '#ffffff'}]
+            },
+            {
+                featureType: 'road.arterial',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#757575'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{color: '#dadada'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#616161'}]
+            },
+            {
+                featureType: 'road.local',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9e9e9e'}]
+            },
+            {
+                featureType: 'transit.line',
+                elementType: 'geometry',
+                stylers: [{color: '#e5e5e5'}]
+            },
+            {
+                featureType: 'transit.station',
+                elementType: 'geometry',
+                stylers: [{color: '#eeeeee'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'geometry',
+                stylers: [{color: '#c9c9c9'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9e9e9e'}]
+            }
+        ]
+    };
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMUhjzESL9Cgb1MWhzbVIZEbrrXMt1TqA&callback=initMap"
+        async defer></script>
+
+</body>
+</html>
