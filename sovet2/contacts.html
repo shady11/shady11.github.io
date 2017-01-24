@@ -292,13 +292,13 @@
                 size: new google.maps.Size(16, 16)
             };
 
-        if(body > 544) {
+        if (body > 544) {
             center = {lat: 42.48478913, lng: 78.39800835};
         }
-        if(body > 768) {
+        if (body > 768) {
             center = {lat: 42.4925741, lng: 78.40983152};
         }
-        if(body > 992) {
+        if (body > 992) {
             center = {lat: 42.4925741, lng: 78.40983152};
             image = {
                 url: 'img/pin.svg',
@@ -326,6 +326,9 @@
             icon: image
         });
     }
+    $(window).resize(function () {
+        initMap();
+    });
 
     var styles = {
         default: null,
