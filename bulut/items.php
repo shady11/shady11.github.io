@@ -1,3 +1,17 @@
+<a href="detail.php?us=17" class="tilter tilter--4" data-modal="modal-17">
+    <figure class="tilter__figure">
+        <img class="tilter__image" src="img/files/17.jpg" alt="Rag'n'Bone Man - Human(Deluxe)" />
+        <div class="tilter__deco tilter__deco--shine"><div></div></div>
+        <div class="tilter__deco tilter__deco--overlay"></div>
+        <figcaption class="tilter__caption">
+            <div class="inner">
+                <h3 class="tilter__title">Human(Deluxe)</h3>
+                <p class="tilter__description">Rag'n'Bone Man</p>
+            </div>
+        </figcaption>
+    </figure>
+</a>
+
 <a href="detail.php?us=10" class="tilter tilter--4" data-modal="modal-10">
     <figure class="tilter__figure">
         <img class="tilter__image" src="img/files/10.jpg" alt="John Legend - Darkness and Light" />
@@ -191,6 +205,19 @@
             <div class="inner">
                 <h3 class="tilter__title">Native</h3>
                 <p class="tilter__description">OneRepublic</p>
+            </div>
+        </figcaption>
+    </figure>
+</a>
+<a href="detail.php?us=16" class="tilter tilter--4" data-modal="modal-16">
+    <figure class="tilter__figure">
+        <img class="tilter__image" src="img/files/16.jpg" alt="ДоМиНо - Стон" />
+        <div class="tilter__deco tilter__deco--shine"><div></div></div>
+        <div class="tilter__deco tilter__deco--overlay"></div>
+        <figcaption class="tilter__caption">
+            <div class="inner">
+                <h3 class="tilter__title">Стон</h3>
+                <p class="tilter__description">ДоМиНо</p>
             </div>
         </figcaption>
     </figure>

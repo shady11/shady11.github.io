@@ -1,0 +1,500 @@
+@import "base";
+
+/* --------------------------------
+Header
+-------------------------------- */
+
+header{
+  height: 120px;
+  padding: 35px 0;
+  @include box-shadow(0 1px 5px transparentize($bx-light, 0.75));
+  .container{
+    text-align: center;
+    > *{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.nav{
+  li{
+    display: inline-block;
+    a{
+      padding: 6px 12px;
+      font-family: $pt-sans-bold;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+/* --------------------------------
+Logo
+-------------------------------- */
+.logo{
+  margin: 0 30px;
+  img{
+    height: 50px;
+    width: auto;
+  }
+}
+/* --------------------------------
+Slider
+-------------------------------- */
+/* --------------------------------
+Content
+-------------------------------- */
+/* Content */
+main{
+  margin-bottom: 100px; //test
+}
+
+.section{
+
+  &.f-section,
+  &.p-section{
+    background: $light-grey;
+  }
+
+  &-content{
+    padding: 36px 0;
+    position: relative;
+  }
+
+  &-title,
+  &-btn{
+    font-family: $pt-sans-bold;
+  }
+
+  &-title{
+    margin: 48px 0 0;
+    font-size: 24px;
+
+    span{
+      position: relative;
+      padding: 0 12px;
+    }
+  }
+
+  &-btn-wrapper{
+    text-align: center;
+    padding: 0 0 48px;
+  }
+
+  &-btn{
+    display: inline-block;
+    padding: 12px 32px;
+    background: transparentize($red, 0.25);
+    color: $white;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @include border-radius(2px);
+
+    @include transition(all 0.3s ease);
+
+    @include box-shadow(0 3px 10px transparentize($red, 0.25));
+
+    &:hover,
+    &:active,
+    &:focus{
+      color: $white;
+      background: $red;
+    }
+  }
+}
+
+//Featured Posts
+.f-post {
+  display: block;
+  position: relative;
+  color: $white;
+
+  * {
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    outline: none;
+  }
+
+  &-figure,
+  &-image {
+    margin: 0;
+    width: 100%;
+    height: 360px;
+    display: block;
+  }
+
+  &-figure {
+    position: relative;
+
+    > * {
+      transform: translateZ(0px); /* Force correct stacking order */
+    }
+
+    &::before {
+      @include pseudos;
+      @include size(90%, 90%);
+      top: 5%;
+      left: 5%;
+      @include box-shadow(0 30px 20px rgba(35, 32, 39, 0.5));
+    }
+  }
+
+  &-deco {
+    @include abs-positioned(0,0);
+    @include square(100%);
+    overflow: hidden;
+
+    &-overlay{
+      background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+    }
+
+    &-shine{
+      div{
+        @include abs-positioned(-50%, -50%);
+        @include square(200%);
+      }
+    }
+  }
+
+  &-caption{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 32px;
+  }
+
+  &-title{
+    margin: 0;
+    font-weight: normal;
+    font-family: $pt-sans-bold;
+    font-size: 20px;
+    text-shadow: 0.1em 0.8em 1em rgba(0,0,0,0.35);
+    text-transform: uppercase;
+  }
+
+  &-description{
+    margin: 16px 0 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.smooth .f-post {
+  &-figure,
+  &-deco-overlay,
+  &-deco-shine div,
+  &-caption {
+    transition: transform 0.2s ease-out;
+  }
+}
+
+//Latest Posts
+.l-post{
+
+  &-thumb{
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+  }
+
+  &-image{
+    @include abs-centered(width);
+  }
+
+  &-caption{
+    padding: 16px 0;
+    //@include box-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
+  }
+  &-title{
+    height: 60px;
+    margin-bottom: 16px;
+    font-family: $pt-sans-bold;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  &-details{
+    margin-bottom: 16px;
+    svg{
+      @include abs-positioned();
+      fill: $grey;
+    }
+  }
+
+  &-date,
+  &-views,
+  &-comments{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    color: $grey;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &-views,
+  &-comments{
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &-date{
+    text-transform: uppercase;
+  }
+
+  &-views {
+    svg {
+      @include abs-positioned(1,1);
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-comments {
+    svg {
+      @include abs-positioned(3,3);
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+//Popular Posts
+.p-post{
+  margin-bottom: 24px;
+
+  &-thumb{
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+  }
+
+  &-image{
+    @include abs-centered(width);
+  }
+
+  &-caption{
+    padding: 16px;
+    background: $white;
+    @include box-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
+  }
+  &-title{
+    height: 80px;
+    font-family: $pt-sans-bold;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  &-details{
+    margin-bottom: 16px;
+    svg{
+      @include abs-positioned();
+      fill: $grey;
+    }
+  }
+
+  &-date,
+  &-views,
+  &-comments{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    color: $grey;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &-views,
+  &-comments{
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &-date{
+    text-transform: uppercase;
+  }
+
+  &-views {
+    svg {
+      @include abs-positioned(1,1);
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-comments {
+    svg {
+      @include abs-positioned(3,3);
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+//Blogs
+.b-post{
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  @include border(1px solid transparentize($grey, 0.75), bottom);
+
+  &:last-child{
+    @include border(none);
+  }
+
+  &-thumb{
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+  }
+
+  &-image{
+    @include abs-centered(width);
+  }
+
+  &-caption{
+    position: relative;
+  }
+
+  &-title{
+    height: 40px;
+    margin-bottom: 16px;
+    font-family: $pt-sans-bold;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &-details{
+    margin-bottom: 8px;
+    svg{
+      @include abs-positioned();
+      fill: $grey;
+    }
+  }
+
+  &-author,
+  &-date,
+  &-views,
+  &-comments{
+    display: inline-block;
+    vertical-align: middle;
+    color: $grey;
+    font-size: 10px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+
+  &-views,
+  &-comments{
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &-author{
+    position: relative;
+    padding-right: 8px;
+
+    &::after{
+      @include pseudos();
+      @include square(4px);
+      @include border-radius(50%);
+      top: 6px;
+      right: -4px;
+      background: $grey;
+    }
+  }
+
+  &-views {
+    svg {
+      @include abs-positioned(1,1);
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-comments {
+    svg {
+      @include abs-positioned(3,3);
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &-author-with-thumb{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+  &-author-thumb,
+  &-author-name{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-author-thumb{
+    @include border-radius(50%);
+    overflow: hidden;
+    margin-right: 8px;
+
+    img{
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &-author,
+  &-author-name{
+    font-family: $pt-sans-bold;
+    text-transform: uppercase;
+  }
+
+  &-author-name{
+    font-size: 12px;
+  }
+
+  &-with-thumb{
+    @include border(none);
+
+    .b-post-caption{
+      padding: 16px;
+      background: $white;
+      @include box-shadow(0 3px 10px transparentize($dark, 0.85));
+    }
+    .b-post-details{
+      position: absolute;
+      top: -36px;
+      margin-bottom: 0;
+
+      svg{
+        fill: $white;
+      }
+    }
+    .b-post-date,
+    .b-post-views,
+    .b-post-comments{
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      color: $white;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .b-post-author{
+      padding: 0;
+      &::after{
+        display: none;
+      }
+    }
+    .b-post-title{
+      height: 60px;
+      font-size: 18px;
+    }
+  }
+}

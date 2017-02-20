@@ -10,7 +10,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "25 ноября 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1156443286?country=kg";
-            $link = "https://www.dropbox.com/s/op5zssdsh0ljsp1/The_Weeknd_-_Starboy_2016.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/op5zssdsh0ljsp1/The_Weeknd_-_Starboy_2016.zip?dl=0";
             break;
         case 2:
             $title = "Alicia Keys - Here";
@@ -18,7 +18,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "4 ноября 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1162262652?country=us";
-            $link = "https://www.dropbox.com/s/gw2ewpcxtm2omom/Alicia_Keys_-_Here_Deluxe_Edition_2016.rar?dl=0";
+            $link = "https://dl.dropbox.com/s/gw2ewpcxtm2omom/Alicia_Keys_-_Here_Deluxe_Edition_2016.rar?dl=0";
             break;
         case 3:
             $title = "Oh Wonder - Oh Wonder";
@@ -26,7 +26,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "9 сентября 2015";
             $itunes = "//tools.applemusic.com/embed/v1/album/1008891895?country=kg";
-            $link = "https://www.dropbox.com/s/m4ffc0oeqd9n38a/Oh_Wonder_-_Oh_Wonder_2015.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/m4ffc0oeqd9n38a/Oh_Wonder_-_Oh_Wonder_2015.zip?dl=0";
             break;
         case 4:
             $title = "Bruno Mars - 24K Magic";
@@ -34,7 +34,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "18 ноября 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1161503945?country=kg";
-            $link = "https://www.dropbox.com/s/4opjvc5qu8zek5q/Bruno_Mars_-_24K_Magic_2016.rar?dl=0";
+            $link = "https://dl.dropbox.com/s/4opjvc5qu8zek5q/Bruno_Mars_-_24K_Magic_2016.rar?dl=0";
             break;
         case 5:
             $title = "Kristina Si - Светом во тьме";
@@ -42,7 +42,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "29 ноября 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1176959649?country=kg";
-            $link = "https://www.dropbox.com/s/2e0cf18jpuq4hj1/Kristina_Si_-_Svetom_vo_tme.rar?dl=0";
+            $link = "https://dl.dropbox.com/s/2e0cf18jpuq4hj1/Kristina_Si_-_Svetom_vo_tme.rar?dl=0";
             break;
         case 6:
             $title = "Coldplay - Ghost Stories";
@@ -50,7 +50,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "16 мая 2014";
             $itunes = "//tools.applemusic.com/embed/v1/album/829909653?country=kg";
-            $link = "https://www.dropbox.com/s/e3ovodp3eycf8k6/Coldplay_-_Ghost_Stories_2014.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/e3ovodp3eycf8k6/Coldplay_-_Ghost_Stories_2014.zip?dl=0";
             break;
         case 7:
             $title = "Coldplay - A Head Full of Dreams";
@@ -58,7 +58,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "4 декабря 2015";
             $itunes = "//tools.applemusic.com/embed/v1/album/1053933969?country=kg";
-            $link = "https://www.dropbox.com/s/fsh08ni65r6hnt6/Coldplay_-_A_Head_Full_Of_Dreams_2015.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/fsh08ni65r6hnt6/Coldplay_-_A_Head_Full_Of_Dreams_2015.zip?dl=0";
             break;
         case 8:
             $title = "Kungs - Layers";
@@ -66,7 +66,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "4 ноября 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1163860108?country=kg";
-            $link = "https://www.dropbox.com/s/pvy3ne4anfu893l/Kungs_-_Layers_-_2016.rar?dl=0";
+            $link = "https://dl.dropbox.com/s/pvy3ne4anfu893l/Kungs_-_Layers_-_2016.rar?dl=0";
             break;
         case 9:
             $title = "Charlie Puth - Nine Track Mind";
@@ -74,7 +74,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "29 января 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1041127262?country=kg";
-            $link = "https://www.dropbox.com/s/qotnd3ovva2mmsl/Charlie_Puth_-_Nine_Track_Mind_2016.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/qotnd3ovva2mmsl/Charlie_Puth_-_Nine_Track_Mind_2016.zip?dl=0";
             break;
         case 10:
             $title = "John Legend - Darkness and Light";
@@ -82,7 +82,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "2 декабря 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1170697676?country=us";
-            $link = "https://www.dropbox.com/s/u3p4nqwhmx74c4e/John_Legend_-_Darkness_and_Light_Deluxe_Edition_2016.rar?dl=0";
+            $link = "https://dl.dropbox.com/s/u3p4nqwhmx74c4e/John_Legend_-_Darkness_and_Light_Deluxe_Edition_2016.rar?dl=0";
             break;
         case 11:
             $title = "OneRepublic - Oh My My";
@@ -90,7 +90,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "7 октября 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1151608594?country=us";
-            $link = "https://www.dropbox.com/s/merv33ijq9z3zfk/OneRepublic_-_Oh_My_My_2016.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/merv33ijq9z3zfk/OneRepublic_-_Oh_My_My_2016.zip?dl=0";
             break;
         case 12:
             $title = "OneRepublic - Native";
@@ -98,7 +98,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "22 марта 2013";
             $itunes = "//tools.applemusic.com/embed/v1/album/603542914?country=kg";
-            $link = "https://www.dropbox.com/s/ni6stwwz2qzkxao/OneRepublic_-_Native_2013.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/ni6stwwz2qzkxao/OneRepublic_-_Native_2013.zip?dl=0";
             break;
         case 13:
             $title = "Frenship - Truce";
@@ -106,7 +106,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "2 сентября 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1147798339?country=kg";
-            $link = "https://www.dropbox.com/s/rxkdc7meksp4p2u/Frenship_-_Truce_EP_2016.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/rxkdc7meksp4p2u/Frenship_-_Truce_EP_2016.zip?dl=0";
             break;
         case 14:
             $title = "Lady Gaga - Joanne";
@@ -114,7 +114,7 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "21 октября 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1161515717?country=kg";
-            $link = "https://www.dropbox.com/s/a8kmgr66lsap2nk/Lady_Gaga_-_Joanne_2016.zip?dl=0";
+            $link = "https://dl.dropbox.com/s/a8kmgr66lsap2nk/Lady_Gaga_-_Joanne_2016.zip?dl=0";
             break;
         case 15:
             $title = "Sia - This Is Acting (Deluxe Version)";
@@ -122,7 +122,23 @@ if(isset($_GET['us'])){
             $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
             $date = "29 января 2016";
             $itunes = "//tools.applemusic.com/embed/v1/album/1162482526?country=kg";
-            $link = "https://www.dropbox.com/s/z1sz3a6xz2nk3zc/Sia_-_This_Is_Acting_Deluxe_Edition_2016.rar?dl=0";
+            $link = "https://dl.dropbox.com/s/z1sz3a6xz2nk3zc/Sia_-_This_Is_Acting_Deluxe_Edition_2016.rar?dl=0";
+            break;
+        case 16:
+            $title = "ДоМиНо - Стон";
+            $desc = "Стон — дебютный альбом казахской группы ДоМиНо.";
+            $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
+            $date = "2007";
+            $itunes = "";
+            $link = "https://dl.dropbox.com/s/vq9hoc97nigy5qm/Domino_-_Ston_2007.rar?dl=0";
+            break;
+        case 17:
+            $title = "Rag'n'Bone Man - Human(Deluxe)";
+            $desc = "Human — дебютный альбом британского соул-исполнителя Rag'n'Bone Man.";
+            $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
+            $date = "10 февраля 2017";
+            $itunes = "//tools.applemusic.com/embed/v1/album/1173599790?country=kg";
+            $link = "https://dl.dropbox.com/s/sgqapnnny4ns1d4/Rag_Bone_Man_-_Human_Deluxe_Edition_2017.rar?dl=0";
             break;
     }
 } else {
@@ -173,9 +189,13 @@ if(isset($_GET['us'])){
                 <div class="dt-content">
                     <p><?=$desc;?></p>
                     <p class="date"><span>Дата Выпуска:</span> <?=$date;?></p>
-                    <div class="md-embed">
-                        <iframe src="<?=$itunes;?>" frameborder="0" allowfullscreen style="width: 100%; height: 500px;"></iframe>
-                    </div>
+
+                    <?php if ($itunes) { ?>
+                        <div class="md-embed">
+                            <iframe src="<?=$itunes;?>" frameborder="0" allowfullscreen style="width: 100%; height: 500px;"></iframe>
+                        </div>
+                    <?php } ?>
+
                     <ul class="md-actions">
                         <li class="download">
                             <a href="<?=$link;?>" target="_blank">

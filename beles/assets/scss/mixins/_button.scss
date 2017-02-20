@@ -1,0 +1,10 @@
+@mixin button(){
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 30px;
+    border: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 40px;
+    @include transition(all 0.4s ease);
+}

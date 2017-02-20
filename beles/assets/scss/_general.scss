@@ -1,0 +1,32 @@
+*,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+}
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background: $white;
+    color: $dark;
+    font-family: $pt-sans;
+    font-size: 14px;
+    line-height: $line-height-base;
+}
+
+a{
+  @include transition(color 0.2s ease);
+
+  &:hover,
+  &:active,
+  &:focus{
+    color: $red;
+  }
+}

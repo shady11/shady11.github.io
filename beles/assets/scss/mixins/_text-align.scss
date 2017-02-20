@@ -1,0 +1,5 @@
+//Text align
+
+@mixin text-align($position){
+    text-align: $position;
+}
