@@ -140,6 +140,14 @@ if(isset($_GET['us'])){
             $itunes = "//tools.applemusic.com/embed/v1/album/1173599790?country=kg";
             $link = "https://dl.dropbox.com/s/sgqapnnny4ns1d4/Rag_Bone_Man_-_Human_Deluxe_Edition_2017.rar?dl=0";
             break;
+        case 18:
+            $title = "Ed Sheeran - &divide; (Deluxe)";
+            $desc = "&divide; — третий студийний альбом британского автора и исполнителя Ed Sheeran.";
+            $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
+            $date = "3 марта 2017";
+            $itunes = "//tools.applemusic.com/embed/v1/album/1193701079?country=us";
+            $link = "https://dl.dropbox.com/s/hifkkda4a15l8xx/Ed_Sheeran_-_Divide_2017.rar?dl=0";
+            break;
     }
 } else {
     redirect('error.php','js');

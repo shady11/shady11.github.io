@@ -1,3 +1,17 @@
+<a href="detail.php?us=18" class="tilter tilter--4" data-modal="modal-18">
+    <figure class="tilter__figure">
+        <img class="tilter__image" src="img/files/18.jpg" alt="Ed Sheeran - &divide; (Deluxe)" />
+        <div class="tilter__deco tilter__deco--shine"><div></div></div>
+        <div class="tilter__deco tilter__deco--overlay"></div>
+        <figcaption class="tilter__caption">
+            <div class="inner">
+                <h3 class="tilter__title">&divide; (Deluxe)</h3>
+                <p class="tilter__description">Ed Sheeran</p>
+            </div>
+        </figcaption>
+    </figure>
+</a>
+
 <a href="detail.php?us=17" class="tilter tilter--4" data-modal="modal-17">
     <figure class="tilter__figure">
         <img class="tilter__image" src="img/files/17.jpg" alt="Rag'n'Bone Man - Human(Deluxe)" />
