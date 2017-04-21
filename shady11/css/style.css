@@ -1,0 +1,934 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/*
+ * Global styles
+ */
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    color: #ffffff;
+    background: #fafafa;
+}
+
+
+
+/* Background */
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%);
+}
+
+
+.content {
+    width: inherit;
+    height: inherit;
+}
+
+#universe {
+    width: 100%;
+    height: 100%;
+}
+
+#footerContent {
+    font-family: sans-serif;
+    font-size: 110%;
+
+    position: fixed;
+    z-index: 20;
+    bottom: 0;
+
+    width: 100%;
+    padding: 20px;
+
+    text-align: center;
+
+    color: rgba(200, 220, 255, .3);
+}
+
+
+
+#footer {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 300px;
+}
+
+#scene {
+    position: absolute;
+    left: 50%;
+
+    height: 100%;
+    margin-left: -800px;
+}
+
+
+
+/*
+ * Page layout
+ */
+
+.page-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: #fafafa;
+}
+
+.page-container {
+    overflow: auto;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+}
+
+.page-content {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    right: 30px;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+
+
+
+/*
+ * Interactive title
+ */
+
+.interactive-title {
+    font-size: 64px;
+
+    margin: 0;
+
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.interactive-title span {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    -webkit-transition: all .2s;
+            transition: all .2s;
+}
+
+.interactive-title span:hover,
+.interactive-title span:active {
+    top: -10px;
+
+    color: #19CF86;
+}
+
+
+
+/*
+ * Interactive subtitle
+ */
+
+.interactive-subtitle {
+    font-size: 24px;
+
+    text-transform: uppercase;
+
+    margin: 15px 0;
+
+    -webkit-transition: all .2s;
+            transition: all .2s;
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s;
+}
+
+.interactive-subtitle2 {
+    font-size: 18px;
+    font-weight: normal;
+
+    margin: 15px 0 30px;
+}
+
+
+.interactive-subtitle span:hover,
+.interactive-subtitle span:active {
+    color: #19CF86;
+}
+
+
+@-webkit-keyframes select {
+    from {
+        top: 0;
+        color: #9fa5a9;
+    }
+    to {
+        top: -10px;
+        color: #19CF86;
+    }
+}
+
+@keyframes select {
+    from {
+        top: 0;
+        color: #9fa5a9;
+    }
+    to {
+        top: -10px;
+        color: #19CF86;
+    }
+}
+
+@-webkit-keyframes deselect {
+    from {
+        top: -10px;
+        color: #19CF86;
+    }
+    to {
+        top: 0;
+        color: #9fa5a9;
+    }
+}
+
+@keyframes deselect {
+    from {
+        top: -10px;
+        color: #19CF86;
+    }
+    to {
+        top: 0;
+        color: #9fa5a9;
+    }
+}
+
+@-webkit-keyframes shake-little {
+    0% {
+        top: -10px;
+        left: 0;
+    }
+    4% {
+        top: -10px;
+        left: -1px;
+    }
+    6% {
+        top: -11px;
+        left: 0;
+    }
+    8% {
+        top: -10px;
+        left: 0;
+    }
+    10% {
+        top: -10px;
+        left: -1px;
+    }
+    12% {
+        top: -10px;
+        left: -1px;
+    }
+    14% {
+        top: -10px;
+        left: 0;
+    }
+    16% {
+        top: -10px;
+        left: 0;
+    }
+    18% {
+        top: -11px;
+        left: 0;
+    }
+    20% {
+        top: -10px;
+        left: 0;
+    }
+    22% {
+        top: -10px;
+        left: -1px;
+    }
+    24% {
+        top: -10px;
+        left: 0;
+    }
+    26% {
+        top: -11px;
+        left: -1px;
+    }
+    28% {
+        top: -11px;
+        left: -1px;
+    }
+    30% {
+        top: -10px;
+        left: 0;
+    }
+    32% {
+        top: -10px;
+        left: -1px;
+    }
+    34% {
+        top: -11px;
+        left: 0;
+    }
+    36% {
+        top: -11px;
+        left: 0;
+    }
+    38% {
+        top: -11px;
+        left: -1px;
+    }
+    40% {
+        top: -11px;
+        left: -1px;
+    }
+    42% {
+        top: -10px;
+        left: -1px;
+    }
+    44% {
+        top: -10px;
+        left: -1px;
+    }
+    46% {
+        top: -11px;
+        left: 0;
+    }
+    48% {
+        top: -10px;
+        left: 0;
+    }
+    50% {
+        top: -11px;
+        left: -1px;
+    }
+    52% {
+        top: -10px;
+        left: 0;
+    }
+    54% {
+        top: -10px;
+        left: 0;
+    }
+    56% {
+        top: -11px;
+        left: -1px;
+    }
+    58% {
+        top: -11px;
+        left: -1px;
+    }
+    60% {
+        top: -11px;
+        left: -1px;
+    }
+    62% {
+        top: -11px;
+        left: -1px;
+    }
+    64% {
+        top: -10px;
+        left: -1px;
+    }
+    66% {
+        top: -11px;
+        left: 0;
+    }
+    68% {
+        top: -11px;
+        left: 0;
+    }
+    70% {
+        top: -11px;
+        left: 0;
+    }
+    72% {
+        top: -10px;
+        left: -1px;
+    }
+    74% {
+        top: -11px;
+        left: 0;
+    }
+    76% {
+        top: -10px;
+        left: 0;
+    }
+    78% {
+        top: -11px;
+        left: -1px;
+    }
+    80% {
+        top: -10px;
+        left: -1px;
+    }
+    82% {
+        top: -11px;
+        left: 0;
+    }
+    84% {
+        top: -10px;
+        left: 0;
+    }
+    86% {
+        top: -10px;
+        left: 0;
+    }
+    88% {
+        top: -10px;
+        left: 0;
+    }
+    90% {
+        top: -10px;
+        left: -1px;
+    }
+    92% {
+        top: -10px;
+        left: 0;
+    }
+    94% {
+        top: -11px;
+        left: 0;
+    }
+    96% {
+        top: -10px;
+        left: 0;
+    }
+    98% {
+        top: -10px;
+        left: 0;
+    }
+}
+
+@keyframes shake-little {
+    0% {
+        top: -10px;
+        left: 0;
+    }
+    4% {
+        top: -10px;
+        left: -1px;
+    }
+    6% {
+        top: -11px;
+        left: 0;
+    }
+    8% {
+        top: -10px;
+        left: 0;
+    }
+    10% {
+        top: -10px;
+        left: -1px;
+    }
+    12% {
+        top: -10px;
+        left: -1px;
+    }
+    14% {
+        top: -10px;
+        left: 0;
+    }
+    16% {
+        top: -10px;
+        left: 0;
+    }
+    18% {
+        top: -11px;
+        left: 0;
+    }
+    20% {
+        top: -10px;
+        left: 0;
+    }
+    22% {
+        top: -10px;
+        left: -1px;
+    }
+    24% {
+        top: -10px;
+        left: 0;
+    }
+    26% {
+        top: -11px;
+        left: -1px;
+    }
+    28% {
+        top: -11px;
+        left: -1px;
+    }
+    30% {
+        top: -10px;
+        left: 0;
+    }
+    32% {
+        top: -10px;
+        left: -1px;
+    }
+    34% {
+        top: -11px;
+        left: 0;
+    }
+    36% {
+        top: -11px;
+        left: 0;
+    }
+    38% {
+        top: -11px;
+        left: -1px;
+    }
+    40% {
+        top: -11px;
+        left: -1px;
+    }
+    42% {
+        top: -10px;
+        left: -1px;
+    }
+    44% {
+        top: -10px;
+        left: -1px;
+    }
+    46% {
+        top: -11px;
+        left: 0;
+    }
+    48% {
+        top: -10px;
+        left: 0;
+    }
+    50% {
+        top: -11px;
+        left: -1px;
+    }
+    52% {
+        top: -10px;
+        left: 0;
+    }
+    54% {
+        top: -10px;
+        left: 0;
+    }
+    56% {
+        top: -11px;
+        left: -1px;
+    }
+    58% {
+        top: -11px;
+        left: -1px;
+    }
+    60% {
+        top: -11px;
+        left: -1px;
+    }
+    62% {
+        top: -11px;
+        left: -1px;
+    }
+    64% {
+        top: -10px;
+        left: -1px;
+    }
+    66% {
+        top: -11px;
+        left: 0;
+    }
+    68% {
+        top: -11px;
+        left: 0;
+    }
+    70% {
+        top: -11px;
+        left: 0;
+    }
+    72% {
+        top: -10px;
+        left: -1px;
+    }
+    74% {
+        top: -11px;
+        left: 0;
+    }
+    76% {
+        top: -10px;
+        left: 0;
+    }
+    78% {
+        top: -11px;
+        left: -1px;
+    }
+    80% {
+        top: -10px;
+        left: -1px;
+    }
+    82% {
+        top: -11px;
+        left: 0;
+    }
+    84% {
+        top: -10px;
+        left: 0;
+    }
+    86% {
+        top: -10px;
+        left: 0;
+    }
+    88% {
+        top: -10px;
+        left: 0;
+    }
+    90% {
+        top: -10px;
+        left: -1px;
+    }
+    92% {
+        top: -10px;
+        left: 0;
+    }
+    94% {
+        top: -11px;
+        left: 0;
+    }
+    96% {
+        top: -10px;
+        left: 0;
+    }
+    98% {
+        top: -10px;
+        left: 0;
+    }
+}
+
+
+/*
+ * Icon
+ */
+
+.icon {
+    font-size: 0;
+
+    position: relative;
+    z-index: 1;
+
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+    -webkit-transition: all .2s;
+            transition: all .2s;
+    text-align: center;
+
+    background-clip: padding-box;
+}
+.icon svg{
+    fill: #ffffff;
+}
+.icon:hover,
+.icon:active {
+    opacity: 0.25;
+}
+
+
+/*
+ * My contacts
+ */
+
+.contacts {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+}
+
+.contacts a {
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    overflow: hidden;
+    border: 0;
+    background-color: transparent;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir::before {
+    display: block;
+    width: 0;
+    height: 150%;
+    content: '';
+}
+
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+    /* 1 */
+    display: table;
+    content: ' ';
+    /* 2 */
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+@media only screen and (max-width: 47.938em) {
+    /* Style adjustments for viewports that meet the condition */
+    .interactive-title {
+        font-size: 36px;
+    }
+    .interactive-subtitle {
+        font-size: 16px;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+    }    
+    .contacts a {
+        margin: 0 10px;
+    }
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        color: #000 !important;
+        background: transparent !important;
+        /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]::after {
+        content: ' (' attr(href) ')';
+    }
+    abbr[title]::after {
+        content: ' (' attr(title) ')';
+    }
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+    .ir a::after,
+    a[href^='javascript:']::after,
+    a[href^='#']::after {
+        content: '';
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+        /* h5bp.com/t */
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    @page {
+        margin: .5cm;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
