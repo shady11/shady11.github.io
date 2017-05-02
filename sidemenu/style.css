@@ -2,6 +2,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
 
+    overflow: hidden;
+
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -18,7 +20,9 @@ a {
 /* Aside */
 aside {
     position: absolute;
+    /* left: 0; */
     z-index: 1;
+    right: 0;
 
     height: 100%;
 }
@@ -27,30 +31,30 @@ aside {
     position: absolute;
 
     height: 100%;
-
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 .main-side {
     z-index: 2;
-    left: 0;
+    /* left: 0; */
+    right: 0;
 
-    width: 64px;
-
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .25);
+    width: 96px;
+    /* box-shadow: 0 0 8px 0 rgba(0, 0, 0, .25); */
 }
 .hidden-side {
     z-index: 1;
-    left: 64px;
+    right: 0;
 
-    width: 256px;
+    width: 480px;
+    background: rgba(0, 0, 0, 0.75);
 
     -webkit-transition: transform .25s ease;
          -o-transition: transform .25s ease;
             transition: transform .25s ease;
-    -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-         -o-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+         -o-transform: translateX(100%);
+            transform: translateX(100%);
 }
 
 .hidden-side.translated {
@@ -70,9 +74,9 @@ aside {
     vertical-align: middle;
 }
 .lines {
-    width: 32px;
-    height: 48px;
-    padding: 16px;
+    width: 64px;
+    height: 32px;
+    padding: 32px;
 
     opacity: 1;
 }
@@ -91,7 +95,7 @@ aside {
          -o-transition: transform .25s ease;
             transition: transform .25s ease;
 
-    background: #000;
+    background: #fff;
 }
 
 .line:first-child,
@@ -121,12 +125,12 @@ aside {
 /* Logo */
 .side-logo,
 .main-logo {
-    padding: 24px 32px;
+    padding: 32px;
 }
 .main-logo {
     position: relative;
     z-index: 9;
-    left: 64px;
+    left: 0;
 }
 .side-logo img,
 .main-logo svg {
@@ -181,6 +185,9 @@ aside {
 .socials li {
     margin: 0 auto 24px;
 }
+.socials li:last-child {
+    margin-bottom: 32px;
+}
 .socials a {
     display: block;
 
@@ -200,28 +207,28 @@ aside {
     white-space: nowrap;
     text-transform: lowercase;
 
-    color: #808080;
+    color: #fff;
 }
 .socials svg {
     -webkit-transition: opacity .25s;
          -o-transition: opacity .25s;
             transition: opacity .25s;
 
-    opacity: .5;
+    opacity: 1;
 
-    fill: #000;
+    fill: #fff;
 }
 
 .socials svg:hover,
 .socials svg:focus {
-    opacity: 1;
+    opacity: .5;
 }
 
 
 /* Side Nav */
 
 .side-nav {
-    margin-top: 80px;
+    margin-top: 96px;
     padding: 16px 32px;
 
     -webkit-transition: opacity .2s ease .4s;
@@ -236,9 +243,9 @@ aside {
 }
 
 .side-nav li a {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 32px;
+    font-family: 'PT Mono', monospace;
+    font-size: 32px;
+    line-height: 48px;
 
     position: relative;
 
@@ -247,6 +254,8 @@ aside {
     margin-bottom: 8px;
 
     text-transform: capitalize;
+
+    color: #fff;
 }
 
 .side-nav li a::after {

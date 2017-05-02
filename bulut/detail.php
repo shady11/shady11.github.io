@@ -148,6 +148,14 @@ if(isset($_GET['us'])){
             $itunes = "//tools.applemusic.com/embed/v1/album/1193701079?country=us";
             $link = "https://dl.dropbox.com/s/hifkkda4a15l8xx/Ed_Sheeran_-_Divide_2017.rar?dl=0";
             break;
+        case 19:
+            $title = "The Chainsmokers - Memories...Do Not Open";
+            $desc = "Memories...Do Not Open — дебютный студийний альбом американского дуэта The Chainsmokers.";
+            $image = "http://".$_SERVER[HTTP_HOST]."/demo/bulut/img/files/".$us.".jpg";
+            $date = "7 апреля 2017";
+            $itunes = "//tools.applemusic.com/embed/v1/album/1207120422?country=us";
+            $link = "https://downloader.disk.yandex.com/disk/ad4859785cbfe116eeeadda29ee7f1b1fdf8db9de28f09a7eb7f2fe6e3239651/5900bc16/myYIJpxMZPbc2aUjsoUz0K6_6kw1-XHJfHtoOd5OI2EBOJay48g6C-KnTmwRzL8cfKEF_wWPIUAoYgibGhky_A%3D%3D?uid=0&filename=The_Chainsmokers_-_Memories...Do_Not_Open_2017.rar&disposition=attachment&hash=N6TqnsboBWHiMNGEG2amf7pEXFnp2zmGeEoDvBVfL98%3D&limit=0&content_type=application%2Fx-rar&fsize=116179090&hid=d0a87c135d75708f676816dcb7825fb7&media_type=compressed&tknv=v2";
+            break;
     }
 } else {
     redirect('error.php','js');
