@@ -24,7 +24,7 @@ body{
         position: relative;
         top: 80px;
         @include breakpoint(large){
-            top: 100px;
+            top: 150px;
         }
     }
 }

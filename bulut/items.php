@@ -12,6 +12,20 @@
     </figure>
 </a>
 
+<a href="detail.php?us=20" class="tilter tilter--4" data-modal="modal-20">
+    <figure class="tilter__figure">
+        <img class="tilter__image" src="img/files/20.jpg" alt="Zara Larsson - So Good" />
+        <div class="tilter__deco tilter__deco--shine"><div></div></div>
+        <div class="tilter__deco tilter__deco--overlay"></div>
+        <figcaption class="tilter__caption">
+            <div class="inner">
+                <h3 class="tilter__title">So Good</h3>
+                <p class="tilter__description">Zara Larsson</p>
+            </div>
+        </figcaption>
+    </figure>
+</a>
+
 <a href="detail.php?us=18" class="tilter tilter--4" data-modal="modal-18">
     <figure class="tilter__figure">
         <img class="tilter__image" src="img/files/18.jpg" alt="Ed Sheeran - &divide; (Deluxe)" />

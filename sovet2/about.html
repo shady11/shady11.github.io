@@ -16,8 +16,8 @@
         function init() {
             window.addEventListener('scroll', function(e){
                 var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                    shrinkOnHeader = 120,
-                    shrinkOnAside = 460,
+                    shrinkOnHeader = 150,
+                    shrinkOnAside = 610,
                     aside = document.getElementById("sidebar"),
                     body = document.body.clientWidth,
                     container = body,
@@ -53,8 +53,6 @@
 
                 if(distanceY > shrinkOnAside) {
                     classie.add(aside,"fixed");
-
-                    console.log(container);
                     aside.style.right = (body-container)/2+"px";
 
                 } else {
@@ -71,16 +69,64 @@
 </head>
 <body class="page about-page">
 
-<div class="wrapper with-cover">
+<div class="wrapper">
     <header class="header">
-        <div class="container">
-            <div id="logo" class="logo">
+        <div class="top-header clearfix">
+            <div class="container">
+                <div class="left-header">
+                    <div class="social">
+                        <ul class="text-center clearfix">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-header">
+                    <ul>
+                        <li>
+                             г. Каракол, ул. Абдрахманова 125, тел.: +996 551 98-46-01, факс: +996 3922 5-81-81
+                        </li>
+                        <li>
+                            <a href="mailto:baibolot.a@gmail.com">
+                                <svg x="0px" y="0px" viewBox="0 0 46 27" xml:space="preserve">
+                                    <g transform="translate(0,-952.36218)">
+                                        <path d="M1.5,952.4c-0.8,0-1.5,0.7-1.5,1.5v24c0,0.8,0.7,1.5,1.5,1.5h43c0.8,0,1.5-0.7,1.5-1.5v-24c0-0.8-0.7-1.5-1.5-1.5H1.5z
+                                             M3.2,954.4h39.5L23,970.1L3.2,954.4z M2,955.9l11.4,9.1L2,976V955.9z M44,955.9v20l-11.4-11L44,955.9z M15,966.3l7.4,5.9
+                                            c0.4,0.3,0.9,0.3,1.3,0l7.4-5.9l11.5,11.1H3.5L15,966.3z"/>
+                                    </g>
+                                </svg>
+                                baibolot.a@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="hamburger-menu" class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <!--<a class="img-replace" href="#0">Menu</a>-->
+        </div>
+        <div class="container">
+            
+            <div class="main-header">
+                <a href="index.html" id="logo" class="logo">
+                </a>
+
+                <div id="hamburger-menu" class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <!--<a class="img-replace" href="#0">Menu</a>-->
+                </div>
             </div>
         </div>
     </header> <!-- fixed header -->
@@ -88,43 +134,27 @@
     <nav id="main-nav">
         <ul class="text-center nav">
             <li>
-                <a class="active" href="#">О нас</a>
+                <a class="active" href="about.html">О нас</a>
             </li>
             <li>
-                <a href="#">Как работает совет</a>
+                <a href="#">Новости</a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">Инвесторы</a>
+            </li> -->
+            <li>
+                <a href="#">Предпринимателям</a>
             </li>
             <li>
-                <a href="#">Предприниматели</a>
+                <a href="#">Кластеры</a>
             </li>
             <li>
-                <a href="#">Участники кластера</a>
+                <a href="#">Координационный совет</a>
             </li>
             <li>
-                <a href="#">Доноры</a>
+                <a href="contacts.html">Контакты</a>
             </li>
-        </ul>
-        <div class="social">
-            <ul class="text-center clearfix">
-                <li>
-                    <a href="#">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        </ul>        
     </nav>
 
     <div id="shadow-layer"></div>
@@ -144,14 +174,29 @@
                 <div class="section-content mb clearfix">
                     <aside id="sidebar">
                         <ul>
-                            <li>
+                            <li class="active">
                                 <a href="about.html">
-                                    Информация о совете
+                                    Общие сведения
                                 </a>
                             </li>
                             <li>
                                 <a href="sovet.html">
-                                    Структура управления
+                                    Модель Совета
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sovet.html">
+                                    Состав Совета
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sovet.html">
+                                    Заседания
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sovet.html">
+                                    Протоколы
                                 </a>
                             </li>
                         </ul>
@@ -284,64 +329,63 @@
                             </div>
                             <div class="grid-16m grid-10l offset-2l menu">
                                 <div class="row">
-                                    <div class="grid grid-8 grid-4m grid-3l offset-2l">
+                                    <div class="grid grid-8 grid-4m grid-4l">
                                         <ul>
                                             <li>
-                                                Компания
+                                                О нас
                                             </li>
                                             <li>
-                                                <a href="#">О нас</a>
+                                                <a href="#">Общие сведения</a>
                                             </li>
                                             <li>
-                                                <a href="#">Новости</a>
+                                                <a href="#">Модель совета</a>
                                             </li>
                                             <li>
-                                                <a href="#">Контакты</a>
+                                                <a href="#">Состав совета</a>
                                             </li>
                                             <li>
-                                                <a href="#">Вакансии</a>
+                                                <a href="#">Заседания</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Протоколы</a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="grid grid-8 grid-4m grid-3l">
+                                    <div class="grid grid-8 grid-4m grid-4l">
                                         <ul>
                                             <li>
-                                                Компания
+                                                <a href="#">Предприниматели</a>
                                             </li>
+                                        </ul>
+                                        <ul>
                                             <li>
-                                                <a href="#">О нас</a>
+                                                <a href="#">Кластеры</a>
                                             </li>
+                                        </ul>
+                                        <ul>
                                             <li>
-                                                <a href="#">Новости</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Контакты</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Вакансии</a>
+                                                <a href="#">Координационный совет</a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="grid grid-8 grid-4m grid-3l">
+                                    <div class="grid grid-8 grid-4m grid-4l">
                                         <ul>
-                                            <li>
-                                                Компания
-                                            </li>
-                                            <li>
-                                                <a href="#">О нас</a>
-                                            </li>
                                             <li>
                                                 <a href="#">Новости</a>
                                             </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Обратная связь</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
                                             <li>
                                                 <a href="#">Контакты</a>
                                             </li>
-                                            <li>
-                                                <a href="#">Вакансии</a>
-                                            </li>
                                         </ul>
                                     </div>
-                                    <div class="grid grid-8 grid-4m grid-5l">
+                                    <div class="grid grid-8 grid-4m grid-4l">
                                         <ul class="social">
                                             <li>
                                                 Следите за нами

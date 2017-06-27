@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Catalog</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/bpHS.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/media.css"> -->
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/classie.js"></script>
+
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                        shrinkOn = 200,
+                        header = document.querySelector(".header");
+                if (distanceY > shrinkOn) {
+                    classie.add(header,"smaller");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                    }
+                }
+            });
+        }
+        window.onload = init();
+    </script>
+</head>
+<body>
+
+	<header class="header transition">
+		<div id="logo">
+
+        </div>
+
+        <div class="contacts">
+            <p class="phone"><i></i>0 (772) 145016</p>
+            <p class="address"><i></i>ул.Байтик Баатыра, 43/2</p>
+            <a class="instagram" target="_blank" href="#"><i></i>topsport.kg</a>
+        </div>
+
+		<div id="pd-hamburger-menu">
+			<a class="img-replace" href="#0">Menu</a>
+		</div>
+		<div id="pd-cart-trigger hidden">
+			<a href="#" class="img-replace"></a>
+		</div>
+	</header> <!-- fixed header -->
+
+	<nav id="main-nav">
+		<ul>
+			<li><a class="current" href="#0">Главная</a></li>
+			<li><a href="#0">Каталог</a></li>
+			<li><a href="#0">FAQ</a></li>
+		</ul>
+
+        <div class="contacts">
+            <p class="instagram">
+                <span><i></i>topsport.kg</span>
+            </p>
+            <p class="phone">
+                <span><i></i>0 (772) 145016</span>
+            </p>
+            <p class="address">
+                <span><i></i>ул.Байтик Баатыра, 43/2</span>
+            </p>
+        </div>
+	</nav> <!-- art-nav -->
+
+	<div id="pd-shadow-layer"></div>
+
+	<div id="pd-cart" class="">
+		<h2>Корзина</h2>
+		<ul class="pd-cart-items">
+			<li>
+				<img src="img/products/small/shirt.png" alt="">
+				<span class="pd-qty">1x</span> Название товара
+				<div class="pd-price">800 сом</div>
+				<a href="#0" class="pd-item-remove img-replace">
+				</a>
+			</li>
+			<li>
+				<img src="img/products/small/shirt.png" alt="">
+				<span class="pd-qty">1x</span> Название товара
+				<div class="pd-price">800 сом</div>
+				<a href="#0" class="pd-item-remove img-replace">
+				</a>
+			</li>
+		</ul> <!-- art-cart-items -->
+
+		<div class="pd-cart-total">
+			<p>Итого <span>1600 сом</span></p>
+		</div> <!-- art-cart-total -->
+
+		<div class="checkout-btn">
+			<a href="#">Оформить заказ</a>
+		</div>
+		
+		<p class="pd-go-to-cart"><a href="#0">Перейти в корзину</a></p>
+	</div> <!-- art-cart -->
+
+	<main class="content">
+
+		<div class="ctl-container section-wrap">
+            <div class="section">
+                <div class="items">
+                    <h2 class="text-center">Каталог</h2>
+
+                    <div class="ctl-inner container clearfix">
+                        <aside>
+                            <ul>
+                                
+                            </ul>
+                        </aside>
+                        <main>
+                            <ul id="pd-gallery-items-2" class="pd-gallery-items pd-container">
+                                <li>
+                                    <div class="grid-item-inner">
+                                        <ul class="pd-item-wrapper">
+                                            <li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+                                        </ul> <!-- pd-item-wrapper -->
+
+                                        <div class="pd-item-info">
+                                            <div class="secondary clearfix">
+                                                <a href="#">
+                                                    <b>Название продукта</b>
+                                                    <em>1200 сом</em>
+                                                </a>
+                                            </div>
+                                        </div> <!-- pd-item-info -->
+
+                                        <nav>
+                                            <ul class="pd-item-navigation">
+                                                <li><a class="img-replace" href="#0">Prev</a></li>
+                                                <li><a class="img-replace" href="#0">Next</a></li>
+                                            </ul>
+                                        </nav>
+
+                                        <a class="pd-3d-trigger img-replace" href="#0">Open</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="grid-item-inner">
+                                        <ul class="pd-item-wrapper">
+                                            <li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+                                        </ul> <!-- pd-item-wrapper -->
+
+                                        <div class="pd-item-info">
+                                            <div class="secondary clearfix">
+                                                <a href="#">
+                                                    <b>Название продукта</b>
+                                                    <em>1200 сом</em>
+                                                </a>
+                                            </div>
+                                        </div> <!-- pd-item-info -->
+
+                                        <nav>
+                                            <ul class="pd-item-navigation">
+                                                <li><a class="img-replace" href="#0">Prev</a></li>
+                                                <li><a class="img-replace" href="#0">Next</a></li>
+                                            </ul>
+                                        </nav>
+
+                                        <a class="pd-3d-trigger img-replace" href="#0">Open</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="grid-item-inner">
+                                        <ul class="pd-item-wrapper">
+                                            <li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+                                        </ul> <!-- pd-item-wrapper -->
+
+                                        <div class="pd-item-info">
+                                            <div class="secondary clearfix">
+                                                <a href="#">
+                                                    <b>Название продукта</b>
+                                                    <em>1200 сом</em>
+                                                </a>
+                                            </div>
+                                        </div> <!-- pd-item-info -->
+
+                                        <nav>
+                                            <ul class="pd-item-navigation">
+                                                <li><a class="img-replace" href="#0">Prev</a></li>
+                                                <li><a class="img-replace" href="#0">Next</a></li>
+                                            </ul>
+                                        </nav>
+
+                                        <a class="pd-3d-trigger img-replace" href="#0">Open</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="grid-item-inner">
+                                        <ul class="pd-item-wrapper">
+                                            <li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+                                        </ul> <!-- pd-item-wrapper -->
+
+                                        <div class="pd-item-info">
+                                            <div class="secondary clearfix">
+                                                <a href="#">
+                                                    <b>Название продукта</b>
+                                                    <em>1200 сом</em>
+                                                </a>
+                                            </div>
+                                        </div> <!-- pd-item-info -->
+
+                                        <nav>
+                                            <ul class="pd-item-navigation">
+                                                <li><a class="img-replace" href="#0">Prev</a></li>
+                                                <li><a class="img-replace" href="#0">Next</a></li>
+                                            </ul>
+                                        </nav>
+
+                                        <a class="pd-3d-trigger img-replace" href="#0">Open</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="grid-item-inner">
+                                        <ul class="pd-item-wrapper">
+                                            <li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+                                        </ul> <!-- pd-item-wrapper -->
+
+                                        <div class="pd-item-info">
+                                            <div class="secondary clearfix">
+                                                <a href="#">
+                                                    <b>Название продукта</b>
+                                                    <em>1200 сом</em>
+                                                </a>
+                                            </div>
+                                        </div> <!-- pd-item-info -->
+
+                                        <nav>
+                                            <ul class="pd-item-navigation">
+                                                <li><a class="img-replace" href="#0">Prev</a></li>
+                                                <li><a class="img-replace" href="#0">Next</a></li>
+                                            </ul>
+                                        </nav>
+
+                                        <a class="pd-3d-trigger img-replace" href="#0">Open</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="grid-item-inner">
+                                        <ul class="pd-item-wrapper">
+                                            <li class="pd-item-front"><a href="#0"><img src="img/products/large/shirt_1.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-middle"><a href="#0"><img src="img/products/large/shirt_2.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-back"><a href="#0"><img src="img/products/large/shirt_3.jpg" alt="Preview image"></a></li>
+                                            <li class="pd-item-out"><a href="#0"><img src="img/products/large/shirt_4.jpg" alt="Preview image"></a></li>
+                                        </ul> <!-- pd-item-wrapper -->
+
+                                        <div class="pd-item-info">
+                                            <div class="secondary clearfix">
+                                                <a href="#">
+                                                    <b>Название продукта</b>
+                                                    <em>1200 сом</em>
+                                                </a>
+                                            </div>
+                                        </div> <!-- pd-item-info -->
+
+                                        <nav>
+                                            <ul class="pd-item-navigation">
+                                                <li><a class="img-replace" href="#0">Prev</a></li>
+                                                <li><a class="img-replace" href="#0">Next</a></li>
+                                            </ul>
+                                        </nav>
+
+                                        <a class="pd-3d-trigger img-replace" href="#0">Open</a>
+                                    </div>
+                                </li>
+
+                            </ul> <!-- pd-gallery-items -->
+                        </main>                
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pluses">
+            <div class="container">
+                <ul>
+                    <li class="plus">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <div class="media-object"></div>
+                            </div>
+                            <div class="media-body media-middle">
+                                <p>
+                                    Доставка по городу
+                                </p>
+                            </div>
+                        </div>
+                        <div class="extra">
+                            Бесплатная доставка по Бишкеку на заказы свыше 1000 сом.
+                        </div>
+                    </li>
+                    <li class="plus">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <div class="media-object"></div>
+                            </div>
+                            <div class="media-body media-middle">
+                                <p>
+                                    Примерка перед покупкой
+                                </p>
+                            </div>
+                        </div>
+                        <div class="extra">
+                            Можете заказать на примерку две модели, и мы привезём по 2 размера каждой модели.
+                        </div>
+                    </li>
+                    <li class="plus">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <div class="media-object"></div>
+                            </div>
+                            <div class="media-body media-middle">
+                                <p>
+                                    Наличный расчет на месте
+                                </p>
+                            </div>
+                        </div>
+                        <div class="extra">
+                            Оплата производится наличными курьеру при доставке.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-5">
+					<div class="row">
+						<ul>
+							<li>
+								<a href="#">О нас</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<a class="logo" href="#">
+						<img src="img/logo-dark.png" alt="">
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-5">
+					<p class="copyright">
+						&copy; 2016, TopSport
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+
+<script src="js/bpHS.js"></script>
+<script>
+	$(document).ready(function() {
+	  
+	    // fire default bpHS!
+	    $('#art-slider').bpHS({
+			// autoPlay: true,
+			duration: 3600
+	    });  
+
+		var height = $('.hd-slider img').height();
+		$( "#art-slider" ).css('height', height);
+//		var width = $('body').width();
+//		$( "#art-slider" ).css('width', width);
+
+	    $(window).resize(function() {
+	    	var heightResize = $('.hd-slider img').height();
+			$( "#art-slider" ).css('height', heightResize);
+//            var widthResize = $('body').width();
+//            $( "#art-slider" ).css('width', widthResize);
+		});
+	    
+	}); 
+</script>
+<script src="js/main.js"></script>
+
+<script src="js/masonry.pkgd.js"></script>
+<script>
+	$(window).load(function(){
+		if( $(window).width() >= 1024 ) {
+	      	$('.grid').masonry({
+				itemSelector: '.grid-item',
+			});
+		}
+	});
+</script>
+	
+</body>
+</html>

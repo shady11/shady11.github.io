@@ -79,7 +79,7 @@ function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
 function move_navigation( $navigation, $MQ) {
     if ( $(window).width() >= $MQ ) {
         $navigation.detach();
-        $navigation.appendTo('header .container');
+        $navigation.appendTo('header .main-header');
     } else {
         $navigation.detach();
         $navigation.insertAfter('header');

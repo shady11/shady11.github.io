@@ -76,7 +76,7 @@ html {
 
 body {
   height: 100%;
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   color: #333333;
   font-family: "Fira Sans", Arial, sans-serif;
   font-size: 14px;
@@ -89,7 +89,7 @@ body {
     top: 80px; }
     @media (min-width: 992px) {
       .wrapper > .inner {
-        top: 100px; } }
+        top: 150px; } }
 
 .container {
   margin-right: auto;
@@ -617,7 +617,7 @@ header {
     margin: 0 auto;
     width: 60px;
     height: 50px;
-    background-image: url("../img/logo.png");
+    background-image: url("../img/logo-text.png");
     background-repeat: no-repeat;
     background-position: top center;
     -webkit-background-size: auto 100%;
@@ -666,8 +666,8 @@ header {
       transform: translateX(100%); }
   @media (min-width: 992px) {
     header {
-      height: 100px;
-      padding: 25px 15px; }
+      height: 150px;
+      padding: 0 0 25px; }
       header .logo, header #main-nav {
         display: table-cell;
         vertical-align: middle; }
@@ -684,7 +684,7 @@ header {
       width: 1170px;
       padding: 0 10px; }
     header .logo {
-      min-width: 120px; } }
+      min-width: 270px; } }
 
 #main-nav {
   position: fixed;
@@ -761,9 +761,45 @@ header {
             #main-nav .nav li a.active::before, #main-nav .nav li a:hover::before {
               width: 100%; } }
 
+.top-header {
+  padding: 15px 0 15px;
+  margin-bottom: 25px;
+  background: #1b8bf9; }
+  .top-header .social, .top-header .right-header li, .top-header .right-header li a {
+    color: #fff; }
+  .top-header svg {
+    fill: #fff; }
+
+.top-header,
+.main-header {
+  transition: all 0.3s; }
+
+.left-header {
+  float: left; }
+
+.right-header {
+  float: right; }
+  .right-header li {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+    margin-left: 15px;
+    font-family: "AvenirNextW1G-Demi", Arial, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #1b8bf9; }
+    .right-header li a {
+      text-transform: none; }
+    .right-header li svg {
+      float: left;
+      height: 12px;
+      margin-right: 8px;
+      margin-top: 4px; }
+
 .social {
   min-width: 120px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  line-height: 20px; }
   .social li {
     float: left; }
     .social li a {
@@ -783,7 +819,7 @@ header {
         transform: translateY(-10%); }
   @media (min-width: 992px) {
     .social {
-      padding-left: 30px; } }
+      padding-left: 0; } }
 
 header.smaller {
   height: 80px;
@@ -793,7 +829,7 @@ header.smaller {
   box-shadow: 0 2px 5px rgba(99, 117, 138, 0.25); }
   @media (min-width: 992px) {
     header.smaller {
-      padding: 15px; }
+      padding: 15px 0; }
       header.smaller #main-nav ul li a {
         position: relative;
         color: #333333; }
@@ -809,6 +845,9 @@ header.smaller {
           -ms-transform: translateY(-10%);
           -o-transform: translateY(-10%);
           transform: translateY(-10%); } }
+  header.smaller .top-header,
+  header.smaller .main-header {
+    transform: translateY(-75px); }
 
 header.smaller, header.smaller > * {
   -webkit-transition: all 0.3s ease;
@@ -841,8 +880,7 @@ Shadow Overlay
 Logo
 -------------------------------- */
 .logo img {
-  height: 50px;
-  width: auto; }
+  height: 50px; }
 
 /* --------------------------------
 Header
@@ -909,14 +947,14 @@ Cover
     -ms-transform: translateX(-50%) translateY(-50%);
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%); }
-  .cover h1 {
+  .cover h1, .cover h2 {
     margin: 70px 0 15px;
     font-family: "AvenirNextW1G-Bold", Arial, sans-serif;
     font-size: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center; }
-    .cover h1 span {
+    .cover h1 span, .cover h2 span {
       display: block; }
   .cover h4 {
     display: none;
@@ -938,10 +976,13 @@ Cover
     .cover {
       height: 700px; }
       .cover .content {
-        width: 60%; }
+        width: 80%; }
       .cover h1 {
-        margin: 150px 0 50px;
+        margin: 150px 0 0;
         font-size: 40px; }
+      .cover h2 {
+        margin: 0 0 50px;
+        font-size: 28px; }
       .cover h4 {
         font-size: 24px; } }
 
@@ -1070,6 +1111,8 @@ Cover
         margin-bottom: 0; }
         .page-section aside ul li:last-child {
           margin-bottom: 0; }
+        .page-section aside ul li.active a {
+          color: #fc3768; }
         .page-section aside ul li a {
           display: block;
           padding: 8px 0;
@@ -1334,6 +1377,13 @@ footer {
     @media (min-width: 992px) {
       footer .copyright {
         text-align: left; } }
+    footer .copyright p {
+      line-height: 20px; }
+      footer .copyright p svg {
+        float: left;
+        height: 12px;
+        margin-top: 3px;
+        margin-right: 4px; }
 
 .footer .section-content {
   padding: 30px 0; }
@@ -1342,7 +1392,8 @@ footer {
   margin-bottom: 20px; }
   .footer .logo img {
     height: 60px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: auto; }
 .footer .info {
   margin-bottom: 20px;
   color: #333333;
@@ -1356,7 +1407,7 @@ footer {
   font-size: 14px;
   text-align: center; }
   .footer .menu li:first-child {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-family: "AvenirNextW1G-Bold", Arial, sans-serif;
     font-size: 12px;
     text-transform: uppercase;
