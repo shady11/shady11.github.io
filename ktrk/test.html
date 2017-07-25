@@ -1,24 +1,26 @@
 <html>
 <head>
     <title>Sample Integration</title>
-    <script src="player/js/hdwplayer.js"></script>
+
+    <link rel="stylesheet" href="http://releases.flowplayer.org/7.0.4/skin/skin.css">
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="http://releases.flowplayer.org/7.0.4/flowplayer.min.js"></script>
+
+    <style type="text/css">
+        .flowplayer {
+          background-color: #00abcd;
+        }
+        .flowplayer .fp-color-play {
+          fill: #eee;
+        }
+    </style>
 </head>
 <body>
-
-<div id="player"></div>
-
-<script>
-    hdwplayer({
-        id        : 'player',
-        swf       : 'player/player.swf',
-        width     : '705',
-        height    : '400',
-        type      : 'rtmp',
-        streamer  : 'rtmp://212.112.96.233:1936/live/',
-        video     : 'ktrk.stream',
-        autoStart : 'true'
-    });
-</script>
+<div data-ratio="0.6" class="flowplayer">
+   <video data-title="FLV video">
+      <source type="video/flash" src="http://85.113.29.234/live/6001.flv">
+   </video>
+</div>
 
 </body>
 </html>

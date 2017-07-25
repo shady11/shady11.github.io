@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Совет по развитию бизнеса и инвестициям Иссык-Кульской области</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fa/css/font-awesome.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script>
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOnHeader = 150,
+					body = document.body.clientWidth,
+					container = body,
+					header = document.querySelector("header");
+
+				if(body > 544) {
+					container = 480;
+				}
+				if(body > 768) {
+					container = 700;
+				}
+				if(body > 992) {
+					container = 920;
+				}
+				if(body > 1200) {
+					container = 1150;
+				}
+
+				var w=window,
+					d=document,
+					e=d.documentElement,
+					g=d.getElementsByTagName('body')[0],
+					x=w.innerWidth||e.clientWidth||g.clientWidth - 17,
+					y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+				if (distanceY > shrinkOnHeader) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+			});
+		}
+		// Window onload
+		window.onload = init();
+	</script>
+</head>
+<body class="page about-page">
+
+<div class="wrapper">
+	<header class="header">
+		<div class="top-header clearfix">
+			<div class="container">
+				<div class="left-header">
+					<div class="social">
+						<ul class="text-center clearfix">
+							<li>
+								<a href="#">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="right-header">
+					<ul>
+						<li>
+							 г. Каракол, ул. Абдрахманова 125, тел.: +996 551 98-46-01, факс: +996 3922 5-81-81
+						</li>
+						<li>
+							<a href="mailto:baibolot.a@gmail.com">
+								<svg x="0px" y="0px" viewBox="0 0 46 27" xml:space="preserve">
+									<g transform="translate(0,-952.36218)">
+										<path d="M1.5,952.4c-0.8,0-1.5,0.7-1.5,1.5v24c0,0.8,0.7,1.5,1.5,1.5h43c0.8,0,1.5-0.7,1.5-1.5v-24c0-0.8-0.7-1.5-1.5-1.5H1.5z
+											 M3.2,954.4h39.5L23,970.1L3.2,954.4z M2,955.9l11.4,9.1L2,976V955.9z M44,955.9v20l-11.4-11L44,955.9z M15,966.3l7.4,5.9
+											c0.4,0.3,0.9,0.3,1.3,0l7.4-5.9l11.5,11.1H3.5L15,966.3z"/>
+									</g>
+								</svg>
+								baibolot.a@gmail.com
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			
+			<div class="main-header">
+				<a href="index.html" id="logo" class="logo">
+				</a>
+
+				<div id="hamburger-menu" class="hamburger">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+					<!--<a class="img-replace" href="#0">Menu</a>-->
+				</div>
+			</div>
+		</div>
+	</header> <!-- fixed header -->
+
+	<nav id="main-nav">
+		<ul class="text-center nav">
+			<li>
+				<a href="about.html">О нас</a>
+			</li>
+			<li>
+				<a href="#">Новости</a>
+			</li>
+			<!-- <li>
+				<a href="#">Инвесторы</a>
+			</li> -->
+			<li>
+				<a href="#">Предпринимателям</a>
+			</li>
+			<li>
+				<a class="active" href="#">Кластеры</a>
+			</li>
+			<li>
+				<a href="#">Координационный совет</a>
+			</li>
+			<li>
+				<a href="contacts.html">Контакты</a>
+			</li>
+		</ul>        
+	</nav>
+
+	<div id="shadow-layer"></div>
+
+	<div class="inner">
+
+		<div class="cover">
+			<div class="content text-center">
+				<h1>
+					Кластеры
+				</h1>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="section page-section">
+				<div class="section-content mb clearfix">
+					<section class="cluster-section">
+						<div class="row">
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/milk.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Молоко»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/meat.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Мясо производители»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/plant.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Растениеводство»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/none.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Аква культура»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/fruits.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Фрукты и Ягоды»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/none.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«ОСОП (Одно село. Один продукт)»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/none.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Недр пользователи»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/bee.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Пчеловодство»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/herbal.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Лекарственные травы»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/energy.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«ВИЭ (Возобновляемые источники энергии)»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/issykkul.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												туристический кластер <span>«Иссык-Куль»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/souvenir.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Сувениры и национальные изделия»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/none.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Зеленая территория «Южный берег Иссык-Куля»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+							<div class="grid grid-16 grid-8m grid-8l">
+								<a href="">
+									<article>
+										<img src="img/clusters/green.jpg" alt="Жылкыбаев Узарбек Казиевич">
+										<div class="cluster-info">
+											<h3>
+												кластер <span>«Тепличное хозяйство»</span>
+											</h3>
+										</div>
+									</article>
+								</a>
+							</div>
+						</div>
+					</section>					
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="section partners">
+					<div class="section-title">
+						<h1>Партнеры</h1>
+					</div>
+					<div class="section-content mb clearfix">
+						<div class="grid">
+							<img src="img/partners/ebrd.png" alt="">
+						</div>
+						<div class="grid">
+							<img src="img/partners/adb.png" alt="">
+						</div>
+						<div class="grid">
+							<img src="img/partners/usaid.png" alt="">
+						</div>
+						<div class="grid">
+							<img src="img/partners/jica.png" alt="">
+						</div>
+						<div class="grid">
+							<img src="img/partners/giz.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="section footer">
+					<div class="row">
+						<div class="section-content clearfix">
+							<div class="grid-4l">
+								<a href="#" class="logo">
+									<img src="img/logo.png" alt="Logo">
+								</a>
+								<p class="info">
+									Площадка для фермеров,
+									предпринимателей,
+									способствующий улучшению
+									бизнеса и привлечению инвестиций.
+								</p>
+							</div>
+							<div class="grid-16m grid-10l offset-2l menu">
+								<div class="row">
+									<div class="grid grid-8 grid-4m grid-4l">
+										<ul>
+											<li>
+												О нас
+											</li>
+											<li>
+												<a href="#">Общие сведения</a>
+											</li>
+											<li>
+												<a href="#">Модель совета</a>
+											</li>
+											<li>
+												<a href="#">Состав совета</a>
+											</li>
+											<li>
+												<a href="#">Заседания</a>
+											</li>
+											<li>
+												<a href="#">Протоколы</a>
+											</li>
+										</ul>
+									</div>
+									<div class="grid grid-8 grid-4m grid-4l">
+										<ul>
+											<li>
+												<a href="#">Предприниматели</a>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												<a href="#">Кластеры</a>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												<a href="#">Координационный совет</a>
+											</li>
+										</ul>
+									</div>
+									<div class="grid grid-8 grid-4m grid-4l">
+										<ul>
+											<li>
+												<a href="#">Новости</a>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												<a href="#">Обратная связь</a>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												<a href="#">Контакты</a>
+											</li>
+										</ul>
+									</div>
+									<div class="grid grid-8 grid-4m grid-4l">
+										<ul class="social">
+											<li>
+												Следите за нами
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-twitter"></i></a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-facebook"></i></a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-google-plus"></i></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="container">
+					© Совет по развитию бизнеса и инвестициям, 2016
+				</div>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
