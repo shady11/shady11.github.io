@@ -858,9 +858,10 @@ header.smaller {
           -ms-transform: translateY(-10%);
           -o-transform: translateY(-10%);
           transform: translateY(-10%); } }
-  header.smaller .top-header,
-  header.smaller .main-header {
-    transform: translateY(-75px); }
+  @media (min-width: 992px) {
+    header.smaller .top-header,
+    header.smaller .main-header {
+      transform: translateY(-75px); } }
 
 header.smaller, header.smaller > * {
   -webkit-transition: all 0.3s ease;

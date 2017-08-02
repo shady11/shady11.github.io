@@ -240,9 +240,12 @@ header.smaller{
             }
         }
     }
-    .top-header,
-    .main-header{
-        transform: translateY(-75px);
+
+    @include breakpoint(large){        
+        .top-header,
+        .main-header{
+            transform: translateY(-75px);
+        }
     }
 }
 header.smaller, header.smaller > *{
