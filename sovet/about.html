@@ -16,21 +16,58 @@
         function init() {
             window.addEventListener('scroll', function(e){
                 var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                    shrinkOn = 120,
+                    shrinkOnHeader = 150,
+                    shrinkOnAside = 610,
+                    aside = document.getElementById("sidebar"),
+                    body = document.body.clientWidth,
+                    container = body,
                     header = document.querySelector("header");
-                if (distanceY > shrinkOn) {
+
+                if(body > 544) {
+                    container = 480;
+                }
+                if(body > 768) {
+                    container = 700;
+                }
+                if(body > 992) {
+                    container = 920;
+                }
+                if(body > 1200) {
+                    container = 1150;
+                }
+
+                var w=window,
+                    d=document,
+                    e=d.documentElement,
+                    g=d.getElementsByTagName('body')[0],
+                    x=w.innerWidth||e.clientWidth||g.clientWidth - 17,
+                    y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+                if (distanceY > shrinkOnHeader) {
                     classie.add(header,"smaller");
                 } else {
                     if (classie.has(header,"smaller")) {
                         classie.remove(header,"smaller");
                     }
                 }
+
+                if(distanceY > shrinkOnAside) {
+                    classie.add(aside,"fixed");
+                    aside.style.right = (body-container)/2+"px";
+
+                } else {
+                    if (classie.has(aside,"fixed")) {
+                        classie.remove(aside,"fixed");
+                        aside.removeAttribute("style");
+                    }
+                }
             });
         }
+        // Window onload
         window.onload = init();
     </script>
 </head>
-<body>
+<body class="page about-page">
 
 <div class="wrapper">
     <header class="header">
@@ -97,7 +134,7 @@
     <nav id="main-nav">
         <ul class="text-center nav">
             <li>
-                <a href="about.html">О нас</a>
+                <a class="active" href="about.html">О нас</a>
             </li>
             <li>
                 <a href="#">Новости</a>
@@ -123,168 +160,131 @@
     <div id="shadow-layer"></div>
 
     <div class="inner">
+
         <div class="cover">
             <div class="content text-center">
                 <h1>
-                    <span>Совет по развитию бизнеса и инвестициям</span>
+                     О нас
                 </h1>
-                <h2>                    
-                    <span>при полномочном представителе Правительстве</span>
-                    <span>Кыргызской Республики в Иссык-Кульской области</span>
-                </h2>
-                <h4>
-                    <span>Площадка для фермеров, предпринимателей,</span>
-                    <span>способствующий улучшению</span>
-                    <span>бизнеса и привлечению инвестиций.</span>
-                </h4>
             </div>
         </div>
 
         <div class="container">
-            <div class="section">
-                <div class="section-title">
-                    <h1>О нас</h1>
-                </div>
+            <div class="section page-section">
                 <div class="section-content mb clearfix">
-                    <div class="grid-16 grid-8m grid-7l offset-1l">
+                    <aside id="sidebar">
+                        <ul>
+                            <li class="active">
+                                <a href="about.html">
+                                    Общие сведения
+                                </a>
+                            </li>
+                            <li>
+                                <a href="model.html">
+                                    Модель Совета
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sovet.html">
+                                    Состав Совета
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sovet.html">
+                                    Заседания
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sovet.html">
+                                    Протоколы
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <main>
                         <p>
-                            Совет является консультационно-совещательным органом и представляет собой
+                            Совет по развитию бизнеса и инвестициям при Полномочном представителе
+                            Правительства Кыргызской Республики в Иссык-Кульской области (далее - Совет)
+                            является консультационно-совещательным органом и представляет собой
                             диалоговую и информационную площадку между всеми заинтересованными
                             сторонами по вопросам улучшения бизнес среды и инвестиционного климата в
                             Иссык-Кульской области.
                         </p>
-                    </div>
-                    <div class="grid-8m grid-7l hide-s">
-                        <p>
-                            Задача Совета объединить фермеров и предпринимателей, чтобы объединить
-                            усилия в решение вопроса «мелко товарности» путем кластерного подхода и
-                            решение вопроса «доступ к дешевым и длинным деньгам» путем открытия
-                            гарантийного фонда.
-                        </p>
-                    </div>
-                </div>
-                <div class="btn-block mb">
-                    <a href="#" class="btn-pill btn-light">
-                        Подробнее
-                    </a>
-                </div>
-            </div>
-            <div class="section">
-                <div class="row blocks">
-                    <div class="grid-8">
-                        <a href="#" class="block no-hover">
-                            <figure>
-                                <!--<img src="img/image.jpg" alt="Image Title">-->
-                                <figcaption>
-                                    <span>Кластеры</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="grid-8">
-                        <a href="#" class="block block-half no-hover">
-                            <figure>
-                                <!--<img src="img/image.jpg" alt="Image Title">-->
-                                <figcaption>
-                                    <span>Заседания совета</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="grid-8 grid-4l">
-                        <a href="#" class="block block-quarter no-hover">
-                            <figure>
-                                <!--<img src="img/image.jpg" alt="Image Title">-->
-                                <figcaption>
-                                    <span>Обучающие программы</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="grid-8 grid-4l">
-                        <a href="#" class="block block-quarter no-hover">
-                            <figure>
-                                <!--<img src="img/image.jpg" alt="Image Title">-->
-                                <figcaption>
-                                    <span>Ближайшие мероприятия</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="section news-block">
-                <div class="section-title">
-                    <h1>Новости</h1>
-                </div>
-                <div class="section-content mb clearfix">
-                    <div class="row">
-                        <div class="grid grid-16 grid-8m grid-4l">
-                            <article>
-                                <a href="#">
-                                    <img src="img/news.jpg" alt="News Title">
-                                </a>
-                                <div class="news-info">
-                                    <a href="#">
-                                        Медовый кластер на сегодняшний день является одним из самых активных в Совете по развитию бизнеса региона.
-                                    </a>
-                                    <div class="news-date">
-                                        11 января, 2017
+                        <section class="list-section">
+                            <p class="text-center">
+                                <strong>
+                                    <span>Совет был создан распоряжением полпреда</span>
+                                    <span>29 июля 2016 года с целью:</span>
+                                </strong>
+                            </p>
+                            <div class="row">
+                                <div class="grid text-center">содействия становлению и устойчивому развитию местного бизнес сообщества</div>
+                                <div class="grid text-center">привлечения внешних инвестиций и их поддержки</div>
+                                <div class="grid text-center">реализации иных мероприятий, способствующих улучшению бизнес среды и инвестиционного климата в регионе</div>
+                            </div>
+                        </section>
+                        <section class="image-section">
+                            <div class="row">
+                                <div class="grid">
+                                    <div class="img-centered">
+                                        <img class="img-height" src="img/about-1.jpg" alt="">
                                     </div>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="grid grid-16 grid-8m grid-4l">
-                            <article>
-                                <a href="#">
-                                    <img src="img/news.jpg" alt="News Title">
-                                </a>
-                                <div class="news-info">
-                                    <a href="#">
-                                        Совет по развитию бизнеса и инвестициям Иссык-Кульского региона расширяет границы!
-                                    </a>
-                                    <div class="news-date">
-                                        9 января, 2017
+                                <div class="grid">
+                                    <h4>
+                                        Совет является информационно диалоговой площадкой для всех
+                                        заинтересованных лиц с целью улучшения бизнес среды и инвестиционного климата
+                                    </h4>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="list-section">
+                            <p class="text-center">
+                                <strong>
+                                    <span>Задачами Совета являются:</span>
+                                </strong>
+                            </p>
+                            <div class="row">
+                                <div class="grid text-center">мобилизация фермеров и предпринимателей, инвесторов, гражданского общества и прочих заинтересованных лиц/сторон</div>
+                                <div class="grid text-center">консолидация всех имеющихся ресурсов и возможностей, с целью их целевого и эффективного использования</div>
+                                <div class="grid text-center">координация усилий органов региональной и местной власти с бизнес сообществом и всеми заинтересованными лицами/сторонами</div>
+                            </div>
+                        </section>
+                        <section class="image-section">
+                            <div class="row">
+                                <div class="grid">
+                                    <h4 class="text-right">
+                                        Задача Совета объединить фермеров и предпринимателей, чтобы объединить
+                                        усилия в решение вопроса "мелко товарности" путем кластерного подхода и
+                                        решение вопроса "доступ к дешевым и длинным деньгам" путем открытия гарантийного фонда.
+                                    </h4>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-centered img-large">
+                                        <img src="img/about-2.jpg" alt="">
                                     </div>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="grid grid-16 grid-8m grid-4l">
-                            <article>
-                                <a href="#">
-                                    <img src="img/news.jpg" alt="News Title">
-                                </a>
-                                <div class="news-info">
-                                    <a href="#">
-                                        В рамках меморандума между Советом и KRJC, в Караколе прошли специальные тренинги.
-                                    </a>
-                                    <div class="news-date">
-                                        20 декабря, 2016
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="grid grid-16 grid-8m grid-4l">
-                            <article>
-                                <a href="#">
-                                    <img src="img/news.jpg" alt="News Title">
-                                </a>
-                                <div class="news-info">
-                                    <a href="#">
-                                        Кластер по туризму стремительно растет!
-                                    </a>
-                                    <div class="news-date">
-                                        15 декабря, 2016
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-block mb">
-                    <a href="#" class="btn-pill btn-light">
-                        Все новости
-                    </a>
+                            </div>
+                        </section>
+                        <section>
+                            <p>
+                                Кластер – это объединение лиц с целью достижения единой цели.
+                            </p>
+                            <p>
+                                Кластерное развитие – практический путь к изменению структуры экономики,
+                                обеспечивающий повышение конкурентоспособности регионов, предприятий, входящих в кластер.
+                            </p>
+                            <p>
+                                Финансовая поддержка для участников Кластера будет осуществляться через
+                                Гарантийный фонд, который сможет обеспечить вам 30-50% залога, если вы
+                                участник Кластера, при получении кредита под 12% при поддержке Российско-Кыргызского Фонда Развития.
+                            </p>
+                            <p>
+                                Средства, поступающие от Кумтора, в Фонд Развития Иссык-Куля теперь будут
+                                работать на развитие Экономики (в виде Гарантийного Фонда).
+                            </p>
+                        </section>
+                    </main>
                 </div>
             </div>
         </div>
@@ -318,7 +318,7 @@
                         <div class="section-content clearfix">
                             <div class="grid-4l">
                                 <a href="#" class="logo">
-                                    <img src="img/logo-text.png" alt="Logo">
+                                    <img src="img/logo.png" alt="Logo">
                                 </a>
                                 <p class="info">
                                     Площадка для фермеров,
@@ -409,19 +409,7 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>
-                        <svg x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve">
-                            <g>
-                                <path d="M0,16C0,7.2,7.2,0,16,0l0,0c8.8,0,16,7.2,16,16l0,0c0,8.8-7.2,16-16,16l0,0C7.2,32,0,24.8,0,16L0,16z M2.8,16
-                                    c0,7.3,5.9,13.2,13.2,13.2l0,0c7.3,0,13.2-5.9,13.2-13.2l0,0c0-7.3-5.9-13.2-13.2-13.2l0,0C8.7,2.8,2.8,8.7,2.8,16L2.8,16z"/>
-                                <path d="M16,24.3c-2.1,0-4.3-0.8-5.9-2.4l0,0c-1.6-1.6-2.4-3.8-2.4-5.9l0,0c0-2.1,0.8-4.3,2.4-5.9l0,0c1.6-1.6,3.8-2.4,5.9-2.4l0,0
-                                    c2.1,0,4.3,0.8,5.9,2.4l0,0l-2,2c-1.1-1.1-2.5-1.6-3.9-1.6l0,0c-1.4,0-2.8,0.5-3.9,1.6l0,0c-1.1,1.1-1.6,2.5-1.6,3.9l0,0
-                                    c0,1.4,0.5,2.8,1.6,3.9l0,0c1.1,1.1,2.5,1.6,3.9,1.6l0,0c1.4,0,2.9-0.5,3.9-1.6l0,0l0,0l2,2C20.3,23.5,18.1,24.3,16,24.3L16,24.3
-                                    C16,24.3,16,24.3,16,24.3L16,24.3z"/>
-                            </g>
-                        </svg>
-                        Совет по развитию бизнеса и инвестициям, 2016
-                    </p>
+                    © Совет по развитию бизнеса и инвестициям, 2016
                 </div>
             </div>
         </footer>

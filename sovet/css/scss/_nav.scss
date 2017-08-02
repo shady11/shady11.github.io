@@ -1,0 +1,266 @@
+/* --------------------------------
+Header
+-------------------------------- */
+header{
+    @include fixed(10,0,0);
+    @include size(100%, 80px);
+    @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
+    background: $bg-primary;
+    text-align: center;
+    padding: 15px 0;
+    .container{
+        position: relative;
+        width: 100%;
+        padding: 0;
+    }
+    .logo{
+        display: inline-block;
+        margin: 0 auto;
+        width:60px;
+        height: 50px;
+        @include background('../img/logo.png',auto 100%,no-repeat,center,top);
+    }
+    #hamburger-menu{
+        @include abs-positioned(null,0);
+        height: 100%;
+        padding: 16px 18px;
+        a{
+            width: 60px;
+            height: 100%;
+            @include background('img/icons/menu.svg',32px,no-repeat,center,center);
+        }
+        .line{
+            display: block;
+            @include size(24px,3px);
+            @include border-radius(3px);
+            background-color: #242526;
+            margin: 3px auto;
+            @include transition(all 0.3s ease-in-out);
+        }
+        &.is-active{
+            .line{
+                &:nth-child(1){
+                    opacity: 0;
+                    @include translateX(-100%);
+                }
+                &:nth-child(3){
+                    opacity: 0;
+                    @include translateX(100%);
+                }
+            }
+        }
+    }
+    @include breakpoint(large) {
+        height: 150px;
+        padding: 0 0 25px;
+
+        .logo, #main-nav{
+            @include display-table-cell(middle);
+        }
+        .logo{
+            @include bg-size(auto 50px);
+            background-position: 0 0;
+            padding-right: 15px;
+            min-width: 80px;
+            background-image: url('../img/logo-text.png');
+        }
+        #hamburger-menu{
+            display: none;
+        }
+    }
+    @include breakpoint(xlarge) {
+        .container{
+            width: 1170px;
+            padding: 0 10px;
+        }
+        .logo{
+            min-width: 270px;
+        }
+    }
+}
+#main-nav{
+    @include fixed(9,-100%,0);
+    @include size(260px, 100%);
+    @include box-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+    @include transition(left 0.3s ease);
+    background: $white;
+    padding-top: 80px; /* header height */
+
+    &.speed-in{
+        left: 0;
+    }
+
+    .nav{
+        padding: 15px 0;
+        li{
+            font-family: $avenir-demi;
+            font-size: 14px;
+            text-transform: uppercase;
+            a{
+                position: relative;
+                display: block;
+                padding: 0 20px;
+                @include border(1px solid lighten(#bcc6d0, 0.9), bottom);
+                line-height: 40px;
+                text-align: left;
+            }
+        }
+    }
+    @include breakpoint(large){
+        @include relative(0,auto,auto);
+        @include box-shadow(none);
+        @include size(auto,auto);
+        padding: 0;
+        background: none;
+        width: 10000px;
+        text-align: right;
+        .social{
+            float: right;
+        }
+        .nav{
+            display: inline-block;
+            padding: 0;
+            li{
+                display: inline-block;
+                padding: 0 12px;
+                font-size: 12px;
+                a{
+                    padding: 0;
+                    border: none;
+                    line-height: 15px;
+                    &::before{
+                        content: '';
+                        @include abs-positioned(0,null,null,-5px);
+                        @include size(0, 2px);
+                        background-color: $dark-grey;
+                        @include transition(width 0.6s cubic-bezier(0.1, 0.88, 0.25, 1));
+                    }
+                    &.active::before, &:hover::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.top-header{
+    display: none;
+    padding: 15px 0 15px;
+    margin-bottom: 25px;
+    background: #1b8bf9;
+
+    .social, .right-header li, .right-header li a{
+        color: #fff;
+    }
+
+    svg{            
+        fill: #fff;
+    }
+
+    @include breakpoint(large){
+        display: block;
+    }
+}
+.top-header,
+.main-header{
+    transition: all 0.3s;    
+}
+.left-header{
+    float: left;
+}
+.right-header{
+    float: right;
+    li{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 20px;
+        margin-left: 15px;
+        font-family: $avenir-demi;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #1b8bf9;
+        a{
+            text-transform: none;
+        }
+        svg{
+            float: left;
+            height: 12px;
+            margin-right: 8px;
+            margin-top: 4px;
+        }
+    }
+}
+.social{
+    min-width:120px;
+    padding-left: 10px;
+    line-height: 20px;
+    li{
+        float: left;
+        a{
+            display: block;
+            width: 35px;
+            @include transition(transform 0.2s cubic-bezier(0.1, 0.88, 0.25, 1));
+            &:hover{
+                @include drop-shadow(0 3px 5px rgba(0,0,0,0.5));
+                @include translateY(-10%);
+            }
+        }
+    }
+    @include breakpoint(large){
+        padding-left: 0;
+    }
+}
+header.smaller{
+    height: 80px;
+    background: $white;
+    @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
+    @include breakpoint(large){
+        padding: 15px 0;
+
+        #main-nav ul{
+            li{
+                a{
+                    position: relative;
+                    color: $text-primary;
+                    &::before{
+                        background-color: $text-primary;
+                    }
+                }
+            }
+        }
+        .social{
+            li{
+                a{
+                    color: $text-primary;
+                    &:hover{
+                        @include drop-shadow(0 3px 5px transparentize($bx-light, 0.5));
+                        @include translateY(-10%);
+                    }
+                }
+            }
+        }
+    }
+    .top-header,
+    .main-header{
+        transform: translateY(-75px);
+    }
+}
+header.smaller, header.smaller > *{
+    @include transition(all 0.3s ease);
+}
+/* --------------------------------
+Shadow Overlay
+-------------------------------- */
+#shadow-layer {
+    @include fixed(2,0,0);
+    display: none;
+    min-height: 100%;
+    width: 100%;
+    background: transparentize(#242526, 0.75);
+    cursor: pointer;
+    z-index: 2;
+}
+#shadow-layer.is-visible {
+    display: block;
+    @include animation(pd-fade-in 0.3s);
+}

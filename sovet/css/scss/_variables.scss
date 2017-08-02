@@ -1,12 +1,12 @@
 @import "fonts";
 
 //Text Colors
-$text-primary: #242526;
+$text-primary: #333333;
 $text-secondary: #747474;
 
 //Background colors
 $bg-primary: #ffffff;
-$bg-secondary: #f6f6f6;
+$bg-secondary: #fafafa;
 
 //Box-Shadow color
 $bx-light: #63758a;
@@ -14,14 +14,20 @@ $bx-light: #63758a;
 //Named colors
 $white: #ffffff;
 $blue: #1b8bf9;
+$dark-grey: #333333;
+$darkest-grey: #323a45;
+$green: #4bc056;
+$pink: #fc3768;
 
 //Typography
 $avenir-regular: 'AvenirNextW1G-Regular', Arial, sans-serif;
 $avenir-medium: 'AvenirNextW1G-Medium', Arial, sans-serif;
 $avenir-demi: 'AvenirNextW1G-Demi', Arial, sans-serif;
 $avenir-bold: 'AvenirNextW1G-Bold', Arial, sans-serif;
+$open-sans: 'Open Sans', Arial, sans-serif;
+$fira-sans: 'Fira Sans', Arial, sans-serif;
 
-$line-height-base: 1.428571429 !default; // 20/14
+$line-height-base: 1.5; // 20/14
 
 //Grid
 $grid-columns: 16;

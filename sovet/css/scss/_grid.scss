@@ -4,5 +4,10 @@
 .row{
     @include make-row();
 }
+.grid-group{
+	@include clearfix();
+
+	margin-bottom: 30px;
+}
 
 @include make-grid();

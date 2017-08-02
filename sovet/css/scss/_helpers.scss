@@ -1,3 +1,6 @@
+/* --------------------------------
+Alignment
+-------------------------------- */
 .text-left {
     @include text-align(left);
 }
@@ -7,9 +10,48 @@
 .text-center {
     @include text-align(center);
 }
+/* --------------------------------
+Clearfix
+-------------------------------- */
 .clearfix{
     @include clearfix();
 }
-.mb-60{
-    margin-bottom: 60px;
+/* --------------------------------
+Replace text with a background-image
+-------------------------------- */
+.img-replace {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+/* --------------------------------
+Margin
+-------------------------------- */
+.mb{
+    margin-bottom: 30px;
+    @include breakpoint(large){
+        margin-bottom: 60px;
+    }
+}
+/* --------------------------------
+Hide elements
+-------------------------------- */
+.hide-s{
+    display: none;
+    @include breakpoint(medium){
+        display: block;
+    }
+    @include breakpoint(large){
+        display: block;
+    }
+    @include breakpoint(xlarge){
+        display: block;
+    }
+}
+.hide-m{
+    display: none;
+    @include breakpoint(large){
+        display: block;
+    }
 }

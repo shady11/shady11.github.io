@@ -6,3 +6,7 @@
     -webkit-background-size:$size;
     background-size:$size;
 }
+@mixin bg-size($size...){
+    -webkit-background-size:$size;
+    background-size:$size;
+}
