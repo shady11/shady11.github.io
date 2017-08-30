@@ -524,14 +524,25 @@ Cover
 .partners{
     text-align: center;
     .grid{
+        position: relative;
         display: inline-block;
         padding: 10px;
+        height: 40px;
         img{
-            @include center-block;
-            @include size(auto, 40px);
+            @include abs-centered();
         }
         &:last-child{
             margin-right: 0;
+        }
+        &.grid-width{
+            img{
+                @include size(100%, auto);
+            }
+        }
+        &.grid-height{ 
+            img{
+                @include size(auto, 40px);
+            }           
         }
         @include breakpoint(large){
             float: left;

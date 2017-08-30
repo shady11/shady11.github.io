@@ -70,7 +70,7 @@
 html {
   height: 100%;
   font-size: 10px;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
@@ -1370,16 +1370,27 @@ Cover
 .partners {
   text-align: center; }
   .partners .grid {
+    position: relative;
     display: inline-block;
-    padding: 10px; }
+    padding: 10px;
+    height: 40px; }
     .partners .grid img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: auto;
-      height: 40px; }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%); }
     .partners .grid:last-child {
       margin-right: 0; }
+    .partners .grid.grid-width img {
+      width: 100%;
+      height: auto; }
+    .partners .grid.grid-height img {
+      width: auto;
+      height: 40px; }
     @media (min-width: 992px) {
       .partners .grid {
         float: left;
