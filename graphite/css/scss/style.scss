@@ -18,13 +18,13 @@ Cover
     header{
         color: $white;
         .logo{
-            @include background('../img/logo.png',auto 50px);
+            @include background('../img/logo-text.png',auto 50px);
         }
         &.smaller{
             background: $white;
             @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
             .logo{
-                background-image: url('../img/logo.png');
+                background-image: url('../img/logo-text.png');
             }
             #main-nav{
                 .nav{
@@ -42,7 +42,7 @@ Cover
             background: none;
             @include box-shadow(none);
             .logo{
-                @include background('../img/logo-light.png',auto 50px);
+                @include background('../img/logo-text.png',auto 50px);
             }
         }
     }
