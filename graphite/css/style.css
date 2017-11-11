@@ -623,7 +623,7 @@ header {
   header .logo {
     display: inline-block;
     margin: 0 auto;
-    width: 100%;
+    width: 60px;
     height: 50px;
     background-image: url("../img/logo-text.png");
     background-repeat: no-repeat;
