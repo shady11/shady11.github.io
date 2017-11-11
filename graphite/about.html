@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Corporate Overview | Kuilyu Graphite</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fa/css/font-awesome.css">    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOnHeader = 150,
+                    shrinkOnAside = 610,
+                    aside = document.getElementById("sidebar"),
+                    body = document.body.clientWidth,
+                    container = body,
+                    header = document.querySelector("header");
+
+                if(body > 544) {
+                    container = 480;
+                }
+                if(body > 768) {
+                    container = 700;
+                }
+                if(body > 992) {
+                    container = 920;
+                }
+                if(body > 1200) {
+                    container = 1150;
+                }
+
+                var w=window,
+                    d=document,
+                    e=d.documentElement,
+                    g=d.getElementsByTagName('body')[0],
+                    x=w.innerWidth||e.clientWidth||g.clientWidth - 17,
+                    y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+                if (distanceY > shrinkOnHeader) {
+                    classie.add(header,"smaller");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                    }
+                }
+
+                if(distanceY > shrinkOnAside) {
+                    classie.add(aside,"fixed");
+                    aside.style.right = (body-container)/2+"px";
+
+                } else {
+                    if (classie.has(aside,"fixed")) {
+                        classie.remove(aside,"fixed");
+                        aside.removeAttribute("style");
+                    }
+                }
+            });
+        }
+        // Window onload
+        window.onload = init();
+    </script>
+</head>
+<body class="page about-page">
+
+<div class="wrapper">
+    <header class="header">
+        <div class="top-header clearfix">
+            <div class="container">
+                <div class="left-header">
+                    <div class="social">
+                        <ul class="text-center clearfix">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-header">
+                    <ul>
+                        <li>
+                             209a Tynstanova, Bishkek, Kyrgyz Republic, tel.: +996 551 199 551, +996 551 199 558
+                        </li>
+                        <li>
+                            <a href="mailto:baibolot.a@gmail.com">
+                                <svg x="0px" y="0px" viewBox="0 0 46 27" xml:space="preserve">
+                                    <g transform="translate(0,-952.36218)">
+                                        <path d="M1.5,952.4c-0.8,0-1.5,0.7-1.5,1.5v24c0,0.8,0.7,1.5,1.5,1.5h43c0.8,0,1.5-0.7,1.5-1.5v-24c0-0.8-0.7-1.5-1.5-1.5H1.5z
+                                             M3.2,954.4h39.5L23,970.1L3.2,954.4z M2,955.9l11.4,9.1L2,976V955.9z M44,955.9v20l-11.4-11L44,955.9z M15,966.3l7.4,5.9
+                                            c0.4,0.3,0.9,0.3,1.3,0l7.4-5.9l11.5,11.1H3.5L15,966.3z"/>
+                                    </g>
+                                </svg>
+                                ajh5745@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
+            <div class="main-header">
+                <a href="index.html" id="logo" class="logo">
+                </a>
+
+                <div id="hamburger-menu" class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <!--<a class="img-replace" href="#0">Menu</a>-->
+                </div>
+            </div>
+        </div>
+    </header> <!-- fixed header -->
+
+    <nav id="main-nav">
+        <ul class="text-center nav">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="active" href="about.html">Corporate</a>
+            </li>
+            <li>
+                <a href="deposit.html">Kuilyu Graphite Deposit</a>
+            </li>
+            <li>
+                <a href="graphite.html">About graphite</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>        
+    </nav>
+
+    <div id="shadow-layer"></div>
+
+    <div class="inner">
+
+        <div class="container">
+            <div class="section page-section"> 
+            	<div class="section-title">
+                  <h1>Corporate</h1>
+              </div>
+                <div class="section-content mb clearfix">
+                    <main>
+                        <section>
+                      		<h4>
+                      			Introduction
+                      		</h4>
+                        	<p>
+	                            Kuilyu Graphite is the operating company that holds the production and development licenses for the Kuilyu graphite deposit in Eastern Kyrgyzstan.
+	                        </p>
+	                        <p>
+	                        	The deposit has already undergone initial exploration and a preliminary feasibility study that has ascertained the graphite as high grade, large flake; confirmed the substantial commercial return of the project and identified the likelihood of further, extensive reserves within the license area.
+	                        </p>
+	                        <p>
+	                        	The management team have further added to this data in 2016/17 with extensive field works and new testing which have revealed even greater geological and commercial potential in the deposit.
+	                        </p>
+	                        <p>
+	                        	The company is now focussed on advancing commercial and operating partnerships that will allow it to follow its strategy for the low risk, low capital and rapid development of production and further development of the deposit.
+	                        </p>
+	                        <p>
+	                        	In parallel the company is developing its innovative social strategy that aims to bring the benefits of the operation to local communities and region and establish a growing and sustainable commercial base that will generate further wealth and opportunities for the region.
+	                        </p>
+                        </section>
+                        <section>
+                      		<h4>
+                      			Background
+                      		</h4>
+                      		<p class="with-image">
+                      			<img src="img/about_1.jpg" alt="">
+                      			<span>
+                      				Deposit at 3 500m looking North East across the Kuilyu river and the road to Karakol in the middle-ground
+                      			</span>
+                      		</p>
+                        	<p>
+                            The deposit has been explored and drilled previously, resulting in an initial state feasibility study in 1998 that concluded a commercially valuable resource of high quality graphite confirmed at 265 000 tonnes in the Arpu takyr II area and with the nearby areas of Kuilyu 1 and Voskresney containing further graphite deposits with a potential of an additional 6 500 000 tonnes.
+	                        </p>
+	                        <p>
+	                        	After 1998 the project dropped into abeyance and only in 2015 the Kuilyu graphite team unearthed the study and combined with their wider research on the increasing use of graphite acquired the relevant licenses to develop the deposit.
+	                        </p>
+	                        <p>
+	                        	Since 2015 the team has pushed forward in the development of the deposit:
+	                        </p>
+	                        <ul>
+	                        	<li>
+	                        		In 2016 the team made several exploratory visits to the deposit, evaluating the site, geology, local environment, local population, infrastructure, economics and access. This activity resulted in the completion of an initial mine plan, financial model, drilling plan and report submitted and accepted by the Kyrgyz Geological agency for the future development.
+	                        	</li>
+	                        	<li>
+	                        		2017 has seen further progress and work increase with access roads constructed and new trenching undertaken, sample testing and liaison with local government and population continuing. The details of the 2017 work are discussed in greater detail below.
+	                        	</li>
+	                        	<li>
+	                        		The aim and the timetable of the project now focus on fund raising to produce an updated bankable feasibility study (BFS) and thereafter to bring in capital for the mine build and move to production.
+	                        	</li>
+	                        </ul>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="section footer">
+                    <div class="row">
+                        <div class="section-content clearfix">
+                            <div class="grid-4l">
+                                <a href="#" class="logo">
+                                    <img src="img/logo-text.png" alt="Logo">
+                                </a>
+                                <p class="info">
+                                    Large Flake, low cost, confirmed reserves, expanding potential
+                                </p>
+                            </div>
+                            <div class="grid-16m grid-10l offset-2l menu">
+                                <div class="row">
+                                    <div class="grid grid-8 grid-4m grid-4l">
+                                        <ul>
+                                            <li>
+                                                Corporate
+                                            </li>
+                                            <li>
+                                                <a href="#">Corporate overview</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-4l">
+                                        <ul>
+                                            <li>
+                                                About Graphite
+                                            </li>
+                                            <li>
+                                                <a href="#">What is Graphite?</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Graphite pricing</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Graphite growth markets</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Graphite supply problem</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Graphite news</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-4l">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Kuilyu Graphite Deposit</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid grid-8 grid-4m grid-4l">
+                                        <ul class="social">
+                                            <li>
+                                                Follow us
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>
+                        <svg x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve">
+                            <g>
+                                <path d="M0,16C0,7.2,7.2,0,16,0l0,0c8.8,0,16,7.2,16,16l0,0c0,8.8-7.2,16-16,16l0,0C7.2,32,0,24.8,0,16L0,16z M2.8,16
+                                    c0,7.3,5.9,13.2,13.2,13.2l0,0c7.3,0,13.2-5.9,13.2-13.2l0,0c0-7.3-5.9-13.2-13.2-13.2l0,0C8.7,2.8,2.8,8.7,2.8,16L2.8,16z"/>
+                                <path d="M16,24.3c-2.1,0-4.3-0.8-5.9-2.4l0,0c-1.6-1.6-2.4-3.8-2.4-5.9l0,0c0-2.1,0.8-4.3,2.4-5.9l0,0c1.6-1.6,3.8-2.4,5.9-2.4l0,0
+                                    c2.1,0,4.3,0.8,5.9,2.4l0,0l-2,2c-1.1-1.1-2.5-1.6-3.9-1.6l0,0c-1.4,0-2.8,0.5-3.9,1.6l0,0c-1.1,1.1-1.6,2.5-1.6,3.9l0,0
+                                    c0,1.4,0.5,2.8,1.6,3.9l0,0c1.1,1.1,2.5,1.6,3.9,1.6l0,0c1.4,0,2.9-0.5,3.9-1.6l0,0l0,0l2,2C20.3,23.5,18.1,24.3,16,24.3L16,24.3
+                                    C16,24.3,16,24.3,16,24.3L16,24.3z"/>
+                            </g>
+                        </svg>
+                        Kuilyu Graphite, 2017
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

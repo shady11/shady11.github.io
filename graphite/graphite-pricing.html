@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Graphite pricing | Kuilyu Graphite</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fa/css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script>
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOnHeader = 150,
+					shrinkOnAside = 224,
+					aside = document.getElementById("sidebar"),
+					body = document.body.clientWidth,
+					container = body,
+					header = document.querySelector("header");
+
+				if(body > 992) {
+					container = 920;
+				}
+				if(body > 1200) {
+					container = 1150;
+				}
+
+				var w=window,
+					d=document,
+					e=d.documentElement,
+					g=d.getElementsByTagName('body')[0],
+					x=w.innerWidth||e.clientWidth||g.clientWidth - 17,
+					y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+				if (distanceY > shrinkOnHeader) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+
+				if(distanceY > shrinkOnAside) {
+					classie.add(aside,"fixed");
+
+					console.log(container);
+					console.log(body);
+					aside.style.right = (body-container)/2+"px";
+
+				} else {
+					if (classie.has(aside,"fixed")) {
+						classie.remove(aside,"fixed");
+						aside.removeAttribute("style");
+					}
+				}
+			});
+		}
+		// Window onload
+		window.onload = init();
+	</script>
+</head>
+<body class="page sovet-page">
+
+<div class="wrapper">
+	<header class="header">
+      <div class="top-header clearfix">
+          <div class="container">
+              <div class="left-header">
+                  <div class="social">
+                      <ul class="text-center clearfix">
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-twitter"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-facebook"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-google-plus"></i>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="right-header">
+                  <ul>
+                      <li>
+                           209a Tynstanova, Bishkek, Kyrgyz Republic, tel.: +996 551 199 551, +996 551 199 558
+                      </li>
+                      <li>
+                          <a href="mailto:baibolot.a@gmail.com">
+                              <svg x="0px" y="0px" viewBox="0 0 46 27" xml:space="preserve">
+                                  <g transform="translate(0,-952.36218)">
+                                      <path d="M1.5,952.4c-0.8,0-1.5,0.7-1.5,1.5v24c0,0.8,0.7,1.5,1.5,1.5h43c0.8,0,1.5-0.7,1.5-1.5v-24c0-0.8-0.7-1.5-1.5-1.5H1.5z
+                                           M3.2,954.4h39.5L23,970.1L3.2,954.4z M2,955.9l11.4,9.1L2,976V955.9z M44,955.9v20l-11.4-11L44,955.9z M15,966.3l7.4,5.9
+                                          c0.4,0.3,0.9,0.3,1.3,0l7.4-5.9l11.5,11.1H3.5L15,966.3z"/>
+                                  </g>
+                              </svg>
+                              ajh5745@gmail.com
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          
+          <div class="main-header">
+              <a href="index.html" id="logo" class="logo">
+              </a>
+
+              <div id="hamburger-menu" class="hamburger">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <!--<a class="img-replace" href="#0">Menu</a>-->
+              </div>
+          </div>
+      </div>
+  </header> <!-- fixed header -->
+
+  <nav id="main-nav">
+      <ul class="text-center nav">
+          <li>
+              <a href="index.html">Home</a>
+          </li>
+          <li>
+              <a href="about.html">Corporate</a>
+          </li>
+          <li>
+              <a href="deposit.html">Kuilyu Graphite Deposit</a>
+          </li>
+          <li>
+              <a class="active" href="graphite.html">About graphite</a>
+          </li>
+          <li>
+              <a href="#">Contact</a>
+          </li>
+      </ul>        
+  </nav>
+
+  <div id="shadow-layer"></div>
+
+	<div class="inner">
+
+		<div class="container">
+			<div class="section page-section with-aside">
+      	<div class="section-title">
+            <h1>Graphite pricing</h1>
+        </div>
+				<div class="section-content mb clearfix">
+					<aside id="sidebar">
+						<ul>
+							<li>
+								<a href="graphite.html">
+									What is graphite?
+								</a>
+							</li>
+							<li class="active">
+								<a href="graphite-pricing.html">
+									Graphite pricing
+								</a>
+							</li>
+							<li>
+								<a href="graphite-growth.html">
+									Graphite growth markets
+								</a>
+							</li>
+							<li>
+								<a href="graphite-supply.html">
+									Graphite supply problem
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<main>
+						<section>
+							<p>
+								<span>
+									Current graphite prices US$/tonne (94-97%C)
+								</span>
+								<span>
+									XL flake $1,750/t (+50 mesh)
+								</span>
+								<span>
+									Large flake 1,150/t (+80 mesh)
+								</span>
+								<span>
+									Medium flake $950/t (+100 to -80 mesh)
+								</span>
+								<span>
+									Small flake $700/t (-100 mesh)
+								</span>
+							</p>
+							<p class="purple-text">
+								Graphite Price Update!!
+							</p>
+							<p>
+								Graphite prices are up 25 to 30 per cent in the last couple months due to an improving steel industry, environmental related production problems in China and continued strong demand growth from the lithium ion battery industry. While still early, this is the first real sign that battery demand is finally doing for graphite prices what it has already done for lithium and cobalt. Prices for large flake graphite are now approximately $1,100/t. This is still well below the 2012 peak of US$2,800/t which was entirely due to the commodity super cycle and strong steel demand. Batteries were then a small part of the market. Batteries are now approximately 25 per cent of the market and growing rapidly. With steel demand also recovering and production issues in China, the supply/demand picture for graphite is very favourable and the potential for higher prices very real.
+							</p>
+							<h4>How is graphite priced?</h4>
+							<p>
+								Like uranium, there is a posted price for graphite which provides a guideline with respect to longer term trends but transactions are largely based on direct negotiations between the buyer and seller. Graphite prices are also a function of flake size and purity with large (+80 mesh) and particularly XL flake (+50 mesh) and 94% plus carbon varieties commanding premium pricing. Prices for +80 mesh large flake exceeded US$1,300/t in the late 80s but crashed to US$600-750t in the 90s as Chinese producers dumped product on the market. During this period there was essentially no exploration and no new mine has been built in the west for over 20 years.
+							</p>
+							<p>
+								Graphite prices did not start to recover until 2005 and well surpassed US$1,300/t with large flake selling for up to $3,000/t in early 2012 with some shortages reported. Price appreciation was largely a function of the commodity super cycle and the industrialization of emerging economies as new, high growth applications such as Li ion batteries (“LiBs”) had not yet had an impact on demand and consumption. Graphite prices subsequently declined to the $750/t area for large flake graphite due to the strength in the US dollar, the slowdown in China and the lack of growth in Japan/Europe/US.
+							</p>
+							<p>
+								Lithium ion batteries were a very small part of the market seven or eight years ago but have been growing at over 20% due to the explosion in the use of cell phones, lap tops, cameras, power tools, etc. LiBs now account for approximately 25% of the graphite market and are expected to continue growing rapidly due to the increasing sales of electric and hybrid electric vehicles as well as grid storage solutions. These applications use much larger batteries and are much larger markets than the small device market.
+							</p>
+							<p>
+								There is also evidence that the steel industry is recovering which could create a perfect storm for higher graphite prices.
+							</p>
+						</section>
+					</main>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+        <div class="container">
+            <div class="section footer">
+                <div class="row">
+                    <div class="section-content clearfix">
+                        <div class="grid-4l">
+                            <a href="#" class="logo">
+                                <img src="img/logo-text.png" alt="Logo">
+                            </a>
+                            <p class="info">
+                                Large Flake, low cost, confirmed reserves, expanding potential
+                            </p>
+                        </div>
+                        <div class="grid-16m grid-10l offset-2l menu">
+                            <div class="row">
+                                <div class="grid grid-8 grid-4m grid-4l">
+                                    <ul>
+                                        <li>
+                                            Corporate
+                                        </li>
+                                        <li>
+                                            <a href="#">Corporate overview</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid grid-8 grid-4m grid-4l">
+                                    <ul>
+                                        <li>
+                                            About Graphite
+                                        </li>
+                                        <li>
+                                            <a href="#">What is Graphite?</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Graphite pricing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Graphite growth markets</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Graphite supply problem</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Graphite news</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid grid-8 grid-4m grid-4l">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Kuilyu Graphite Deposit</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid grid-8 grid-4m grid-4l">
+                                    <ul class="social">
+                                        <li>
+                                            Follow us
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>
+                    <svg x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve">
+                        <g>
+                            <path d="M0,16C0,7.2,7.2,0,16,0l0,0c8.8,0,16,7.2,16,16l0,0c0,8.8-7.2,16-16,16l0,0C7.2,32,0,24.8,0,16L0,16z M2.8,16
+                                c0,7.3,5.9,13.2,13.2,13.2l0,0c7.3,0,13.2-5.9,13.2-13.2l0,0c0-7.3-5.9-13.2-13.2-13.2l0,0C8.7,2.8,2.8,8.7,2.8,16L2.8,16z"/>
+                            <path d="M16,24.3c-2.1,0-4.3-0.8-5.9-2.4l0,0c-1.6-1.6-2.4-3.8-2.4-5.9l0,0c0-2.1,0.8-4.3,2.4-5.9l0,0c1.6-1.6,3.8-2.4,5.9-2.4l0,0
+                                c2.1,0,4.3,0.8,5.9,2.4l0,0l-2,2c-1.1-1.1-2.5-1.6-3.9-1.6l0,0c-1.4,0-2.8,0.5-3.9,1.6l0,0c-1.1,1.1-1.6,2.5-1.6,3.9l0,0
+                                c0,1.4,0.5,2.8,1.6,3.9l0,0c1.1,1.1,2.5,1.6,3.9,1.6l0,0c1.4,0,2.9-0.5,3.9-1.6l0,0l0,0l2,2C20.3,23.5,18.1,24.3,16,24.3L16,24.3
+                                C16,24.3,16,24.3,16,24.3L16,24.3z"/>
+                        </g>
+                    </svg>
+                    Kuilyu Graphite, 2017
+                </p>
+            </div>
+        </div>
+    </footer>
+	</div>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

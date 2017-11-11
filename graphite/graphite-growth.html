@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Graphite growth markets | Kuilyu Graphite</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fa/css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script>
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOnHeader = 150,
+					shrinkOnAside = 224,
+					aside = document.getElementById("sidebar"),
+					body = document.body.clientWidth,
+					container = body,
+					header = document.querySelector("header");
+
+				if(body > 992) {
+					container = 920;
+				}
+				if(body > 1200) {
+					container = 1150;
+				}
+
+				var w=window,
+					d=document,
+					e=d.documentElement,
+					g=d.getElementsByTagName('body')[0],
+					x=w.innerWidth||e.clientWidth||g.clientWidth - 17,
+					y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+				if (distanceY > shrinkOnHeader) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+
+				if(distanceY > shrinkOnAside) {
+					classie.add(aside,"fixed");
+
+					console.log(container);
+					console.log(body);
+					aside.style.right = (body-container)/2+"px";
+
+				} else {
+					if (classie.has(aside,"fixed")) {
+						classie.remove(aside,"fixed");
+						aside.removeAttribute("style");
+					}
+				}
+			});
+		}
+		// Window onload
+		window.onload = init();
+	</script>
+</head>
+<body class="page sovet-page">
+
+<div class="wrapper">
+	<header class="header">
+      <div class="top-header clearfix">
+          <div class="container">
+              <div class="left-header">
+                  <div class="social">
+                      <ul class="text-center clearfix">
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-twitter"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-facebook"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-google-plus"></i>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="right-header">
+                  <ul>
+                      <li>
+                           209a Tynstanova, Bishkek, Kyrgyz Republic, tel.: +996 551 199 551, +996 551 199 558
+                      </li>
+                      <li>
+                          <a href="mailto:baibolot.a@gmail.com">
+                              <svg x="0px" y="0px" viewBox="0 0 46 27" xml:space="preserve">
+                                  <g transform="translate(0,-952.36218)">
+                                      <path d="M1.5,952.4c-0.8,0-1.5,0.7-1.5,1.5v24c0,0.8,0.7,1.5,1.5,1.5h43c0.8,0,1.5-0.7,1.5-1.5v-24c0-0.8-0.7-1.5-1.5-1.5H1.5z
+                                           M3.2,954.4h39.5L23,970.1L3.2,954.4z M2,955.9l11.4,9.1L2,976V955.9z M44,955.9v20l-11.4-11L44,955.9z M15,966.3l7.4,5.9
+                                          c0.4,0.3,0.9,0.3,1.3,0l7.4-5.9l11.5,11.1H3.5L15,966.3z"/>
+                                  </g>
+                              </svg>
+                              ajh5745@gmail.com
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          
+          <div class="main-header">
+              <a href="index.html" id="logo" class="logo">
+              </a>
+
+              <div id="hamburger-menu" class="hamburger">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <!--<a class="img-replace" href="#0">Menu</a>-->
+              </div>
+          </div>
+      </div>
+  </header> <!-- fixed header -->
+
+  <nav id="main-nav">
+      <ul class="text-center nav">
+          <li>
+              <a href="index.html">Home</a>
+          </li>
+          <li>
+              <a href="about.html">Corporate</a>
+          </li>
+          <li>
+              <a href="deposit.html">Kuilyu Graphite Deposit</a>
+          </li>
+          <li>
+              <a class="active" href="graphite.html">About graphite</a>
+          </li>
+          <li>
+              <a href="#">Contact</a>
+          </li>
+      </ul>        
+  </nav>
+
+  <div id="shadow-layer"></div>
+
+	<div class="inner">
+
+		<div class="container">
+			<div class="section page-section with-aside">
+      	<div class="section-title">
+            <h1>Graphite growth markets</h1>
+        </div>
+				<div class="section-content mb clearfix">
+					<aside id="sidebar">
+						<ul>
+							<li>
+								<a href="graphite.html">
+									What is graphite?
+								</a>
+							</li>
+							<li>
+								<a href="graphite-pricing.html">
+									Graphite pricing
+								</a>
+							</li>
+							<li class="active">
+								<a href="graphite-growth.html">
+									Graphite growth markets
+								</a>
+							</li>
+							<li>
+								<a href="graphite-supply.html">
+									Graphite supply problem
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<main>
+						<section>
+							<h4>Lithium Ion Batteries</h4>
+							<p>
+								The anode in Li ion batteries (LiBs”) is made out of graphite. A graphite anode is one of the things that make it a LiB and there are no substitutes. LiBs are smaller, lighter and more powerful than traditional batteries and have a flat voltage profile meaning they provide almost full power until discharged. They also have no memory effect and a very low rate of discharge when not in use. Almost all portable consumer devices such as laptops, cell phones, MP3 players and cameras use Li ion batteries and they are now rapidly moving into power tools. While the batteries are small, the markets are large and growing rapidly regardless of general economic conditions. Annual growth is estimated at 20%+ and total graphite demand is approaching 150,000tpa which is approximately 25 per cent of the flake market.
+							</p>
+							<p>
+								Growth in the use of hybrid electric vehicles (“HEV”), plug in electric vehicles (“PEV”) and all electric vehicles (“EV”) is still at a very early stage but has huge implications for the LiB market. The batteries are large and the potential demand for graphite very significant. Grid storage and the replacement of lead starter batteries are two other very large, emerging markets for LiBs. While this has created a great deal of excitement in the lithium industry, the investment community is only now beginning to focus on other materials used in LiBs and by weight, graphite is the second largest component. In fact, there is 10-15 times more graphite than lithium, in an LiB and because of losses in the manufacturing process, it actually takes 30 times as much graphite to make the batteries.
+							</p>
+							<p>
+								There is up to 10 kgs of graphite in the average HEV and up to 70 kgs in an EV. There is far more in a Tesla Model S. Every million EVs, which is about 1.5% of the new car market, require in the order of 100,000 tonnes of graphite to make the batteries which represents a potential 15 per cent increase in flake graphite demand. Because of the small size of the flake graphite market, even modest, conservation EV adoption rates will have a big effect on demand. Annual flake graphite production will have to double if EVs became even 5% of the new car market. China alone plans on having five million EVs by 2020.
+							</p>
+							<p>
+								The anode material used in LiBs, called spherical graphite (“SPG”), is manufactured from flake graphite concentrates produced by graphite mines. Only flake graphite which can be economically rounded and upgraded to 99.95% purity can be used. The manufacturing process includes micronization, rounding, purification and heat treatment. The process is expensive and wastes up to 70% of the flake graphite feed. As a result, uncoated spherical graphite currently sells for up to USD3,00/tonne or over three times the price of large flake graphite. Coated spherical graphite sells for USD4,000 to 12,000 per tonne depending on quality and end market.
+							</p>
+							<p>
+								Almost all Li ion battery manufacturing currently takes place in Asia because of the ready availability of graphite, weak environmental standards and low costs. Secure, cost competitive and environmentally sustainable source of graphite are needed in the west.
+							</p>
+						</section>
+						<section>
+							<h4>Expandable graphite</h4>
+							<p>
+								Expandable graphite is one of the fastest growing markets along with Li ion batteries. It is the only graphite market to have experienced price increases over the last couple years and is largely based on XL flake material which is the strength of the Bissett Creek deposit. It involves treating XL flake graphite with a dilute acid solution and heating it to cause the flakes to split apart, expand and increase hundreds of time in volume. This material is pressed into sheets to create a foil which can be cut into shapes and used in many applications including thermal management in consumer electronics, high end gaskets that are heat and corrosion resistant, fire retardants, smart building products, flow batteries and fuel cells. Fuel cells are already a billion dollar industry with commercial buses, forklift trucks, standby power plants, etc. already in operation. There are commercial fuel cell cars now and many observers expect them to become more popular more quickly than EVs.
+							</p>
+						</section>
+						<section>
+							<h4>Fuel Cells</h4>
+							<p>
+								A fuel cell is a device that combines a “fuel”, usually hydrogen, with oxygen to generate electricity, with water and heat as its by-product.  A battery is a passive device that stores energy for subsequent use.
+							</p>
+							<p>
+								Since fuel cells rely on an electrochemical process and not combustion, emissions from fuel cells are significantly lower than emissions from even the cleanest fuel combustion processes. Water and heat are the only by-products. Fuel cells are also much more efficient than combustion engines in converting fuel to energy. Because they have no moving parts, fuel cells are quiet, durable, reliable and long lasting with little maintenance. Fuel cells can be used in both stationary and mobile applications although the latter requires access to a refueling station. For this reason they are most popular in fleet type applications where vehicles return to a central point each day. Use in personal vehicles is expanding as the network of refueling stations expands.
+							</p>
+							<p>
+								The bi polar plates in Proton Exchange Membrane Fuel Cells, one of the most popular technologies, requires large flake, high purity graphite. Fine grained graphite is also used as additives and fillers but this is a relatively small component of fuel cells. It has been estimated that there is more graphite in a fuel cell vehicle than there is in a electric vehicle.
+							</p>
+							<p>
+								The major markets for fuel cells (from fuelcells2000) are:
+							</p>
+							<ul>
+								<li>
+									<strong>Transportation:</strong> Daimler and Honda are already leasing fuel cell vehicles and are being followed by other automakers Toyota. Fuel cell buses operate in daily revenue service in California, Texas, Connecticut, Delaware and London England.
+								</li>
+								<li>
+									<strong>Large Stationary Power:</strong> Grocery and Retail Establishments, Hospitals, Data Centers, Government Buildings, Corporate Sites, Wastewater Treatment Plants, Jails, Agricultural and Beverage Processing Facilities, and Breweries are using fuel cells from 100 kW to more than 5 MW in capacity for primary power. Stationary fuel cells can be installed as part of the electric grid and can also provide reliable backup power in the event of a grid failure or blackout. This allows critical functions such as hospitals, refrigerators, telecommunications, etc to continue running. Most large stationary fuel cell systems are fueled by natural gas, but anaerobic digester gas (ADG), derived from wastewater, manufacturing processes, or from crop or animal waste, is being used more frequently as a feedstock. ADG-powered fuel cells are being used at a number of wastewater treatment plants, as well as at breweries and agricultural processing facilities. This up-and-coming resource is counted as a renewable fuel in several states.
+								</li>
+								<li>
+									<strong>Small Stationary Power:</strong> Fuel cell systems are increasingly being used to provide reliable, on-site, long-running primary or backup power for telecommunication towers and sites. The fuel cells are quiet, rugged and durable and generate reliable, long-running power at hard-to-access locations or sites that are subject to harsh or inclement weather. They are typically in the range of 1 to 5 kW. Smaller stationary fuel cells are also ideal for residential and small commercial applications.
+								</li>
+								<li>
+									<strong>Portable Power:</strong> Small, portable fuel cell units are being used for battery charging and auxiliary power and lighting in everything from military, surveillance and emergency response applications to personal cell phone charging. Fuel cells can replace batteries or generators, lightening the load carried into the field, and providing uninterrupted power and extended run-times to field computers and critical communications equipment.
+								</li>
+								<li>
+									<strong>Materials Handling:</strong> The U.S. is the world leader in fuel cell forklifts with more than 4,000 systems either deployed or on order. Customers include Coca-Cola, Walmart and Sysco. Fuel cell forklifts can lower total logistics costs since they operate longer, require minimal refilling and need less maintenance compared to electric forklifts. Batteries are heavy and provide on average six hours of run time, while fuel cells last more than twice as long (12-14 hours). Warehouses and distribution centers can install their own hydrogen fueling station in-house and fuel cell forklifts take only one to two minutes to refuel, compared to the half hour or longer it takes to change out a battery. This also eliminates the need for battery storage and changing rooms, leaving more warehouse space for products. Another key advantage that fuel cell forklifts have over battery-powered ones, in relation to the grocery and food distribution industry, is the ability to perform in freezing temperatures, making them suitable to refrigeration and freezer operations.
+								</li>
+							</ul>
+						</section>
+						<section>
+							<h4>Vanadium Redox Batteries</h4>
+							<p>
+								Vanadium redox (redox flow) batteries (“VRB”) are large scale storage batteries that are ideal for intermittent power sources such as wind and solar. They can be scaled to very large sizes, they have long lives with little maintenance and they can provide power very quickly. The technology is well established and commercial units are available for home and industrial use.
+							</p>
+							<p>
+								A vanadium redox battery consists of an assembly of power cells in which the two vanadium based electrolytes are separated by a proton exchange membrane. The two half-cells are additionally connected to storage tanks and pumps so that very large volumes of the electrolytes can be circulated through the cell to generate power. Similar to the PEM fuel cell, the bi polar plates in a vanadium redox battery are made out of graphite. It is estimated that 300 tonnes of graphite are required for every mW/hr of VRB capacity.
+							</p>
+							<p>
+								There are an increasing number of manufacturers and examples of vanadium redox battery installations. Use of these batteries is price sensitive and will increase as costs come down with higher volumes.
+							</p>
+						</section>
+						<section>
+							<h4>Pebble Bed Nuclear Reactors</h4>
+							<p>
+								A Pebble Bed Modular Reactor (“PBMR”) is a small, modular nuclear reactor.  The fuel is uranium embedded in tennis size balls made out of graphite.  PBMRs have a number of advantages over large traditional reactors. They have much lower capital and operating costs and use an inert gases rather than water as a coolant. Therefore, they do not need the large, complex water cooling systems of conventional reactors and the inert gases do not dissolve and carry contaminants. Second, a PBMR cools naturally when is shut down and this “passive safety” characteristic removes the need for redundant active safety systems.  Also, PBMRs operate at higher temperatures which makes more efficient use of fuel and they can directly heat fluids for low pressure gas turbines.
+							</p>
+							<p>
+								China has an operating prototype, is building the first two commercial units and has firm plans to build 30 by 2020.  China ultimately plans to build up to 300 gigawatts of reactors and PBMRs are a major part of the strategy.  Small, modular reactors are also very attractive to small population centers or large and especially remote industrial applications.  Companies such as Hitachi are currently working on turn key solutions. 
+							</p>
+							<p>
+								It is estimated that each PBMR requires 300 tonnes of graphite at start up and 60-100 tonnes per year to operate.
+							</p>
+						</section>
+					</main>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+        <div class="container">
+            <div class="section footer">
+                <div class="row">
+                    <div class="section-content clearfix">
+                        <div class="grid-4l">
+                            <a href="#" class="logo">
+                                <img src="img/logo-text.png" alt="Logo">
+                            </a>
+                            <p class="info">
+                                Large Flake, low cost, confirmed reserves, expanding potential
+                            </p>
+                        </div>
+                        <div class="grid-16m grid-10l offset-2l menu">
+                            <div class="row">
+                                <div class="grid grid-8 grid-4m grid-4l">
+                                    <ul>
+                                        <li>
+                                            Corporate
+                                        </li>
+                                        <li>
+                                            <a href="#">Corporate overview</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid grid-8 grid-4m grid-4l">
+                                    <ul>
+                                        <li>
+                                            About Graphite
+                                        </li>
+                                        <li>
+                                            <a href="#">What is Graphite?</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Graphite pricing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Graphite growth markets</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Graphite supply problem</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Graphite news</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid grid-8 grid-4m grid-4l">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Kuilyu Graphite Deposit</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid grid-8 grid-4m grid-4l">
+                                    <ul class="social">
+                                        <li>
+                                            Follow us
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>
+                    <svg x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve">
+                        <g>
+                            <path d="M0,16C0,7.2,7.2,0,16,0l0,0c8.8,0,16,7.2,16,16l0,0c0,8.8-7.2,16-16,16l0,0C7.2,32,0,24.8,0,16L0,16z M2.8,16
+                                c0,7.3,5.9,13.2,13.2,13.2l0,0c7.3,0,13.2-5.9,13.2-13.2l0,0c0-7.3-5.9-13.2-13.2-13.2l0,0C8.7,2.8,2.8,8.7,2.8,16L2.8,16z"/>
+                            <path d="M16,24.3c-2.1,0-4.3-0.8-5.9-2.4l0,0c-1.6-1.6-2.4-3.8-2.4-5.9l0,0c0-2.1,0.8-4.3,2.4-5.9l0,0c1.6-1.6,3.8-2.4,5.9-2.4l0,0
+                                c2.1,0,4.3,0.8,5.9,2.4l0,0l-2,2c-1.1-1.1-2.5-1.6-3.9-1.6l0,0c-1.4,0-2.8,0.5-3.9,1.6l0,0c-1.1,1.1-1.6,2.5-1.6,3.9l0,0
+                                c0,1.4,0.5,2.8,1.6,3.9l0,0c1.1,1.1,2.5,1.6,3.9,1.6l0,0c1.4,0,2.9-0.5,3.9-1.6l0,0l0,0l2,2C20.3,23.5,18.1,24.3,16,24.3L16,24.3
+                                C16,24.3,16,24.3,16,24.3L16,24.3z"/>
+                        </g>
+                    </svg>
+                    Kuilyu Graphite, 2017
+                </p>
+            </div>
+        </div>
+    </footer>
+	</div>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
