@@ -1201,6 +1201,10 @@ Cover
         font-family: "Montserrat", Arial, sans-serif;
         font-weight: 700;
         font-size: 20px; }
+      .page-section section h5 {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 14px; }
       .page-section section p span {
         display: block;
         font-weight: 700; }
@@ -1305,6 +1309,9 @@ Cover
 .btn-block {
   text-align: center; }
 
+.blocks {
+  margin-bottom: 60px; }
+
 .pb-20 {
   padding-bottom: 20px; }
 
@@ -1318,8 +1325,7 @@ Cover
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
-  background: -webkit-linear-gradient(33deg, #2effd3, #1f7bd8);
-  background: linear-gradient(33deg, #2effd3, #1f7bd8); }
+  background: #fff; }
   .block:hover {
     color: #ffffff; }
   @media (min-width: 768px) {
@@ -1334,9 +1340,31 @@ Cover
     .block {
       font-size: 30px;
       letter-spacing: 1.5px; } }
+  .block img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    height: 100%;
+    width: auto; }
 
 .block-half {
   margin-bottom: 20px; }
+  .block-half img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    height: auto;
+    width: 100%; }
 
 .block-quarter {
   letter-spacing: 0;
@@ -1344,16 +1372,6 @@ Cover
   @media (min-width: 992px) {
     .block-quarter {
       font-size: 24px; } }
-
-.block img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%); }
 
 .block figcaption {
   position: absolute;
@@ -1422,6 +1440,16 @@ Cover
     font-weight: 500;
     font-size: 10px;
     text-transform: uppercase; }
+
+.progress-block .block-info {
+  margin-bottom: 30px; }
+  .progress-block .block-info h4 {
+    font-family: "AvenirNextW1G-Bold", Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px; }
+  .progress-block .block-info ul {
+    list-style-type: disc;
+    padding-left: 20px; }
 
 .partners {
   text-align: center; }
@@ -1496,17 +1524,15 @@ Cover
     margin: 0 0 40px; }
   .map-container .map-content .main-list {
     text-align: center; }
-    .map-container .map-content .main-list > li {
-      margin-bottom: 30px; }
-      .map-container .map-content .main-list > li h4 {
-        margin-bottom: 15px;
-        color: #fc3768;
-        font-family: "Montserrat", Arial, sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        text-transform: uppercase; }
-      .map-container .map-content .main-list > li ul li {
-        margin-bottom: 5px; }
+    .map-container .map-content .main-list > li h4 {
+      margin-bottom: 15px;
+      color: #fc3768;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase; }
+    .map-container .map-content .main-list > li ul li {
+      margin-bottom: 5px; }
   @media (min-width: 768px) {
     .map-container .map-content .section-title h1 {
       margin-bottom: 50px; } }

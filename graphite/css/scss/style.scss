@@ -334,6 +334,9 @@ Cover
             h4{
     					@include font-montserrat-bold(20);
             }
+            h5{
+							@include font-montserrat-bold(14);
+            }
             p{
             	span{
             		display: block;
@@ -481,6 +484,9 @@ Cover
 }
 
 //Blocks
+.blocks{
+	margin-bottom: 60px;
+}
 .pb-20{
     padding-bottom: 20px;
 }
@@ -493,8 +499,9 @@ Cover
     text-transform: uppercase;
     text-align: center;
     //for fun
-    background: -webkit-linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
-    background: linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
+    background: #fff;
+    // background: -webkit-linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
+    // background: linear-gradient(33deg, rgb(46, 255, 211), rgb(31, 123, 216));
     &:hover{
         color: $white;
     }
@@ -510,9 +517,20 @@ Cover
         font-size: 30px;
         letter-spacing: 1.5px;
     }
+
+    img{    	
+	    @include abs-centered();
+	    height: 100%;
+	    width: auto;
+    }
 }
 .block-half{
     margin-bottom: 20px;
+    img{    	
+	    @include abs-centered();
+	    height: auto;
+	    width: 100%;
+    }
 }
 .block-quarter{
     letter-spacing: 0;
@@ -520,9 +538,6 @@ Cover
     @include breakpoint(large){
         font-size: 24px;
     }
-}
-.block img{
-    @include abs-centered();
 }
 .block figcaption{
     @include abs-centered();
@@ -583,6 +598,22 @@ Cover
         @include font-montserrat-medium(10);
         text-transform: uppercase;
     }
+}
+
+
+// PROGRESS
+.progress-block{
+	.block-info{
+		margin-bottom: 30px;
+		h4{
+  		@include font-avenir-bold(24);
+  		margin-bottom: 15px;			
+		}
+		ul{
+			list-style-type: disc;
+			padding-left: 20px;
+		}
+	}
 }
 
 //PARTNERS
@@ -668,7 +699,7 @@ Cover
                     @include font-montserrat-bold(12);
                     text-transform: uppercase;
                 }
-                margin-bottom: 30px;
+                // margin-bottom: 30px;
                 ul{
                     li{
                         margin-bottom: 5px;
