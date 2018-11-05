@@ -1,41 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&subset=cyrillic");
-@font-face {
-  font-family: "AvenirNextW1G-Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/avenir/AvenirNextW1G-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/AvenirNextW1G-Regular.woff") format("woff"), url("fonts/avenir/AvenirNextW1G-Regular.ttf") format("truetype"), url("fonts/avenir/AvenirNextW1G-Regular.svg#AvenirNextW1G-Regular") format("svg"); }
-@font-face {
-  font-family: "AvenirNextW1G-Medium";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/avenir/AvenirNextW1G-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/AvenirNextW1G-Medium.woff") format("woff"), url("fonts/avenir/AvenirNextW1G-Medium.ttf") format("truetype"), url("fonts/avenir/AvenirNextW1G-Medium.svg#AvenirNextW1G-Medium") format("svg"); }
-@font-face {
-  font-family: "AvenirNextW1G-Demi";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/avenir/AvenirNextW1G-Demi.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/AvenirNextW1G-Demi.woff") format("woff"), url("fonts/avenir/AvenirNextW1G-Demi.ttf") format("truetype"), url("fonts/avenir/AvenirNextW1G-Demi.svg#AvenirNextW1G-Demi") format("svg"); }
-@font-face {
-  font-family: "AvenirNextW1G-Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/avenir/AvenirNextW1G-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/AvenirNextW1G-Bold.woff") format("woff"), url("fonts/avenir/AvenirNextW1G-Bold.ttf") format("truetype"), url("fonts/avenir/AvenirNextW1G-Bold.svg#AvenirNextW1G-Bold") format("svg"); }
-@font-face {
-  font-family: "AvenirNextW1G-Heavy";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/avenir/AvenirNextW1G-Heavy.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/AvenirNextW1G-Heavy.woff") format("woff"), url("fonts/avenir/AvenirNextW1G-Heavy.ttf") format("truetype"), url("fonts/avenir/AvenirNextW1G-Heavy.svg#AvenirNextW1G-Heavy") format("svg"); }
-@font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/open-sans/OpenSans-Regular-webfont.eot");
-  src: url("fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/open-sans/OpenSans-Regular-webfont.woff") format("woff"), url("fonts/open-sans/OpenSans-Regular-webfont.ttf") format("truetype"), url("fonts/open-sans/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 .btn, .btn-pill, .btn-light {
   display: inline-block;
   margin: 0 auto;
   padding: 0 30px;
   border: none;
-  font-family: "AvenirNextW1G-Demi", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
   font-size: 10px;
   text-transform: uppercase;
   line-height: 40px;
@@ -805,6 +774,9 @@ header {
     color: #1b8bf9; }
     .right-header li a {
       text-transform: none; }
+    .right-header li .fa {
+      font-size: 16px;
+      margin-right: 4px; }
     .right-header li svg {
       float: left;
       height: 12px;
@@ -954,7 +926,8 @@ Cover
   -moz-box-shadow: 0 2px 5px rgba(99, 117, 138, 0.25);
   box-shadow: 0 2px 5px rgba(99, 117, 138, 0.25); }
   .cover .content {
-    width: 90%;
+    width: auto;
+    height: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -992,8 +965,6 @@ Cover
   @media (min-width: 1200px) {
     .cover {
       height: 700px; }
-      .cover .content {
-        width: 80%; }
       .cover h1 {
         margin: 150px 0 0;
         font-size: 40px; }
@@ -1405,13 +1376,14 @@ Cover
     -moz-box-shadow: 0px 7px 20px rgba(36, 37, 38, 0.1);
     box-shadow: 0px 7px 20px rgba(36, 37, 38, 0.1); }
   .news-block article h4 {
-    font-family: "AvenirNextW1G-Bold", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
     font-size: 24px;
     margin-bottom: 15px; }
   .news-block article p {
     line-height: 20px;
     height: 100px; }
-  .news-block article svg {
+  .news-block article svg, .news-block article i {
     display: block;
     width: 72px;
     margin: 0 auto 30px;
@@ -1444,7 +1416,8 @@ Cover
 .progress-block .block-info {
   margin-bottom: 30px; }
   .progress-block .block-info h4 {
-    font-family: "AvenirNextW1G-Bold", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
     font-size: 24px;
     margin-bottom: 15px; }
   .progress-block .block-info ul {

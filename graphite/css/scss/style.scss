@@ -71,7 +71,8 @@ Cover
     @include background('../img/cover.jpg',cover);
     @include box-shadow(0 2px 5px transparentize($bx-light, 0.75));
     .content{
-        width: 90%;
+        width: auto;
+        height: 300px;
         @include abs-centered();
     }
     h1, h2{
@@ -106,9 +107,6 @@ Cover
     }
     @include breakpoint(xlarge){
         height: 700px;
-        .content{
-            width: 80%;
-        }
         h1{
             margin: 150px 0 0;
             font-size: 40px;
@@ -153,28 +151,28 @@ Cover
 .section{
 }
 .section-title {
-	h1{
-		color: $dark-purple;
-    margin: 30px auto;
-    @include font-montserrat-bold(20);
-    text-align: center;
-    text-transform: uppercase;
-    @include breakpoint(large){
-        margin: 60px auto;
-        font-size: 30px;
+    h1{
+        color: $dark-purple;
+        margin: 30px auto;
+        @include font-montserrat-bold(20);
+        text-align: center;
+        text-transform: uppercase;
+        @include breakpoint(large){
+            margin: 60px auto;
+            font-size: 30px;
+        }
     }
-  }
-  &.section-title-with-paragraph{
-  	text-align: center;
-  	margin-bottom: 60px;
-  	h1{
-  		margin-bottom: 0;
-  	}
-  	p{
-  		@include font-montserrat-bold(20);
-  		color: $text-secondary;
-  	}
-  }
+    &.section-title-with-paragraph{
+        text-align: center;
+        margin-bottom: 60px;
+        h1{
+            margin-bottom: 0;
+        }
+        p{
+            @include font-montserrat-bold(20);
+            color: $text-secondary;
+        }
+    }
 }
 .section-content{
     font-size: 15px;
@@ -197,10 +195,10 @@ Cover
             font-weight: 500;
         }
         &.with-span{
-        	span{
-        		display: block;
-        		margin-bottom: 10px;
-        	}
+            span{
+                display: block;
+                margin-bottom: 10px;
+            }
         }
     }
 }
@@ -269,9 +267,9 @@ Cover
     ul{
         list-style-type:disc;
         li{
-        	strong{
-        		font-weight: 700;
-        	}
+            strong{
+                font-weight: 700;
+            }
         }
     }
     ol{
@@ -332,32 +330,32 @@ Cover
                 }
             }
             h4{
-    					@include font-montserrat-bold(20);
+                @include font-montserrat-bold(20);
             }
             h5{
-							@include font-montserrat-bold(14);
+                @include font-montserrat-bold(14);
             }
             p{
-            	span{
-            		display: block;
-            		font-weight: 700;
-            	}
-            	&.purple-text{
-            		font-weight: 700;
-            		color: $purple;
-            	}
+                span{
+                    display: block;
+                    font-weight: 700;
+                }
+                &.purple-text{
+                    font-weight: 700;
+                    color: $purple;
+                }
             }
             .with-image{
-            	margin-bottom: 30px;
-            	text-align: center;
-            	img{
-            		width: 800px;
-            		height: auto;
-            		margin: 30px auto 10px;
-            	}
-            	span{
-    						@include font-montserrat-bold(14);
-            	}
+                margin-bottom: 30px;
+                text-align: center;
+                img{
+                    width: 800px;
+                    height: auto;
+                    margin: 30px auto 10px;
+                }
+                span{
+                    @include font-montserrat-bold(14);
+                }
             }
             &.image-section{
                 margin: 70px 0;
@@ -371,37 +369,37 @@ Cover
             }
         }
         &.with-aside{
-	        aside{
-	            float: right;
-	            width: 250px;
-	            &.fixed{
-	                @include fixed(10, false, 100px);
-	            }
-	        }
-	        main{
-	            width: 650px;
-	        }	        
-			    @include breakpoint(xlarge){
-			        main{
-			            width: 880px;
-			        }
-			    }
+            aside{
+                float: right;
+                width: 250px;
+                &.fixed{
+                    @include fixed(10, false, 100px);
+                }
+            }
+            main{
+                width: 650px;
+            }
+            @include breakpoint(xlarge){
+                main{
+                    width: 880px;
+                }
+            }
         }
     }
 }
 .team-section{
     .section-title{
-        p{            
+        p{
             margin-bottom: 30px;
             strong{
                 font-size: 28px;
             }
         }
     }
-    .team-info {  
-        padding: 15px 0; 
-        text-align: center;  
-        line-height: 1.25;   
+    .team-info {
+        padding: 15px 0;
+        text-align: center;
+        line-height: 1.25;
 
         h3{
             font-size: 16px;
@@ -421,9 +419,9 @@ Cover
     .member-info{
         line-height: 20px;
     }
-    .member-info + [data-readmore-toggle], 
+    .member-info + [data-readmore-toggle],
     .member-info[data-readmore]{
-        display: block; 
+        display: block;
         width: 100%;
         text-align: center;
     }
@@ -431,7 +429,7 @@ Cover
         transition: height 500ms;
         overflow: hidden;
     }
-    .member-info + [data-readmore-toggle]{        
+    .member-info + [data-readmore-toggle]{
         position: relative;
         padding: 0;
         font-size: 20px;
@@ -451,12 +449,12 @@ Cover
 .cluster-section{
     article{
         position: relative;
-        background-color: $dark-grey; 
+        background-color: $dark-grey;
         margin-bottom: 20px;
-        
+
         img{
             opacity: 0.6;
-        }     
+        }
     }
     .cluster-info{
         position: absolute;
@@ -473,7 +471,7 @@ Cover
             transform: translate3d(15px,30px,0);
             color: $white;
             font-size: 28px;
-            span{                
+            span{
                 text-transform: uppercase;
             }
         }
@@ -485,7 +483,7 @@ Cover
 
 //Blocks
 .blocks{
-	margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 .pb-20{
     padding-bottom: 20px;
@@ -518,18 +516,18 @@ Cover
         letter-spacing: 1.5px;
     }
 
-    img{    	
-	    @include abs-centered();
-	    height: 100%;
-	    width: auto;
+    img{
+        @include abs-centered();
+        height: 100%;
+        width: auto;
     }
 }
 .block-half{
     margin-bottom: 20px;
-    img{    	
-	    @include abs-centered();
-	    height: auto;
-	    width: 100%;
+    img{
+        @include abs-centered();
+        height: auto;
+        width: 100%;
     }
 }
 .block-quarter{
@@ -559,26 +557,26 @@ Cover
         }
     }
     article{
-    	padding: 45px 15px;
-      background: $white;
-      @include transition(all 0.4s ease);
-      &:hover{
-          @include box-shadow(0px 7px 20px rgba(36,37,38,0.1));
-      }
-      h4{
-    		@include font-avenir-bold(24);
-    		margin-bottom: 15px;
-      }
-      p{
-      	line-height: 20px;
-      	height: 100px;
-      }
-      svg{
-      	display: block;
-      	width: 72px;
-      	margin: 0 auto 30px;
-      	fill: $purple;
-      }
+        padding: 45px 15px;
+        background: $white;
+        @include transition(all 0.4s ease);
+        &:hover{
+            @include box-shadow(0px 7px 20px rgba(36,37,38,0.1));
+        }
+        h4{
+            @include font-montserrat-bold(24);
+            margin-bottom: 15px;
+        }
+        p{
+            line-height: 20px;
+            height: 100px;
+        }
+        svg, i{
+            display: block;
+            width: 72px;
+            margin: 0 auto 30px;
+            fill: $purple;
+        }
     }
 }
 .news-info{
@@ -603,17 +601,17 @@ Cover
 
 // PROGRESS
 .progress-block{
-	.block-info{
-		margin-bottom: 30px;
-		h4{
-  		@include font-avenir-bold(24);
-  		margin-bottom: 15px;			
-		}
-		ul{
-			list-style-type: disc;
-			padding-left: 20px;
-		}
-	}
+    .block-info{
+        margin-bottom: 30px;
+        h4{
+            @include font-montserrat-bold(24);
+            margin-bottom: 15px;
+        }
+        ul{
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    }
 }
 
 //PARTNERS
@@ -635,10 +633,10 @@ Cover
                 @include size(100%, auto);
             }
         }
-        &.grid-height{ 
+        &.grid-height{
             img{
                 @include size(auto, 40px);
-            }           
+            }
         }
         @include breakpoint(large){
             float: left;

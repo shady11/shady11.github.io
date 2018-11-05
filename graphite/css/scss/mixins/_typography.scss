@@ -1,29 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&subset=cyrillic');
-
-@mixin font-avenir-regular($font-size: false){
-    font-family: $avenir-regular;
-    @if $font-size {
-        font-size: $font-size + px;
-    }
-}
-@mixin font-avenir-medium($font-size: false){
-    font-family: $avenir-medium;
-    @if $font-size {
-        font-size: $font-size + px;
-    }
-}
-@mixin font-avenir-demi($font-size: false){
-    font-family: $avenir-demi;
-    @if $font-size {
-        font-size: $font-size + px;
-    }
-}
-@mixin font-avenir-bold($font-size: false){
-    font-family: $avenir-bold;
-    @if $font-size {
-        font-size: $font-size + px;
-    }
-}
 @mixin font-montserrat-regular($font-size: false){
     font-family: $montserrat;
     @if $font-size {
@@ -55,18 +29,6 @@
     font-family: $open-sans;
     @if $font-size {
         font-size: $font-size + px;
-    }
-}
-@mixin font-fira-sans($font-size: false, $font-weight: false, $font-style: false){
-    font-family: $fira-sans;
-    @if $font-size {
-        font-size: $font-size + px;
-    }
-    @if $font-weight {
-        font-weight: $font-weight;
-    }
-    @if $font-style {
-        font-style: $font-style;
     }
 }
 @mixin link-hover(){
