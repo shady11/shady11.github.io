@@ -1,0 +1,108 @@
+header .eco_nav nav .navbar-nav li ul li a {
+    font-weight: 500;
+}
+header .eco_nav nav .navbar-nav li ul li a:before {
+    display: none;
+}
+header .eco_nav nav .navbar-nav li ul li .dropdown_icon:before {
+    display: block;
+}
+header .eco_nav nav .navbar-nav .single_nav ul li {
+    margin-bottom: 13px;
+}
+.modal_sidebar_2 .recent_courses h2, .modal_sidebar_2 .events_wrapper h2{
+    text-align: left;
+    padding-left: 22px;
+}
+.popular_cources_2 .view-more-btn:hover {
+    color: #ffffff;
+    border: 2px solid #2f2f2f;
+}
+.blog_2 .blog_2_single .blog_img a {
+    border-radius: 0px;
+}
+#scroll-top .to-top a {
+    top: 88%;
+}
+.cources_categories_3 .courses_single .courses_title .teacher_pro {
+    left: 67px;
+}
+.courses_details_body .popular_cources {
+    max-height: 802px;
+}
+.our_instructors_1 .view-more-btn, .teachers_2 .view-more-btn, .event_list_1 .view-more-btn, .event_list_1 .popular_event .events-single-box .event-info .apply_btn, .event_list_1 .popular_event .events-single-box .event-info .apply_btn, .event_list_3 .popular_event .events-single-box .event-info .apply_btn, .event_list_3 .view-more-btn, .event_slider .cources_slider .events-single-box .event-info .apply_btn, .event_grid_2 .view-more-btn, .courses_1 .popular_cources_1 .view-more-btn, .courses_2 .view-more-btn, .courses_3 .view-more-btn{
+    font-weight: 600;
+}
+.sub_header_banner {
+    min-height: 390px;
+}
+.teachers_profile .teacher-details-wrapper .teacher-detail-left .teacher_info_wrapper .teacher-skills .skill-single span:last-child span {
+    background: #ddd;
+}
+.teachers_profile .teacher-details-wrapper .teacher-detail-right .teacher-contact form textarea {
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: 0px;
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    color: #2f2f2f;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.teachers_profile .teacher-details-wrapper .teacher-detail-right .teacher-contact form textarea:focus {
+    border: 1px solid #ff1949;
+    outline: none;
+}
+.teachers_profile .teacher-details-wrapper .teacher-detail-right .teacher-info {
+    padding: 51px 30px;
+}
+.top_tutors .tutor_signle:before {
+    background: #ff1949;
+}
+.become_a_instractor .apply_instractor {
+    padding-top: 20px;
+}
+.become_a_instractor .apply_instractor form .form-group input{
+    height: 42px;
+}
+.forgot_pass .forgot_wrapper {
+    background: #fff;
+    box-shadow: 10px 17px 70px 0px rgba(47, 47, 47, 0.16);
+}
+.forgot_pass .forgot_wrapper form input.reset_pass_btn {
+	height: 54px;
+	padding: 0 35px;
+	line-height: 54px;
+	border: none;
+	border-radius: 0;
+	background: #ff1949;
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffffff;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	width: 50%;
+}
+.forgot_wrapper h6 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.contact_page .contact_form .leave_comment_wrapper .leave_comment .submit-btn button {
+    background: #ff1949;
+    color: #fff;
+}
+.popular_event .event_single .event_img:after {
+    background: rgba(47, 47, 47, 0);
+}
+.about_4 .about_bottom_wrapepr .info_courses_single p {
+    color: rgba(255, 255, 255, 0.6);
+}
+.teachers_profile .teacher-details-wrapper .teacher-detail-right .teacher-contact form button{
+    background: #ff1949;
+}
+.contact_page .contact_form .leave_comment_wrapper .leave_comment .form-group input{
+    height: 48px;
+}
