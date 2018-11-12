@@ -33,9 +33,6 @@ header .eco_nav nav .navbar-nav .single_nav ul li {
 .our_instructors_1 .view-more-btn, .teachers_2 .view-more-btn, .event_list_1 .view-more-btn, .event_list_1 .popular_event .events-single-box .event-info .apply_btn, .event_list_1 .popular_event .events-single-box .event-info .apply_btn, .event_list_3 .popular_event .events-single-box .event-info .apply_btn, .event_list_3 .view-more-btn, .event_slider .cources_slider .events-single-box .event-info .apply_btn, .event_grid_2 .view-more-btn, .courses_1 .popular_cources_1 .view-more-btn, .courses_2 .view-more-btn, .courses_3 .view-more-btn{
     font-weight: 600;
 }
-.sub_header_banner {
-    min-height: 390px;
-}
 .teachers_profile .teacher-details-wrapper .teacher-detail-left .teacher_info_wrapper .teacher-skills .skill-single span:last-child span {
     background: #ddd;
 }

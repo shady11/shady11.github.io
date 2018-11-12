@@ -31,6 +31,14 @@ $(document).ready(function () {
     $('.js-modal-hide').on('click' ,function(e){
         $('.js-modal-shopify').toggleClass('is-shown--off-flow').toggleClass('is-hidden--off-flow');
     });
+
+    // ************ Map popup
+    $('#KG-Y').on('click' ,function(e){
+        $('.js-modal-map').toggleClass('is-shown--off-flow').toggleClass('is-hidden--off-flow');
+    });
+    $('.js-modal-hide-map').on('click' ,function(e){
+        $('.js-modal-map').toggleClass('is-shown--off-flow').toggleClass('is-hidden--off-flow');
+    });
           
 
 
