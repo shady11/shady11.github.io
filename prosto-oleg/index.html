@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="{{app()->getlocale()}}">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Строительная компания Просто Олег</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/avenir/stylesheet.css">
+    <link rel="stylesheet" href="fonts/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/loaders.css">
+    <link rel="stylesheet" href="css/modal-video.min.css">
+
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script src="js/classie.js"></script>
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOn = 0,
+                    logo = document.querySelector(".header .logo"),
+                    navbarBtn = document.querySelector(".header .navbar-btn"),
+                    // linkHover = document.querySelector(".header .navbar-widget .link-hover"),
+                    navLinks = document.querySelectorAll(".header .navbar-nav .nav-link"),
+                    header = document.querySelector(".header");
+
+                if (distanceY > shrinkOn) {
+                    classie.add(header,"smaller");
+                    logo.innerHTML = '<img src="img/logo.svg" class="d-inline-block align-top">';
+                    // classie.remove(linkHover,"link-hover-white");
+                    // classie.add(linkHover,"link-hover-blue");
+                    for (var i = 0; i < navLinks.length; i++) {
+                        classie.remove(navLinks[i],"link-hover-white");
+                    }
+                    classie.remove(navbarBtn,"btn-outline-light");
+                    classie.add(navbarBtn,"btn-primary");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                        logo.innerHTML = '<img src="img/logo-light.svg" class="d-inline-block align-top">';
+                        // classie.add(linkHover,"link-hover-white");
+                        // classie.remove(linkHover,"link-hover-blue");
+                        for (var i = 0; i < navLinks.length; i++) {
+                            classie.add(navLinks[i],"link-hover-white");
+                        }
+                        classie.add(navbarBtn,"btn-outline-light");
+                        classie.remove(navbarBtn,"btn-primary");
+                    }
+                }
+            });
+        }
+        window.onload = init();
+    </script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+</head>
+<body class="header-fixed">
+
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+
+<div class="header d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container p-0">
+            <div class="col-md-5">
+                <nav class="navbar navbar-menu navbar-expand-lg">
+                    <div class="container p-0">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link link-hover link-hover-white" href="#">
+                                <span class="hover-line">
+                                    Главная
+                                </span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link link-hover link-hover-white" href="#">
+                                <span class="hover-line">
+                                    О компании
+                                </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-hover link-hover-white" href="#">
+                                <span class="hover-line">
+                                    Объекты
+                                </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-hover link-hover-white" href="#">
+                                <span class="hover-line">
+                                    Гарантии
+                                </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-hover link-hover-white" href="#contacts">
+                                <span class="hover-line">
+                                    Контакты
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex justify-content-center">
+                    <a class="navbar-brand logo d-flex align-items-center m-0" href="#">
+                        <img loading="lazy" src="img/logo-light.svg" class="d-inline-block align-top" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex align-items-center justify-content-end">
+                    <div class="navbar-widgets ml-auto">
+                        <div class="navbar-widget navbar-dropdown navbar-widget-md text-md-right">
+                            <a class="dropdown-toggle" href="tel:+996 703 660 000" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                +7 (495) 123 45 67
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-primary" href="tel:+996 553 660 000">+7 (495) 123 45 67</a></li>
+                                <li><a class="dropdown-item text-primary" href="tel:+996 773 660 000">+7 (495) 123 45 67</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="navbar-btn btn btn-sm btn-outline-light" data-toggle="modal" data-target="#feedbackModal">
+                        Бесплатная консультация
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="mobile-header d-block d-lg-none">
+    <div class="burger-container">
+        <div id="burger">
+            <div class="bar topBar"></div>
+            <div class="bar btmBar"></div>
+        </div>
+    </div>
+    <div class="icon icon-logo">
+        <a class="logo" href="#"><img loading="lazy" src="img/logo.svg" alt=""></a>
+    </div>
+    <ul class="menu list-unstyled accordion" id="navAccordion">
+        <li class="menu-item">
+            <a href="#">
+                Главная
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="#">
+                О компании
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="#">
+                Объекты
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="#">
+                Гарантии
+            </a>
+        </li>
+        <li class="my-4">
+            <ul class="widgets">
+                <li class="widget d-flex align-items-center">
+                    <div class="widget-icon bg-secondary d-flex align-items-center justify-content-center">
+                        <i class="bx bx-map text-white"></i>
+                    </div>
+                    г. Санкт-Петербург, Дворцовая пл.
+                </li>
+                <li class="widget d-flex align-items-center">
+                    <div class="widget-icon bg-secondary d-flex align-items-center justify-content-center">
+                        <i class="bx bx-envelope text-white"></i>
+                    </div>
+                    <a href="mailto:prostooleg@gmail.com"><strong>prostooleg@gmail.com</strong></a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="socials d-flex align-items-center">
+                <li class="ml-0">
+                    <a target="_blank" href="#"><i class="bx bxl-tiktok"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="#"><i class="bx bxl-facebook-circle"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="#"><i class="bx bxl-instagram-alt"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="#"><i class="bx bxl-youtube"></i></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="icon icon-search">
+        <a href="#" class="search-form-toggle" data-toggle="modal" data-target="#feedbackModal">
+            <i data-feather="phone"></i>
+        </a>
+    </div>
+</div>
+
+<div class="hero" style="background-image: url(img/main/hero2.jpg)">
+    <div class="hero-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Мы строим дома, которые приносят счастье</h1>
+                    <p>
+                        Мы предоставляем возможность купить собственную квартиру по доступным ценам на выгодных условиях.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">
+                            Наши объекты
+                        </a>
+                        <a href="#" class="btn btn-light" data-toggle="modal" data-target="#feedbackModal">
+                            Бесплатная консультация
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section section-about">
+        <div class="section-title">
+            <div class="d-flex align-items-center">
+                <div class="section-title-line"></div>
+                О компании
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-md-9">
+                    <h2 class="text-uppercase">
+                        Мы приветствуем Вас на сайте строительной компании
+                        <span class="text-primary">Просто</span>
+                        <span class="text-primary">Олег</span>
+                    </h2>
+                    <p>
+                        Строительная компания Ала-Тоо Билдинг. Мы уважаем наших клиентов и выполняем
+                        взятые на себя обязательства.
+                    </p>
+                    <p>
+                        Строительная компания Ала-Тоо Билдинг динамично развивающаяся компания,
+                        осуществляющая высококачественное строительство объектов, которые отвечают всем
+                        стандартам качества и выполняются с использованием новейших технологий.
+                    </p>
+                    <a href="#" class="btn btn-primary my-3">Подробнее</a>
+                </div>
+                <div class="col-md-3 text">
+                    <div class="clip-text">
+                        <span>9</span>
+                        летний опыт в строительстве
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light">
+    <div class="container">
+        <div class="section section-why">
+            <div class="section-title">
+                <div class="d-flex align-items-center">
+                    <div class="section-title-line"></div>
+                    Почему клиенты выбирают именно нас
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="why-carousel row">
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="award"></i>
+                        </div>
+                        <div class="why-text">
+                            Опыт работы команды в строительной сфере – более 9 лет
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="user"></i>
+                        </div>
+                        <div class="why-text">
+                            Мы гибкая и клиентоориентированная компания
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="calendar"></i>
+                        </div>
+                        <div class="why-text">
+                            Индивидуальный график оплаты под каждого клиента
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="database"></i>
+                        </div>
+                        <div class="why-text">
+                            Индивидуальный подход к первоначальному взносу
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="message-circle"></i>
+                        </div>
+                        <div class="why-text">
+                            Учитываем возможности и пожелания каждого клиента
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="bar-chart"></i>
+                        </div>
+                        <div class="why-text">
+                            Возможность расписать график оплаты на каждый месяц индивидуально
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="heart"></i>
+                        </div>
+                        <div class="why-text">
+                            Клиенты нас любят и доверяют нам
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="users"></i>
+                        </div>
+                        <div class="why-text">
+                            Мы открыты для диалога с клиентом по любому вопросу
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="file-text"></i>
+                        </div>
+                        <div class="why-text">
+                            Договоры заключаются в сомах
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon d-flex align-items-center justify-content-center">
+                            <i data-feather="edit-3"></i>
+                        </div>
+                        <div class="why-text">
+                            Договоры заверяются нотариально
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section section-objects">
+        <div class="section-title">
+            <div class="d-flex align-items-center">
+                <div class="section-title-line"></div>
+                Наши объекты
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="object object-1">
+                <div class="row">
+                    <div class="col-md-5 order-2 order-md-1">
+                        <h3 class="object-slogan text-secondary">Красивому городу красивые дома!</h3>
+                        <div class="clip-text d-flex align-items-center justify-content-center">
+                            <ul>
+                                <li>Район — дом расположен в южной части Бишкека</li>
+                                <li>Фасад выполнен из Сары-Таш</li>
+                                <li>Уличная терраса на крыше дома для всех жильцов</li>
+                                <li>Детская игровая площадка</li>
+                                <li>Подземный паркинг</li>
+                                <li>Шумоизоляция квартир</li>
+                                <li>Круглосуточное видеонаблюдение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7 order-1 order-md-2">
+                        <div class="object-img">
+                            <img loading="lazy" src="img/main/object-1.jpg" alt="">
+                        </div>
+                        <div class="object-body">
+                            <h3>Жилой дом <span class="text-primary">Изумруд</span></h3>
+                            <p>пересечении улиц Ахунбаева/Баха (район нижнего Джала)</p>
+                            <a href="#" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="object object-2">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="object-img">
+                            <img loading="lazy" src="img/main/object-2.jpg" alt="">
+                        </div>
+                        <div class="object-body">
+                            <h3>Жилой дом <span class="text-primary">Бермет</span></h3>
+                            <p>ул. Фучика, ниже ул Жибек Жолу. Напротив офиса Газпром</p>
+                            <a href="#" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <h3 class="object-slogan text-secondary">Дом, в котором хочется жить!</h3>
+                        <div class="clip-text d-flex align-items-center justify-content-center">
+                            <ul>
+                                <li>Кирпичный дом</li>
+                                <li>Красная Книга</li>
+                                <li>Центральные коммуникации</li>
+                                <li>Детская площадка</li>
+                                <li>Парковка</li>
+                                <li>Закрытая территория</li>
+                                <li>Школы, медицинские центры в шаговой доступности</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-secondary overflow-hidden position-relative">
+    <div class="container">
+        <div class="section section-steps">
+            <div class="section-title">
+                <div class="d-flex align-items-center">
+                    <div class="section-title-line"></div>
+                    Этапы приобретения недвижимости
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-img">
+                                <img loading="lazy" class="card-img-top" src="img/main/step-1.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-inner">
+                                    <h4 class="card-title text-uppercase">1. Первичный звонок в отдел продаж</h4>
+                                    <p>
+                                        Тут вы получаете первичную консультацию с менеджером, который в будущем станет вашим персональным консультантом, о наших жилых комплексах, аукционных предложениях, форме оплаты и т.д.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-img">
+                                <img loading="lazy" class="card-img-top" src="img/main/step-2.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-inner">
+                                    <h4 class="card-title text-uppercase">2. Подробная консультация в офисе</h4>
+                                    <p>
+                                        Мы отвечаем на все интересующие вас вопросы. Подбираем наиболее подходящий для вас вариант квартиры, исходя из ваших потребностей и пожеланий. Детально обсуждаем форму и условия оплаты, выгодные для всех. При необходимости вы сразу бронируете понравившийся вам вариант квартиры
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-img">
+                                <img loading="lazy" class="card-img-top" src="img/main/step-3.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-inner">
+                                    <h4 class="card-title text-uppercase">3. Поездка на объект</h4>
+                                    <p>
+                                        Здесь мы изучаем:
+                                    </p>
+                                    <ul>
+                                        <li>- Локацию объекта на месте, сам микрорайон дома</li>
+                                        <li>- Качество постройки, строительных материалов</li>
+                                        <li>- Аккуратность ведения строительно – монтажных работ</li>
+                                        <li>- Порядок на строительной площадке и т.д.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-img">
+                                <img loading="lazy" class="card-img-top" src="img/main/step-4.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-inner">
+                                    <h4 class="card-title text-uppercase">4. Заключение договора</h4>
+                                    <p>
+                                        Договор заключается в сомах по фиксированному курсу доллара. Вам
+                                        не нужно будет переживать по поводу резких скачков курса доллара.
+                                        Вы не будете зависеть от внешних факторов
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-outline-light" data-toggle="modal" data-target="#feedbackModal">Бесплатная консультация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light">
+    <div class="container">
+        <div class="section section-why">
+            <div class="section-title">
+                <div class="d-flex align-items-center">
+                    <div class="section-title-line"></div>
+                    Гарантии
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="row justify-md-content-center">
+                    <div class="why-item why-item-hor col-md-4 d-flex align-items-center">
+                        <div class="why-icon why-icon-primary d-flex align-items-center justify-content-center">
+                            <i data-feather="book-open"></i>
+                        </div>
+                        <div class="why-text">
+                            Строительные нормы и правила
+                        </div>
+                    </div>
+                    <div class="why-item why-item-hor col-md-4 d-flex align-items-center">
+                        <div class="why-icon why-icon-primary d-flex align-items-center justify-content-center">
+                            <i data-feather="edit-3"></i>
+                        </div>
+                        <div class="why-text">
+                            Нотариальное заверение договора
+                        </div>
+                    </div>
+                    <div class="why-item why-item-hor col-md-4 d-flex align-items-center">
+                        <div class="why-icon why-icon-primary d-flex align-items-center justify-content-center">
+                            <i data-feather="book"></i>
+                        </div>
+                        <div class="why-text">
+                            Красная книга
+                        </div>
+                    </div>
+                    <div class="why-item why-item-hor col-md-4 d-flex align-items-center">
+                        <div class="why-icon why-icon-primary d-flex align-items-center justify-content-center">
+                            <i data-feather="file-text"></i>
+                        </div>
+                        <div class="why-text">
+                            Разрешительные документы
+                        </div>
+                    </div>
+                    <div class="why-item why-item-hor col-md-4 d-flex align-items-center">
+                        <div class="why-icon why-icon-primary d-flex align-items-center justify-content-center">
+                            <i data-feather="dollar-sign"></i>
+                        </div>
+                        <div class="why-text">
+                            Договор в сомах по фиксированному курсу доллара
+                        </div>
+                    </div>
+                    <div class="why-item why-item-hor col-md-4 d-flex align-items-center">
+                        <div class="why-icon why-icon-primary d-flex align-items-center justify-content-center">
+                            <i data-feather="credit-card"></i>
+                        </div>
+                        <div class="why-text">
+                            Собственные средства
+                        </div>
+                    </div>
+                    <div class="why-item why-item-hor col-md-4 d-flex align-items-center">
+                        <div class="why-icon why-icon-primary d-flex align-items-center justify-content-center">
+                            <i data-feather="award"></i>
+                        </div>
+                        <div class="why-text">
+                            Опыт работы
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <a href="#" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section section-slogan section-slogan-secondary d-flex align-items-center">
+    <div class="container">
+        <div class="section-title">
+            <div class="d-flex align-items-center">
+                <div class="section-title-line"></div>
+                Способы оплаты
+            </div>
+        </div>
+        <div class="section-body text-center">
+            <div class="slogan-items row align-items-center">
+                <div class="slogan-item col-md-4 d-flex align-items-stretch">
+                    <h3 class="text-uppercase">
+                        Рассрочка без процентов <br> + Гибкий график оплаты
+                    </h3>
+                </div>
+                <div class="slogan-item col-md-4 align-items-stretch">
+                    <h3 class="text-uppercase">
+                        Бартер на авто и недвижимость
+                    </h3>
+                </div>
+                <div class="slogan-item col-md-4 align-items-stretch">
+                    <h3 class="text-uppercase">
+                        Скидки при 100% оплате + приятные бонусы
+                    </h3>
+                </div>
+            </div>
+            <a href="#" class="btn btn-outline-light">Подробнее</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section section-news">
+        <div class="section-title">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="section-title-line"></div>
+                    Новости и акции
+                </div>
+                <a href="#" class="btn btn-primary">все новости</a>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="row">
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-img">
+                            <img loading="lazy" src="img/news/1.jpg" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Заголовок новости</h5>
+                            <h6>25.07.23</h6>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-img">
+                            <img loading="lazy" src="img/news/1.jpg" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Заголовок новости</h5>
+                            <h6>25.07.23</h6>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-img">
+                            <img loading="lazy" src="img/news/1.jpg" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Заголовок новости</h5>
+                            <h6>25.07.23</h6>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section section-leader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-end">
+                <div class="leader-img">
+                    <img loading="lazy" class="img-fluid" src="img/main/leader-img.jpg" alt="">
+                </div>
+                <div class="clip-text">&nbsp;</div>
+            </div>
+            <div class="col-md-8">
+                <div class="section-title">
+                    <div class="d-flex align-items-center">
+                        <div class="section-title-line"></div>
+                        Обращение Генерального Директора
+                    </div>
+                </div>
+                <div class="section-body">
+                    <h3 class="text-secondary">Уважаемый клиент!</h3>
+                    <p>
+                        Строительная компания "Ала-Тоо Билдинг" благодарит Вас за то, что Вы выбрали нашу компанию. Благодаря Вам мы становимся ещё лучше. Душу, которую мы вкладываем в каждый проект - семейные ценности. Нас выбирают более сотни семей и это только начало!
+                    </p>
+                    <p>
+                        Именно Вы можете стать одними из самых счастливых людей, выбравших "Ала-Тоо Билдинг". Искренне желаю Вам крепкого здоровья, долгих лет жизни и исполнения всех Ваших желаний!
+                    </p>
+                    <p>
+                        Желаю чтоб каждый прожитый Вами день приносил Вам счастье и благополучие.
+                    </p>
+                    <div class="section-footer text-right pb-0">
+                        <em class="text-secondary">
+                            С уважением, <br> Мадыбаев Марлен Мелисович <br> Генеральный директор строительной <br> компании Ала-Тоо Билдинг
+                        </em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section section-videos bg-secondary">
+    <div class="container">
+        <div class="section-title">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="section-title-line"></div>
+                    Преимущества наших объектов
+                </div>
+                <a href="#" class="btn btn-outline-light">все видео</a>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <div class="card mb-3 mb-md-0 bg-transparent">
+                        <div class="card-img h-auto overflow-hidden position-relative">
+                            <img loading="lazy" src="img/main/video.jpeg" class="card-img-top" alt="">
+                            <i class="js-modal-btn" data-feather="play-circle" data-video-id="9Xvn_Ku55cI"></i>
+                        </div>
+                        <h3 class="mt-3 mb-0 text-white">Название видео</h3>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="d-flex flex-column justify-content-between h-100">
+
+                        <div class="media row align-items-center mb-3 mb-md-0">
+                            <div class="media-img col-5 d-flex align-items-center justify-content-center">
+                                <img loading="lazy" src="img/main/video.jpeg" class="card-img-top" alt="">
+                                <i class="js-modal-btn" data-feather="play-circle" data-video-id="9Xvn_Ku55cI"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="text-white font-weight-normal mb-0">Название видео</h6>
+                            </div>
+                        </div>
+
+                        <div class="media row align-items-center mb-3 mb-md-0">
+                            <div class="media-img col-5 d-flex align-items-center justify-content-center">
+                                <img loading="lazy" src="img/main/video.jpeg" class="card-img-top" alt="">
+                                <i class="js-modal-btn" data-feather="play-circle" data-video-id="9Xvn_Ku55cI"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="text-white font-weight-normal mb-0">Название видео</h6>
+                            </div>
+                        </div>
+
+                        <div class="media row align-items-center mb-3 mb-md-0">
+                            <div class="media-img col-5 d-flex align-items-center justify-content-center">
+                                <img loading="lazy" src="img/main/video.jpeg" class="card-img-top" alt="">
+                                <i class="js-modal-btn" data-feather="play-circle" data-video-id="9Xvn_Ku55cI"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="text-white font-weight-normal mb-0">Название видео</h6>
+                            </div>
+                        </div>
+
+                        <div class="media row align-items-center mb-3 mb-md-0">
+                            <div class="media-img col-5 d-flex align-items-center justify-content-center">
+                                <img loading="lazy" src="img/main/video.jpeg" class="card-img-top" alt="">
+                                <i class="js-modal-btn" data-feather="play-circle" data-video-id="9Xvn_Ku55cI"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="text-white font-weight-normal mb-0">Название видео</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section section-feedback">
+        <div class="section-title">
+            <div class="d-block d-md-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center mb-3 mb-md-0">
+                    <div class="section-title-line"></div>
+                    <div>
+                        Мы <span class="text-primary">&nbsp;ценим каждый отзыв&nbsp;</span> о нас
+
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">все отзывы</a>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-stretch">
+
+                    <div class="card">
+                        <div class="card-img">
+                            <img loading="lazy" src="img/feedback/1.jpg" class="card-img-top" alt="">
+
+                            <i class="js-modal-btn" data-feather="play-circle" data-video-id="9Xvn_Ku55cI"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="text-secondary">Название объекта</h4>
+                            <h5 class="card-title">
+                                Текст отзыва
+                            </h5>
+                            <h6>Автор отзыва</h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+
+                    <div class="card">
+                        <div class="card-img">
+                            <img loading="lazy" src="img/feedback/1.jpg" class="card-img-top" alt="">
+
+                            <i class="js-modal-btn" data-feather="play-circle" data-video-id="9Xvn_Ku55cI"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contacts">
+    <div class="section section-map p-0">
+        <div id="map-box"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="callback bg-primary text-white text-center">
+                        <h4>Выбирайте профессионалов</h4>
+                        <p>
+                            Звоните или пишите, ответим на все
+                            Ваши вопросы и поможем определить
+                            какой дом нужен именно Вам
+                        </p>
+                        <div class="phones">
+                            <a href="tel:+996 703 66 00 00">+996 703 66 00 00</a>
+                            <a href="tel:+996 553 66 00 00">+996 553 66 00 00</a>
+                            <a href="tel:+996 773 66 00 00">+996 773 66 00 00</a>
+                        </div>
+                        <p>
+                            Или введите свой номер и мы
+                            перезвоним в течении 10 минут
+                        </p>
+                        <form action="#" method="POST">
+                            <div class="input-group">
+                                <input type="hidden" name="name" value="">
+                                <input name="phone" type="text" class="form-control" placeholder="Телефон" aria-describedby="callback-btn">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-light" type="submit" id="callback-btn">
+                                        <i data-feather="phone"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <a href="#" class="logo">
+                    <img loading="lazy" src="img/logo.svg" class="d-inline-block align-top" alt="">
+                </a>
+                <ul class="widgets">
+                    <li class="widget d-flex align-items-center">
+                        <div class="widget-icon bg-secondary d-flex align-items-center justify-content-center">
+                            <i class="bx bx-map text-white"></i>
+                        </div>
+                        <div class="d-block d-md-flex align-items-center">
+                            <strong class="d-block">Офис продаж:</strong>
+                            г. Бишкек, ул.Чокморова 240, 7-этаж
+                        </div>
+                    </li>
+                    <li class="widget d-flex align-items-center">
+                        <div class="widget-icon bg-secondary d-flex align-items-center justify-content-center">
+                            <i class="bx bx-envelope text-white"></i>
+                        </div>
+                        <a href="mailto:alatoobuilding@gmail.com"><strong>alatoobuilding@gmail.com</strong></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-6 col-md-6 d-flex">
+                        <ul class="footer-nav">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Объекты</a></li>
+                            <li><a href="#">Гарантии</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-6 d-flex">
+                        <ul class="footer-nav">
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Видео</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-left text-md-right">
+                <ul class="socials d-flex align-items-center justify-content-start justify-content-md-end">
+                    <li>
+                        <a target="_blank" href="#"><i class="bx bxl-tiktok"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="#"><i class="bx bxl-facebook-circle"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="#"><i class="bx bxl-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="#"><i class="bx bxl-youtube"></i></a>
+                    </li>
+                </ul>
+                <p class="copyright">© 2023 Просто Олег. Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="callback-bt">
+    <a target="_blank" href="https://api.whatsapp.com/send?phone=&amp;text=Я%20хочу%20получить%20консультацию" class="text-call">
+        <i class="bx bxl-whatsapp"></i>
+    </a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="#" method="POST">
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title" id="exampleModalLabel">Закажите обратный звонок</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 text-center">
+                            <p>Оставьте свой номер и мы перезвоним Вам в течении 10 минут</p>
+                            <div class="form-group">
+                                <input name="name" type="text" class="form-control text-center" placeholder="Ваше имя" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input name="phone" type="text" class="form-control text-center" placeholder="Телефон" autocomplete="off">
+                            </div>
+                            <p>
+                                или свяжитесь с нами по следующим номерам и мы ответим на все Ваши вопросы
+                            </p>
+                            <div class="phones">
+                                <a href="tel:+996 703 66 00 00">+996 703 66 00 00</a>
+                                <a href="tel:+996 553 66 00 00">+996 553 66 00 00</a>
+                                <a href="tel:+996 773 66 00 00">+996 773 66 00 00</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/promise-polyfill.js"></script>
+<script src="js/sweetalert2@10.js"></script>
+
+<script src="js/jquery-modal-video.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+
+<script>
+
+    //<![CDATA[
+    $(window).on('load', function() {
+        $("body").addClass("loaded");
+    });
+    //]]>
+
+    $(function(){
+
+        // Dropdown on Hover
+        $('.navbar-dropdown').hover(function (){
+            $(this).toggleClass('show');
+            $(this).children('.dropdown-menu').toggleClass('show');
+        });
+
+            // MOBILE HEADER
+        var body = $('body'),
+            burger = $('.burger-container'),
+            header = $('.mobile-header');
+
+        burger.on('click', function() {
+            body.toggleClass('body-noscroll');
+            header.toggleClass('menu-opened');
+        });
+
+        feather.replace();
+
+        $("input[name=phone]").mask("0 (999) 99-99-99");
+
+        // Mobile
+        var is_mobile = false,
+            navbar = $('#navbarNav'),
+            menu = $('.navbar-menu');
+
+        var mql = window.matchMedia('(max-width: 991px)');
+        if (mql.matches) {
+            is_mobile = true;
+        }
+        if(is_mobile){
+            // menu.prependTo(navbar);
+        }
+
+        $(".js-modal-btn").modalVideo({
+            youtube:{
+                nocookie: true
+            }
+        });
+    });
+
+    ymaps.ready(function () {
+
+        var myMap2 = new ymaps.Map('map-box', {
+                center: [42.868847, 74.585043],
+                zoom: 17,
+                controls: [],
+                suppressMapOpenBlock: false
+            }),
+
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+
+            myPlacemark2 = new ymaps.Placemark(myMap2.getCenter(), {
+                hintContent: 'ул.Чокморова 240, 7-этаж'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'img/icons/bxs-map.svg',
+            // Размеры метки.
+            iconImageSize: [48, 48],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-25, -64]
+    });
+
+        myMap2.geoObjects
+            .add(myPlacemark2);
+
+    });
+
+    // Select all links with hashes
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .not('[href="#room-1"]')
+        .not('[href="#room-2"]')
+        .not('[href="#room-3"]')
+        .click(function(event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
+
+</script>
+
+<script src="slick/slick.min.js"></script>
+
+<script>
+    $(function(){
+
+        var whyCarousel = $('.why-carousel');
+
+        whyCarousel.slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: '<div class="prev-arrow"><svg class="feather"><use href="css/feather-sprite.svg#chevron-left"/></svg></div>',
+            nextArrow: '<div class="next-arrow"><svg class="feather"><use href="css/feather-sprite.svg#chevron-right"/></svg></div>',
+            responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: true,
+                }
+            }
+        ]
+    }).on('init', function() {
+            feather.replace();
+        });
+    });
+</script>
+
+</body>
+</html>
